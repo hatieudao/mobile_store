@@ -14,6 +14,8 @@ const checkoutRouter = require('./routes/checkout.route');
 const contactRouter = require('./routes/contact.route');
 const loginRouter = require('./routes/login.route');
 const registerRouter = require('./routes/register.route');
+const myAccountRouter = require('./routes/myAccount.route');
+const wishlistRouter = require('./routes/wishlist.route');
 
 app.set("views", "./views")
 app.set('view engine', 'hbs')
@@ -33,6 +35,8 @@ app.use('/checkout', checkoutRouter);
 app.use('/contact', contactRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
+app.use('/myaccount', myAccountRouter);
+app.use('/wishlist', wishlistRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

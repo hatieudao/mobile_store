@@ -75,7 +75,7 @@ div.cart-collaterals ul.products li.product {
   text-align: center;
 }  
 .navbar-header {
-  text-align: center;
+  text-align: center !important;
 }    
     
 .navbar-toggle {
