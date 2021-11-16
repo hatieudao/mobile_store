@@ -14,6 +14,7 @@
     "pg": "^8.7.1"
   },
   "scripts": {
+    "start": "node index",
     "dev": "nodemon --inspect index",
     "lint": "yarn eslint",
     "lint:fix": "yarn eslint --fix"

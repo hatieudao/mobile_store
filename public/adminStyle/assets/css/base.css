@@ -1,0 +1,31 @@
+:root{
+    --white-color: #ffffff;
+    --black-color: #000;
+    --sidebar-color: #132644;
+    --admin-login-background: #132644;
+    --admin-header-height: 80px;
+    --admin-sidebar-widtht: 250px;
+}
+
+table{
+    border: 1px solid #ccc;
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pagination{
+    padding: 10px;
+}
+
+.paginatio-first{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    
+}
+
+td img{
+    width: 50px;
+}
