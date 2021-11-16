@@ -7,6 +7,7 @@ CREATE TABLE "users" (
   "full_name" varchar(50) NOT NULL,
   "address" varchar(150),
   "uid" uuid NOT NULL,
+  "avatar" varchar(150) NOT NULL,
   "role" varchar(5) NOT NULL DEFAULT 'user',
   "phone_number" varchar(15),
   "created_at" timestamp
