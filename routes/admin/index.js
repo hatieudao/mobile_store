@@ -8,7 +8,7 @@ const userRouter = require('./user.route');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('admin/index', { title: 'Dashboard', layout: 'adminViews/layout.hbs' });
+  res.render('admin/index', { title: 'Dashboard', layout: 'admin/layout.hbs' });
 });
 
 router.use('/order', orderRouter);
