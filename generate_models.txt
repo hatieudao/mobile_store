@@ -1,0 +1,1 @@
+node_modules\.bin\sequelize-auto -h localhost -d mobile_store -u postgres -x hoanganhpro  --dialect postgres  -o "./models"

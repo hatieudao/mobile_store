@@ -11,7 +11,9 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.12.0-alpha.1"
   },
   "scripts": {
     "start": "node index",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "eslint": "^8.2.0",
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "sequelize-auto": "^0.8.5"
   }
 }
