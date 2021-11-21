@@ -18,8 +18,9 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon --inspect index",
-    "lint": "yarn eslint",
-    "lint:fix": "yarn eslint --fix"
+    "lint": "yarn run eslint src --ignore-path .gitignore",
+    "lint:fix": "yarn run eslint --fix",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
   "devDependencies": {
     "eslint": "^8.2.0",
