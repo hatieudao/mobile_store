@@ -1,3 +1,4 @@
+--\i D:/web/mobile_store/mobile_store.sql
 DROP DATABASE mobile_store;
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
@@ -9,6 +10,7 @@ CREATE TABLE "users" (
   "password" varchar(50) NOT NULL,
   "full_name" varchar(50) NOT NULL,
   "address" varchar(150),
+  "avatar" varchar(150),
   "uid" uuid NOT NULL,
   "role" varchar(5) NOT NULL DEFAULT 'user',
   "phone_number" varchar(15),
@@ -27,21 +29,19 @@ CREATE TABLE "mobiles" (
 
 CREATE TABLE "specifications" (
   "id" SERIAL PRIMARY KEY,
-  "mobile_id" integer NOT NULL,
-  "name" varchar(150) NOT NULL,
-  "value" varchar(100) NOT NULL
+  "name" text NOT NULL
 );
 
 CREATE TABLE "configurations" (
   "id" SERIAL PRIMARY KEY,
   "specification_id" integer NOT NULL,
   "mobile_id" integer NOT NULL,
-  "value" varchar(100)
+  "value" text NOT NULL
 );
 
 CREATE TABLE "capacities" (
   "id" SERIAL PRIMARY KEY,
-  "name" varchar(20) NOT NULL
+  "name" varchar(50) NOT NULL
 );
 
 CREATE TABLE "options" (
@@ -55,6 +55,7 @@ CREATE TABLE "options" (
 CREATE TABLE "orders" (
   "id" SERIAL PRIMARY KEY,
   "user_id" integer NOT NULL,
+  "state" varchar(10),
   "created_at" timestamp
 );
 
@@ -119,8 +120,6 @@ ALTER TABLE "mobiles" ADD CONSTRAINT "fk_mobiles_brands" FOREIGN KEY ("brand_id"
 
 ALTER TABLE "pictures" ADD CONSTRAINT "fk_pictures_mobiles" FOREIGN KEY ("imageable_id") REFERENCES "mobiles" ("id");
 
-ALTER TABLE "pictures" ADD CONSTRAINT "fk_pictures_users" FOREIGN KEY ("imageable_id") REFERENCES "users" ("id");
-
 ALTER TABLE "options" ADD FOREIGN KEY ("mobile_id") REFERENCES "mobiles" ("id");
 
-ALTER TABLE "options"  ADD FOREIGN KEY ("capacity_id") REFERENCES "capacities" ("id");
+ALTER TABLE "options" ADD FOREIGN KEY ("capacity_id") REFERENCES "capacities" ("id");

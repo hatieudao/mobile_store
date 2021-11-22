@@ -15,6 +15,10 @@ module.exports = function(sequelize, DataTypes) {
         key: 'id'
       }
     },
+    state: {
+      type: DataTypes.STRING(10),
+      allowNull: true
+    },
     created_at: {
       type: DataTypes.DATE,
       allowNull: true

@@ -7,16 +7,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       primaryKey: true
     },
-    mobile_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
     name: {
-      type: DataTypes.STRING(150),
-      allowNull: false
-    },
-    value: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.TEXT,
       allowNull: false
     }
   }, {

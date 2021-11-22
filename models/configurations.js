@@ -24,8 +24,8 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     value: {
-      type: DataTypes.STRING(100),
-      allowNull: true
+      type: DataTypes.TEXT,
+      allowNull: false
     }
   }, {
     sequelize,

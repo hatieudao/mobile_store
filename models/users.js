@@ -23,6 +23,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(150),
       allowNull: true
     },
+    avatar: {
+      type: DataTypes.STRING(150),
+      allowNull: true
+    },
     uid: {
       type: DataTypes.UUID,
       allowNull: false

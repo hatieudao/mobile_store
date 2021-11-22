@@ -40,6 +40,8 @@ function initModels(sequelize) {
   mobiles.hasMany(configurations, { as: "configurations", foreignKey: "mobile_id"});
   options.belongsTo(mobiles, { as: "mobile", foreignKey: "mobile_id"});
   mobiles.hasMany(options, { as: "options", foreignKey: "mobile_id"});
+  pictures.belongsTo(mobiles, { as: "imageable", foreignKey: "imageable_id"});
+  mobiles.hasMany(pictures, { as: "pictures", foreignKey: "imageable_id"});
   order_details.belongsTo(options, { as: "option", foreignKey: "option_id"});
   options.hasMany(order_details, { as: "order_details", foreignKey: "option_id"});
   order_details.belongsTo(orders, { as: "order", foreignKey: "order_id"});
@@ -52,8 +54,6 @@ function initModels(sequelize) {
   users.hasMany(comments, { as: "comments", foreignKey: "user_id"});
   orders.belongsTo(users, { as: "user", foreignKey: "user_id"});
   users.hasMany(orders, { as: "orders", foreignKey: "user_id"});
-  pictures.belongsTo(users, { as: "imageable", foreignKey: "imageable_id"});
-  users.hasMany(pictures, { as: "pictures", foreignKey: "imageable_id"});
 
   return {
     brands,
