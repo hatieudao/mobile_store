@@ -1,7 +1,7 @@
 --\i D:/web/mobile_store/mobile_store.sql
-DROP DATABASE mobile_store;
-DROP SCHEMA public CASCADE;
-CREATE SCHEMA public;
+-- DROP DATABASE mobile_store;
+-- DROP SCHEMA public CASCADE;
+-- CREATE SCHEMA public;
 CREATE DATABASE mobile_store;
 \c mobile_store;
 CREATE TABLE "users" (
@@ -55,7 +55,7 @@ CREATE TABLE "options" (
 CREATE TABLE "orders" (
   "id" SERIAL PRIMARY KEY,
   "user_id" integer NOT NULL,
-  "state" varchar(10),
+  "state" varchar(30),
   "created_at" timestamp
 );
 

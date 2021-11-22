@@ -22,10 +22,17 @@
 + Create pull request, add reviewer, send a message on FB
 ### Config DB
 + Install postgresql [here](https://www.postgresql.org/download/)
-+ Start service `postgresql-x64-14`.
-+ Run file `mobile_store.sql` and `add_data.sql` if this's the first run.
++ Start service `postgresql-x64-14`:
+  + `Window` + `R`
+  + Type `services.msc` and `Enter`
+  + Choose `postgresql-x64-14`, right click and `start`
++ `psql -U postgres` and type password is set when download.
++ Run file `mobile_store.sql` and `add_data.sql` if this's the first run:
+  + `\i <path-to-file>`
++ In `.env` change `DB_PASSWORD` is your password
   
 ### DB description
-+ A `mobile` has many `specifications`, such as chipset, pin, screen,...
++ A `mobile` has many `configurations` about chipset, pin, screen,...
++ `specifications` has name and `configurations` has value of a `mobile`
 + `capacities` : 64 GB, 128 GB,...
 + `options` include a `mobile`, a `capacity`, and something more such as color, special model. Example `iPhone 13 128GB black`
