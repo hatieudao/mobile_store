@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^10.0.0",
@@ -11,16 +12,20 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.12.0-alpha.1"
   },
   "scripts": {
     "start": "node index",
     "dev": "nodemon --inspect index",
-    "lint": "yarn eslint",
-    "lint:fix": "yarn eslint --fix"
+    "lint": "yarn run eslint src --ignore-path .gitignore",
+    "lint:fix": "yarn run eslint --fix",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
   "devDependencies": {
     "eslint": "^8.2.0",
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "sequelize-auto": "^0.8.5"
   }
 }
