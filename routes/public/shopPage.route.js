@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const shopPageController = require('../../controllers/shopPage.controller');
 
-/* GET home page. */
-router.get('/', shopPageController.list);
+router.get('/', shopPageController.listMobilePage);
+router.get('/:id', shopPageController.detailMobile);
 
 module.exports = router;

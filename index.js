@@ -5,12 +5,17 @@ const port = process.env.PORT || 5000;
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const path = require('path');
-// Database
+const bodyParser = require('body-parser');
 
+app.use(bodyParser.json()) // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+// Database
 const db = require('./config/database');
 db.authenticate()
   .then(() => console.log("DB connected..........."))
   .catch(err => console.log("Error......." + err))
+
 
 // Public route
 const homeRouter = require('./routes/public/home.route');
