@@ -12,7 +12,7 @@ insert into brands (id, name) values(9, 'vivo');
 insert into brands (id, name) values(10, 'oneplus');
 insert into brands (id, name) values(11, 'nubia');
 
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(1,'iPhone 11 I Chính hãng VN/A',1,18000000,3,'Fri, 05 Nov 2021 11:34:16 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(1,'iPhone 11 I Chính hãng VN/A',1,18000000,3,'Thu, 21 Oct 2021 08:39:37 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1,1,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/l/a/layer_20.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(2,1,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/_/0/_0005_layer_6.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(3,1,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/_/0/_0001_layer_2.jpg');
@@ -120,7 +120,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(10,1,3,'Vàn
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(11,1,3,'Xanh lá',14700000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(12,1,3,'Đen ',14500000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(13,1,3,'Đỏ',14500000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(2,'iPhone 12 Pro Max I Chính hãng VN/A',1,32990000,2,'Thu, 09 Sep 2021 12:46:08 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(2,'iPhone 12 Pro Max I Chính hãng VN/A',1,32990000,1,'Sun, 13 Jun 2021 13:26:32 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(24,2,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_1__7_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(25,2,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_3__7.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(26,2,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_4__7.jpg');
@@ -183,7 +183,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(22,2,6,'Bạ
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(23,2,6,'Vàng',28950000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(24,2,6,'Xám',28950000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(25,2,6,'Xanh dương ',28950000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(3,'iPhone 12 I Chính hãng VN/A',1,22990000,0,'Mon, 08 Nov 2021 15:51:53 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(3,'iPhone 12 I Chính hãng VN/A',1,22990000,1,'Wed, 17 Feb 2021 23:36:32 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(37,3,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/2/121775005_214053020136993_4215871422753310748_n_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(38,3,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-mini-2-do-11_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(39,3,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-mini-do-2_1.jpg');
@@ -264,7 +264,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(40,3,7,'Xanh
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(41,3,7,'Xanh lá',18800000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(42,3,7,'Đen',18800000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(43,3,7,'Đỏ',18800000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(4,'iPhone 11 128GB I Chính hãng VN/A',1,19900000,3,'Fri, 16 Apr 2021 02:27:24 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(4,'iPhone 11 128GB I Chính hãng VN/A',1,19900000,3,'Mon, 21 Jun 2021 05:44:20 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(64,4,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-11_6_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(65,4,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-11_2_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(66,4,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/l/a/layer_19_1.jpg');
@@ -325,7 +325,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(53,4,3,'Vàn
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(54,4,3,'Xanh lá',14700000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(55,4,3,'Đen ',14500000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(56,4,3,'Đỏ',14500000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(5,'iPhone XR 64GB I Chính hãng VN/A',1,14990000,0,'Wed, 07 Jul 2021 14:00:49 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(5,'iPhone XR 64GB I Chính hãng VN/A',1,14990000,0,'Sat, 13 Nov 2021 02:56:44 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(77,5,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/d/s/dscf2172_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(78,5,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/p/apple-iphone-xr-64-gb-chinh-hang-vn_3_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(79,5,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/p/apple-iphone-xr-64-gb-chinh-hang-vn_1_.jpg');
@@ -387,7 +387,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(65,5,3,'Vàn
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(66,5,3,'Xanh dương',12000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(67,5,3,'Đen ',12000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(68,5,3,'Đỏ',12000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(6,'iPhone 12 Pro I Chính hãng VN/A',1,30990000,1,'Thu, 28 Oct 2021 05:17:55 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(6,'iPhone 12 Pro I Chính hãng VN/A',1,30990000,3,'Wed, 23 Jun 2021 15:57:07 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(92,6,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(93,6,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_4_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(94,6,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_2_.jpg');
@@ -454,7 +454,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(77,6,6,'Bạ
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(78,6,6,'Vàng',26550000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(79,6,6,'Xám',26550000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(80,6,6,'Xanh dương ',26550000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(7,'iPhone 12 128GB I Chính hãng VN/A',1,24990000,0,'Thu, 23 Dec 2021 22:12:21 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(7,'iPhone 12 128GB I Chính hãng VN/A',1,24990000,2,'Sun, 06 Jun 2021 08:25:58 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(112,7,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_3__1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(113,7,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_4__1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(114,7,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_1__1.jpg');
@@ -523,7 +523,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(95,7,7,'Xanh
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(96,7,7,'Xanh lá',18800000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(97,7,7,'Đen',18800000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(98,7,7,'Đỏ',18800000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(8,'iPhone 12 mini I Chính hãng VN/A',1,18990000,2,'Mon, 22 Mar 2021 23:10:16 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(8,'iPhone 12 mini I Chính hãng VN/A',1,18990000,3,'Wed, 20 Jan 2021 04:01:20 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(128,8,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_7__6_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(129,8,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(130,8,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_4_.jpg');
@@ -597,7 +597,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(108,8,7,'Xan
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(109,8,7,'Xanh dương ',15490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(110,8,7,'Đen',15490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(111,8,7,'Đỏ',15490000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(9,'iPhone 12 Pro Max 256GB I Chính hãng VN/A',1,36990000,2,'Tue, 07 Sep 2021 08:43:46 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(9,'iPhone 12 Pro Max 256GB I Chính hãng VN/A',1,36990000,0,'Thu, 04 Nov 2021 21:55:39 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(155,9,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_1__5.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(156,9,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_4__5.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(157,9,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_3__5.jpg');
@@ -659,7 +659,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(120,9,6,'B�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(121,9,6,'Vàng',28950000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(122,9,6,'Xám',28950000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(123,9,6,'Xanh dương ',28950000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(10,'iPhone XR 128GB I Chính hãng VN/A',1,16990000,1,'Mon, 19 Jul 2021 00:20:15 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(10,'iPhone XR 128GB I Chính hãng VN/A',1,16990000,2,'Wed, 10 Mar 2021 08:22:42 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(170,10,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/d/s/dscf2222_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(171,10,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/d/s/dscf2172_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(172,10,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/m/img_7262_2.jpg');
@@ -715,7 +715,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(132,10,3,'V�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(133,10,3,'Xanh dương',12000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(134,10,3,'Đen ',12000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(135,10,3,'Đỏ',12000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(11,'iPhone 11 256GB I Chính hãng VN/A',1,22000000,2,'Sun, 03 Jan 2021 07:21:56 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(11,'iPhone 11 256GB I Chính hãng VN/A',1,22000000,2,'Tue, 06 Apr 2021 08:53:06 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(179,11,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-11_2__2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(180,11,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-11_6__2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(181,11,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/l/a/layer_19_2.jpg');
@@ -773,7 +773,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(145,11,3,'V�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(146,11,3,'Xanh lá',14700000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(147,11,3,'Đen ',14500000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(148,11,3,'Đỏ',14500000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(12,'iPhone 12 mini 128GB I Chính hãng VN/A',1,20990000,0,'Thu, 15 Jul 2021 07:47:38 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(12,'iPhone 12 mini 128GB I Chính hãng VN/A',1,20990000,3,'Sat, 25 Dec 2021 22:11:48 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(189,12,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_3__4.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(190,12,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_4__4.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(191,12,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_2__4.jpg');
@@ -836,7 +836,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(158,12,7,'Xa
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(159,12,7,'Xanh dương ',15490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(160,12,7,'Đen',15490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(161,12,7,'Đỏ',15490000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(13,'iPhone 12 Pro Max 512GB I Chính hãng VN/A',1,42990000,3,'Wed, 28 Apr 2021 14:55:32 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(13,'iPhone 12 Pro Max 512GB I Chính hãng VN/A',1,42990000,3,'Wed, 10 Feb 2021 04:14:28 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(204,13,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_2__6.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(205,13,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_4__6.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(206,13,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_3__6.jpg');
@@ -891,7 +891,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(170,13,6,'B�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(171,13,6,'Vàng',28950000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(172,13,6,'Xám',28950000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(173,13,6,'Xanh dương ',28950000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(14,'iPhone 12 Pro 256GB I Chính hãng VN/A',1,33990000,0,'Sun, 15 Aug 2021 10:46:26 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(14,'iPhone 12 Pro 256GB I Chính hãng VN/A',1,33990000,3,'Sat, 22 May 2021 20:07:27 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(212,14,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_1__8.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(213,14,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_4__8.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(214,14,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_3__8.jpg');
@@ -949,7 +949,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(182,14,6,'B�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(183,14,6,'Vàng',26550000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(184,14,6,'Xám',26550000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(185,14,6,'Xanh dương ',26550000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(15,'iPhone 12 256GB I Chính hãng VN/A',1,26990000,1,'Wed, 01 Sep 2021 08:45:22 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(15,'iPhone 12 256GB I Chính hãng VN/A',1,26990000,3,'Sun, 29 Aug 2021 05:38:03 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(223,15,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_1__2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(224,15,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_4__2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(225,15,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_2__2.jpg');
@@ -1012,7 +1012,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(200,15,7,'Xa
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(201,15,7,'Xanh lá',18800000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(202,15,7,'Đen',18800000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(203,15,7,'Đỏ',18800000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(16,'iPhone 12 Pro 512GB I Chính hãng VN/A',1,38990000,3,'Thu, 22 Jul 2021 20:16:37 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(16,'iPhone 12 Pro 512GB I Chính hãng VN/A',1,38990000,0,'Thu, 21 Oct 2021 00:32:30 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(233,16,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_1__9.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(234,16,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_2__9.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(235,16,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_4__9.jpg');
@@ -1073,7 +1073,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(212,16,6,'B�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(213,16,6,'Vàng',26550000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(214,16,6,'Xám',26550000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(215,16,6,'Xanh dương ',26550000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(17,'iPhone 12 mini 256GB I Chính hãng VN/A',1,22990000,3,'Fri, 05 Nov 2021 01:24:13 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(17,'iPhone 12 mini 256GB I Chính hãng VN/A',1,22990000,5,'Thu, 17 Jun 2021 19:12:27 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(247,17,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_2__5.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(248,17,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_4__5.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(249,17,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12_3__5.jpg');
@@ -1136,7 +1136,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(225,17,7,'Xa
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(226,17,7,'Xanh dương ',15490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(227,17,7,'Đen',15490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(228,17,7,'Đỏ',15490000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(18,'Samsung Galaxy Note 20 Ultra 5G',1,32990000,4,'Thu, 23 Dec 2021 21:12:33 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(18,'Samsung Galaxy Note 20 Ultra 5G',2,32990000,2,'Fri, 11 Jun 2021 14:15:15 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(262,18,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/b/l/black_final_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(263,18,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/y/e/yellow_final_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(264,18,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/note_20_ultra_1_8.jpg');
@@ -1195,7 +1195,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(233,18,9,'V�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(234,18,9,'Đen',18990000);
 INSERT INTO capacities(id, name) VALUES(10,'Note 20');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(235,18,10,'original',15000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(19,'Samsung Galaxy S20 FE 256GB (Fan Edition)',1,15490000,2,'Wed, 14 Apr 2021 07:20:48 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(19,'Samsung Galaxy S20 FE 256GB (Fan Edition)',2,15490000,4,'Sat, 08 May 2021 22:14:44 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(276,19,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-20-fe_3_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(277,19,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-20-fe_4_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(278,19,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s20-fe-18.jpg');
@@ -1237,7 +1237,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(639,19
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(640,19,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(641,19,33,'Chụp góc rộng, Chụp xóa phông, Chụp Zoom xa, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(642,19,34,'Kháng nước, kháng bụi, Sạc không dây, Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(20,'Samsung Galaxy S21 Ultra 5G',1,30990000,2,'Fri, 12 Nov 2021 23:53:35 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(20,'Samsung Galaxy S21 Ultra 5G',2,30990000,0,'Mon, 20 Sep 2021 18:11:50 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(286,20,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-ultra_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(287,20,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-ultra-bac-3-org.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(288,20,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-ultra-den-2.jpg');
@@ -1288,7 +1288,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(676,20
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(236,20,5,'original',27700000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(237,20,2,'Bạc',25000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(238,20,2,'Đen ',25000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(21,'Samsung Galaxy S21 Plus 5G',1,25990000,1,'Sat, 04 Dec 2021 08:20:31 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(21,'Samsung Galaxy S21 Plus 5G',2,25990000,2,'Wed, 28 Jul 2021 03:20:50 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(299,21,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-plus-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(300,21,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-plus-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(301,21,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-plus-3.jpg');
@@ -1343,7 +1343,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(240,21,5,'Đ
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(241,21,6,'Bạc ',20300000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(242,21,6,'Tím',20300000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(243,21,6,'Đen',20300000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(22,'Samsung Galaxy A72',1,11490000,2,'Fri, 09 Apr 2021 10:36:50 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(22,'Samsung Galaxy A72',2,11490000,1,'Fri, 17 Dec 2021 19:45:09 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(314,22,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a72-29.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(315,22,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a72-30.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(316,22,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a72-31.jpg');
@@ -1426,7 +1426,7 @@ INSERT INTO capacities(id, name) VALUES(12,'Galaxy A52');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(248,22,12,'Tím',8150000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(249,22,12,'Xanh ',8150000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(250,22,12,'Đen',8150000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(23,'Samsung Galaxy A52',1,9290000,3,'Sun, 25 Apr 2021 12:24:07 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(23,'Samsung Galaxy A52',2,9290000,0,'Sat, 13 Nov 2021 11:19:21 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(355,23,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a52-26.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(356,23,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a52-25.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(357,23,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a52-24.jpg');
@@ -1501,7 +1501,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(254,23,11,'�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(255,23,12,'Tím',8150000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(256,23,12,'Xanh ',8150000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(257,23,12,'Đen',8150000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(24,'Samsung Galaxy A22',1,5890000,4,'Tue, 26 Oct 2021 00:38:37 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(24,'Samsung Galaxy A22',2,5890000,4,'Fri, 05 Feb 2021 02:55:23 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(388,24,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a22-5g-ra-mat-2_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(389,24,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a22-5g-_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(390,24,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a22-5g-600x600_1.jpg');
@@ -1545,7 +1545,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(798,24
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(799,24,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(800,24,33,'Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(801,24,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(25,'Samsung Galaxy Note 20 Ultra',1,29990000,4,'Fri, 02 Apr 2021 06:45:27 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(25,'Samsung Galaxy Note 20 Ultra',2,29990000,4,'Mon, 27 Sep 2021 15:09:01 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(406,25,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/b/l/black_final.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(407,25,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/y/e/yellow_final.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(408,25,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/w/h/white_final.jpg');
@@ -1598,7 +1598,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(261,25,9,'Tr
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(262,25,9,'Vàng Đồng ',18990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(263,25,9,'Đen',18990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(264,25,10,'original',15000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(26,'Samsung Galaxy A32',1,6690000,0,'Mon, 05 Jul 2021 03:06:32 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(26,'Samsung Galaxy A32',2,6690000,5,'Fri, 13 Aug 2021 08:36:32 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(417,26,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a32-3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(418,26,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a32-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(419,26,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a32-4.jpg');
@@ -1660,7 +1660,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(866,26
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(867,26,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(868,26,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(869,26,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(27,'Samsung Galaxy A12',1,4290000,3,'Sun, 20 Jun 2021 21:51:24 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(27,'Samsung Galaxy A12',2,4290000,1,'Fri, 09 Jul 2021 01:40:05 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(444,27,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a12_3_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(445,27,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a12_2_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(446,27,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a12_1_.jpg');
@@ -1705,7 +1705,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(899,27
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(900,27,31,'A-GPS, GLONASS, GALILEO, BDS');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(901,27,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(902,27,33,'Chụp góc rộng, Chụp xóa phông');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(28,'Samsung Galaxy Note 20',1,23990000,1,'Thu, 28 Oct 2021 23:10:30 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(28,'Samsung Galaxy Note 20',2,23990000,1,'Wed, 12 May 2021 15:45:53 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(455,28,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/g/r/gray_final.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(456,28,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/m/i/mint_final.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(457,28,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/y/e/yellow_final_1_1.jpg');
@@ -1742,7 +1742,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(268,28,9,'Tr
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(269,28,9,'Vàng Đồng ',18990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(270,28,9,'Đen',18990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(271,28,10,'original',15000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(29,'Samsung Galaxy Z Fold2 5G',1,49990000,2,'Tue, 06 Jul 2021 22:37:47 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(29,'Samsung Galaxy Z Fold2 5G',2,49990000,4,'Sun, 22 Aug 2021 12:52:48 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(462,29,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/g/a/galaxy-z-fold2-5g.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(463,29,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/g/a/galaxy-z-fold2-5g-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(464,29,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-fold-2-11.jpg');
@@ -1788,7 +1788,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(275,29,14,'�
 INSERT INTO capacities(id, name) VALUES(15,'Phiên bản thường');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(276,29,15,'Vàng Đồng',46500000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(277,29,15,'Đen ',46500000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(30,'Samsung Galaxy A02s',1,3590000,3,'Sun, 07 Mar 2021 22:35:45 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(30,'Samsung Galaxy A02s',2,3590000,0,'Wed, 07 Apr 2021 14:50:23 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(476,30,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a02s-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(477,30,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-a02s-2.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(947,30,1,'6.5 inches');
@@ -1822,7 +1822,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(974,30
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(975,30,31,'Có, hỗ trợ A-GPS, GLONASS, GALILEO, BDS');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(976,30,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(977,30,33,'Chụp xóa phông');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(31,'Samsung Galaxy S20 Ultra',1,29990000,4,'Fri, 22 Oct 2021 08:12:55 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(31,'Samsung Galaxy S20 Ultra',2,29990000,4,'Sat, 13 Feb 2021 14:02:47 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(478,31,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637170935875912528_ss-s20-ultra-den-1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(479,31,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637170935875393356_ss-s20-ultra-den-3.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(480,31,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637170935336423061_ss-s20-ultra-xam-1.png');
@@ -1861,7 +1861,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1008,3
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1009,31,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1010,31,33,'Chụp góc rộng, Chụp xóa phông, Chụp Zoom xa, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1011,31,34,'Kháng nước, kháng bụi, Sạc không dây, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(32,'Samsung Galaxy Z Fold2 5G (Phiên bản mùa hè)',1,50000000,4,'Sat, 08 May 2021 04:25:15 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(32,'Samsung Galaxy Z Fold2 5G (Phiên bản mùa hè)',2,50000000,0,'Wed, 22 Dec 2021 05:25:47 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(482,32,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/g/a/galaxy-z-fold2-5g_3_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(483,32,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/g/a/galaxy-z-fold2-5g-1_3_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(484,32,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-fold-2-11_1_1.jpg');
@@ -1904,7 +1904,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(280,32,14,'V
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(281,32,14,'Đen ',46500000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(282,32,15,'Vàng Đồng',46500000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(283,32,15,'Đen ',46500000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(33,'Samsung Galaxy Z Fold2 5G (Phiên bản mùa xuân)',1,50000000,4,'Thu, 25 Mar 2021 09:04:47 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(33,'Samsung Galaxy Z Fold2 5G (Phiên bản mùa xuân)',2,50000000,3,'Thu, 25 Mar 2021 23:43:41 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(496,33,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/g/a/galaxy-z-fold2-5g_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(497,33,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/g/a/galaxy-z-fold2-5g-1_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(498,33,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-fold-2-11_1.jpg');
@@ -1947,7 +1947,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(286,33,14,'V
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(287,33,14,'Đen ',46500000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(288,33,15,'Vàng Đồng',46500000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(289,33,15,'Đen ',46500000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(34,'Samsung Galaxy Note 10 Lite',1,11490000,2,'Mon, 01 Nov 2021 18:53:35 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(34,'Samsung Galaxy Note 10 Lite',2,11490000,0,'Sat, 13 Mar 2021 00:51:29 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(510,34,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-note-10-lite-600x600.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(511,34,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-note-10-lite-chi-tiet-1-400x460.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(512,34,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/u/xuat-hien-anh-chup-thuc-te-cua-galaxy-note-10-lite-camera-vuong-1.png');
@@ -1975,7 +1975,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1074,3
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1075,34,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1076,34,33,'Chụp góc rộng, Chụp xóa phông, Chụp Zoom xa, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1077,34,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(35,'Samsung Galaxy A11',1,2990000,3,'Fri, 26 Mar 2021 13:53:28 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(35,'Samsung Galaxy A11',2,2990000,5,'Wed, 15 Sep 2021 22:05:45 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(515,35,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/1/a11-trang-1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(516,35,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/1/a11-trang-2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(517,35,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/1/a11-xanh-1.png');
@@ -2024,7 +2024,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1107,3
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1108,35,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1109,35,33,'Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1110,35,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(36,'Samsung Galaxy S21 Ultra 5G 256GB',1,33990000,3,'Mon, 22 Feb 2021 18:23:23 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(36,'Samsung Galaxy S21 Ultra 5G 256GB',2,33990000,2,'Tue, 13 Apr 2021 17:18:18 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(530,36,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-ultra-1_1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(531,36,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-ultra-2_1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(532,36,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/s/a/samsung-galaxy-s21-ultra-12_1.jpg');
@@ -2070,7 +2070,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1144,3
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(290,36,5,'original',27700000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(291,36,2,'Bạc',25000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(292,36,2,'Đen ',25000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(37,'Samsung Galaxy A31',1,5790000,4,'Tue, 20 Jul 2021 23:14:41 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(37,'Samsung Galaxy A31',2,5790000,0,'Sun, 06 Jun 2021 02:08:54 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(538,37,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/3/a31-xd-1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(539,37,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/3/a31-xd-2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(540,37,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/3/a31-dn-1.png');
@@ -2114,7 +2114,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1174,3
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1175,37,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1176,37,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1177,37,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(38,'Xiaomi Mi 11 Lite 5G',1,10490000,2,'Tue, 14 Sep 2021 05:55:07 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(38,'Xiaomi Mi 11 Lite 5G',3,10490000,4,'Tue, 09 Feb 2021 22:13:19 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(548,38,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-11-lite-5g-2_10.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(549,38,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-11-lite-5g-1_12.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(550,38,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-11-lite-5g-3_13.png');
@@ -2167,7 +2167,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1207,3
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1208,38,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1209,38,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1210,38,34,'Hỗ trợ 5G, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(39,'Xiaomi Redmi Note 10',1,5490000,1,'Thu, 25 Feb 2021 23:52:58 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(39,'Xiaomi Redmi Note 10',3,5490000,3,'Sun, 27 Jun 2021 20:29:50 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(567,39,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(568,39,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10_2_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(569,39,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10_1_.jpg');
@@ -2232,7 +2232,7 @@ INSERT INTO capacities(id, name) VALUES(19,'
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(302,39,19,'Trắng ',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(303,39,19,'Xám',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(304,39,19,'Xanh lá',5000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(40,'Xiaomi Redmi Note 10 Pro 8GB',1,7490000,5,'Wed, 05 May 2021 07:38:54 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(40,'Xiaomi Redmi Note 10 Pro 8GB',3,7490000,0,'Mon, 18 Oct 2021 06:02:46 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(577,40,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro_2_.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(578,40,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro-8gb-128gb_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(579,40,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro_1_.png');
@@ -2300,7 +2300,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(314,40,18,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(315,40,19,'Trắng ',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(316,40,19,'Xám',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(317,40,19,'Xanh lá',5000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(41,'Xiaomi Redmi Note 10 Pro 6GB',1,6990000,0,'Mon, 12 Jul 2021 14:43:37 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(41,'Xiaomi Redmi Note 10 Pro 6GB',3,6990000,3,'Wed, 21 Apr 2021 23:03:20 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(596,41,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro_1__2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(597,41,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro_2__2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(598,41,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro-18_1.jpg');
@@ -2359,7 +2359,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(327,41,18,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(328,41,19,'Trắng ',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(329,41,19,'Xám',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(330,41,19,'Xanh lá',5000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(42,'Xiaomi Redmi Note 10 5G',1,5290000,0,'Wed, 26 May 2021 04:01:01 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(42,'Xiaomi Redmi Note 10 5G',3,5290000,3,'Thu, 12 Aug 2021 21:44:42 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(607,42,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi-note-10-5g.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(608,42,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-5g-xam.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(609,42,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-5g-bac.jpg');
@@ -2396,7 +2396,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1342,4
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1343,42,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1344,42,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1345,42,34,'Hỗ trợ 5G, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(43,'Xiaomi Redmi Note 10 4GB',1,4690000,0,'Sat, 20 Feb 2021 02:04:43 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(43,'Xiaomi Redmi Note 10 4GB',3,4690000,3,'Thu, 20 May 2021 23:44:56 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(610,43,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10_1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(611,43,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10_2__1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(612,43,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10_1__2.jpg');
@@ -2446,7 +2446,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(339,43,18,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(340,43,19,'Trắng ',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(341,43,19,'Xám',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(342,43,19,'Xanh lá',5000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(44,'Xiaomi Redmi 9T 6GB 128GB',1,4990000,2,'Tue, 06 Apr 2021 07:50:44 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(44,'Xiaomi Redmi 9T 6GB 128GB',3,4990000,4,'Mon, 07 Jun 2021 12:28:44 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(613,44,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-9t_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(614,44,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi-9t-4.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(615,44,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi-9t-2.jpg');
@@ -2483,7 +2483,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(347,44,22,'C
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(348,44,22,'Xám',3750000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(349,44,22,'Xanh dương',3750000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(350,44,22,'Xanh lá',3750000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(45,'Xiaomi Mi 11 5G',1,21990000,4,'Mon, 08 Feb 2021 18:38:16 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(45,'Xiaomi Mi 11 5G',3,21990000,0,'Mon, 13 Sep 2021 11:28:17 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(617,45,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi11-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(618,45,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-11-den_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(619,45,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-11-xanhduong-600x600-600x600.jpg');
@@ -2527,7 +2527,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(354,45,24,'�
 INSERT INTO capacities(id, name) VALUES(25,'Mi 11 5G');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(355,45,25,'Xám',15200000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(356,45,25,'Xanh ',15200000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(46,'Xiaomi Redmi Note 10S',1,6490000,4,'Thu, 12 Aug 2021 15:17:11 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(46,'Xiaomi Redmi Note 10S',3,6490000,0,'Sat, 27 Feb 2021 11:26:48 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(620,46,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10s-trang.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(621,46,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10s-xam.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(622,46,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10s-1-den.jpg');
@@ -2567,7 +2567,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1463,4
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1464,46,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1465,46,33,'Chụp góc rộng, Chụp xóa phông, Chống rung');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1466,46,34,'Kháng nước, kháng bụi, Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(47,'Xiaomi Redmi 9A',1,1990000,0,'Tue, 25 May 2021 15:44:35 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(47,'Xiaomi Redmi 9A',3,1990000,4,'Wed, 19 May 2021 01:30:45 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(625,47,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi_9a_0000_layer_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(626,47,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi_9a_0004_background.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(627,47,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi_9a_0005_background.jpg');
@@ -2606,7 +2606,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1496,4
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1497,47,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1498,47,33,'Chụp xóa phông, Chống rung');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1499,47,34,'Nhận diện khuôn mặt');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(48,'Xiaomi Redmi 9T 4GB 64GB',1,3990000,5,'Wed, 24 Feb 2021 08:45:38 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(48,'Xiaomi Redmi 9T 4GB 64GB',3,3990000,0,'Fri, 26 Feb 2021 10:39:07 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(630,48,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-9t_1__2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(631,48,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi-9t-4_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(632,48,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi-9t-2_2.jpg');
@@ -2641,7 +2641,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(361,48,22,'C
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(362,48,22,'Xám',3750000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(363,48,22,'Xanh dương',3750000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(364,48,22,'Xanh lá',3750000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(49,'Xiaomi Mi 10T Pro 5G',1,12990000,5,'Tue, 12 Jan 2021 06:39:39 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(49,'Xiaomi Mi 10T Pro 5G',3,12990000,0,'Thu, 17 Jun 2021 14:06:58 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(634,49,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-10t-pro_2_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(635,49,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-10t-pro_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(636,49,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637370828366783154_xiaomi-mi-10t-pro-bac-1_1.png');
@@ -2689,7 +2689,7 @@ INSERT INTO capacities(id, name) VALUES(28,'Mi 10T Pro 256GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(369,49,28,'Bạc ',11200000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(370,49,28,'Xanh',11200000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(371,49,28,'Đen',11200000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(50,'Xiaomi POCO X3 NFC 128GB',1,6990000,4,'Fri, 24 Sep 2021 22:45:28 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(50,'Xiaomi POCO X3 NFC 128GB',3,6990000,3,'Sat, 09 Oct 2021 00:23:23 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(637,50,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-poco-x3_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(638,50,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-poco-x3_2_.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1556,50,1,'6.67 inches');
@@ -2729,7 +2729,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1589,5
 INSERT INTO capacities(id, name) VALUES(29,'6GB - 64GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(372,50,29,'original',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(373,50,22,'original',5700000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(51,'Xiaomi Mi 11 5G 128GB',1,20990000,0,'Sat, 05 Jun 2021 11:40:05 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(51,'Xiaomi Mi 11 5G 128GB',3,20990000,4,'Tue, 29 Jun 2021 12:25:07 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(639,51,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi11-1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(640,51,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-11-den_1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(641,51,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-11-xanhduong-600x600-600x600_3.jpg');
@@ -2771,7 +2771,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(376,51,24,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(377,51,24,'Đen',8490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(378,51,25,'Xám',15200000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(379,51,25,'Xanh ',15200000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(52,'Xiaomi Mi 10T Pro 5G 8GB 128GB',1,11990000,3,'Wed, 10 Feb 2021 10:28:02 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(52,'Xiaomi Mi 10T Pro 5G 8GB 128GB',3,11990000,5,'Fri, 27 Aug 2021 15:27:30 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(643,52,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-10t-pro_2__3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(644,52,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-mi-10t-pro_1__3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(645,52,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637370828366783154_xiaomi-mi-10t-pro-bac-1_1_1.png');
@@ -2816,7 +2816,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(383,52,27,'o
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(384,52,28,'Bạc ',11200000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(385,52,28,'Xanh',11200000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(386,52,28,'Đen',11200000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(53,'Xiaomi Redmi 9C 3GB - 64GB',1,2990000,1,'Tue, 27 Apr 2021 19:10:00 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(53,'Xiaomi Redmi 9C 3GB - 64GB',3,2990000,4,'Fri, 05 Feb 2021 11:34:52 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(646,53,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi-9c_3__1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(647,53,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi-9c_1__1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(648,53,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-9c-cam.png');
@@ -2859,7 +2859,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(388,53,30,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(389,53,30,'Xanh',2450000);
 INSERT INTO capacities(id, name) VALUES(31,'4GB - 128GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(390,53,31,'original',2100000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(54,'Xiaomi Redmi Note 10 Pro ( Phiên bản Mi Fan Festival)',1,7490000,5,'Sun, 10 Jan 2021 06:48:47 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(54,'Xiaomi Redmi Note 10 Pro ( Phiên bản Mi Fan Festival)',3,7490000,4,'Tue, 30 Nov 2021 14:55:48 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(649,54,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro-mi-fan-festival-14.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(650,54,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro-mi-fan-festival-12.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(651,54,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/x/i/xiaomi-redmi-note-10-pro-mi-fan-festival-11.jpg');
@@ -2909,7 +2909,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(397,54,17,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(398,54,19,'Trắng ',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(399,54,19,'Xám',5000000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(400,54,19,'Xanh lá',5000000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(55,'Xiaomi Redmi Note 9s 4G 64GB',1,5490000,5,'Tue, 04 May 2021 09:02:20 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(55,'Xiaomi Redmi Note 9s 4G 64GB',3,5490000,0,'Sat, 11 Dec 2021 23:27:19 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(654,55,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi_note_9s_0002_layer_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(655,55,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi_note_9s_0000_layer_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(656,55,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/redmi_note_9s_0001_layer_2.jpg');
@@ -2947,7 +2947,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1752,5
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1753,55,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1754,55,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1755,55,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(56,'OPPO Reno6 Z 5G',1,9490000,4,'Wed, 14 Apr 2021 01:23:33 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(56,'OPPO Reno6 Z 5G',4,9490000,2,'Tue, 02 Mar 2021 22:12:48 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(657,56,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo_reno6.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(658,56,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/2/12345678.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(659,56,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637613348978844164_oppo-reno6z-xanh-2.jpg');
@@ -2993,7 +2993,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1781,5
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1782,56,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1783,56,33,'Chụp macro, Chụp góc rộng, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1784,56,34,'Hỗ trợ 5G, Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(57,'Oppo Reno5',1,8690000,1,'Mon, 08 Mar 2021 09:21:53 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(57,'Oppo Reno5',4,8690000,3,'Tue, 21 Sep 2021 21:02:27 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(673,57,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-reno-5_1__1_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(674,57,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-reno-5_3_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(675,57,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-reno-5_2__1_1.jpg');
@@ -3038,7 +3038,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(402,57,32,'�
 INSERT INTO capacities(id, name) VALUES(33,'Reno5');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(403,57,33,'Bạc ',7690000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(404,57,33,'Đen',7690000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(58,'Oppo A73',1,5490000,1,'Sun, 21 Nov 2021 12:25:28 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(58,'Oppo A73',4,5490000,4,'Wed, 25 Aug 2021 07:59:47 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(677,58,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a73_2_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(678,58,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a73_1_.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1819,58,1,'6.44 inches');
@@ -3064,7 +3064,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1838,5
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1839,58,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1840,58,33,'Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1841,58,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(59,'OPPO Find X3 Pro 5G',1,26990000,2,'Thu, 18 Feb 2021 02:38:11 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(59,'OPPO Find X3 Pro 5G',4,26990000,4,'Fri, 25 Jun 2021 03:28:24 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(679,59,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-find-x3-pro-5g-3_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(680,59,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-find-x3-pro-5g-2_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(681,59,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-find-x3-pro-5g-1_2.jpg');
@@ -3123,7 +3123,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1872,5
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1873,59,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1874,59,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Chụp Zoom xa, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1875,59,34,'Hỗ trợ 5G, Sạc không dây, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(60,'Oppo A93',1,6490000,1,'Fri, 03 Dec 2021 16:18:13 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(60,'Oppo A93',4,6490000,2,'Mon, 29 Mar 2021 18:25:12 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(703,60,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/c/o/combo_-_a93-white_2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(704,60,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/c/o/combo_-_a93-black_2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(705,60,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a93-11.jpg');
@@ -3165,7 +3165,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1905,6
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1906,60,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1907,60,33,'Chụp góc rộng, Chụp xóa phông, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1908,60,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(61,'Oppo Reno5 5G',1,11990000,5,'Sun, 07 Nov 2021 01:47:17 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(61,'Oppo Reno5 5G',4,11990000,3,'Tue, 26 Oct 2021 22:56:23 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(711,61,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-reno-5-5g_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(712,61,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-reno-5-5g_2_.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(1909,61,1,'6.43 inches');
@@ -3206,7 +3206,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(405,61,32,'B
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(406,61,32,'Đen',10590000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(407,61,33,'Bạc ',7690000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(408,61,33,'Đen',7690000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(62,'Oppo Reno4',1,8490000,1,'Fri, 26 Mar 2021 08:15:10 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(62,'Oppo Reno4',4,8490000,0,'Thu, 08 Apr 2021 23:30:51 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(713,62,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/_/0/_0002_combo_-_reno4_-_black_-_full_check.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(714,62,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/_/0/_0004_combo_-_reno4_-_purple_-_full_check.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(715,62,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/_/0/_0003_combo_-_reno4_-_blue_-_full_check.jpg');
@@ -3247,7 +3247,7 @@ INSERT INTO capacities(id, name) VALUES(34,'Oppo Reno 4 Pro');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(409,62,34,'original',9790000);
 INSERT INTO capacities(id, name) VALUES(35,'Oppo Reno 4');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(410,62,35,'original',6590000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(63,'Oppo A54',1,4690000,0,'Fri, 26 Nov 2021 23:59:49 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(63,'Oppo A54',4,4690000,2,'Sat, 13 Feb 2021 00:17:21 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(716,63,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a54-4g-black-600x600.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(717,63,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a54-4g-blue-200x200.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(718,63,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a54-12.jpg');
@@ -3286,7 +3286,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2000,6
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2001,63,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2002,63,33,'Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2003,63,34,'Kháng nước, kháng bụi, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(64,'Oppo A74',1,6690000,5,'Fri, 07 May 2021 12:47:03 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(64,'Oppo A74',4,6690000,1,'Fri, 19 Mar 2021 15:43:30 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(726,64,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/c/o/combo_a74_-_xanh.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(727,64,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/c/o/combo_a74_-_en.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(728,64,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a74-2.jpg');
@@ -3329,7 +3329,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2030,6
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2031,64,31,'A-GPS, GLONASS, GALILEO, BDS');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2032,64,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2033,64,33,'Chụp macro, Chụp xóa phông');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(65,'Oppo A12 3GB',1,2990000,3,'Fri, 28 May 2021 14:09:08 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(65,'Oppo A12 3GB',4,2990000,4,'Tue, 14 Dec 2021 09:32:17 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(738,65,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/1/a12-den.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(739,65,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/1/a12-xanh.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(740,65,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a12_2_.jpg');
@@ -3367,7 +3367,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2063,6
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2064,65,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2065,65,33,'Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2066,65,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(66,'Oppo A15',1,3490000,0,'Wed, 10 Nov 2021 10:12:58 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(66,'Oppo A15',4,3490000,4,'Tue, 09 Nov 2021 12:49:30 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(742,66,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a15_2_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(743,66,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a15_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(744,66,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a15-11.jpg');
@@ -3412,7 +3412,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2095,6
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2096,66,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2097,66,33,'Chụp macro, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2098,66,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(67,'Oppo A94',1,7690000,5,'Sun, 31 Oct 2021 22:37:31 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(67,'Oppo A94',4,7690000,1,'Tue, 09 Nov 2021 00:51:57 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(754,67,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a94-purple.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(755,67,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a94-11.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(756,67,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a94-14.jpg');
@@ -3456,7 +3456,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2128,6
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2129,67,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2130,67,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2131,67,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(68,'Oppo A15s',1,3990000,5,'Tue, 27 Jul 2021 12:31:58 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(68,'Oppo A15s',4,3990000,3,'Wed, 24 Nov 2021 06:12:31 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(764,68,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a15s-2_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(765,68,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a15s-1_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(766,68,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/p/oppo-a15s-1_4.jpg');
@@ -3498,7 +3498,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2160,6
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2161,68,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2162,68,33,'Chụp macro, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2163,68,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(69,'Oppo A1K',1,2690000,5,'Sun, 10 Jan 2021 13:57:22 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(69,'Oppo A1K',4,2690000,3,'Wed, 11 Aug 2021 11:01:14 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(773,69,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/1/a1k-do.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(774,69,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/1/a1k-den.png');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2164,69,1,'6.1 inches');
@@ -3519,7 +3519,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2178,6
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2179,69,29,'Wi-Fi 802.11 b/g/n, hotspot');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2180,69,30,'Có, v4.2');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2181,69,31,'Có');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(70,'Nokia 5.4',1,4190000,1,'Fri, 13 Aug 2021 01:21:48 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(70,'Nokia 5.4',5,4190000,1,'Mon, 23 Aug 2021 04:21:28 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(775,70,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-5-4-xanh_1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(776,70,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-5.4-1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(777,70,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-5.4-box.jpg');
@@ -3561,7 +3561,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2212,7
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2213,70,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2214,70,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2215,70,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(71,'Nokia 2.4',1,2690000,0,'Fri, 22 Jan 2021 01:03:37 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(71,'Nokia 2.4',5,2690000,3,'Tue, 05 Oct 2021 01:21:40 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(782,71,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-2.4_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(783,71,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-2.4_4_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(784,71,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-2.4_2_.jpg');
@@ -3597,7 +3597,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2243,7
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2244,71,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2245,71,33,'Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2246,71,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(72,'Nokia 3.4',1,3290000,2,'Mon, 20 Dec 2021 07:04:13 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(72,'Nokia 3.4',5,3290000,2,'Mon, 16 Aug 2021 11:57:05 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(786,72,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-34_3_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(787,72,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-34_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(788,72,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-34_2_.jpg');
@@ -3634,7 +3634,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2276,7
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2277,72,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2278,72,33,'Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2279,72,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(73,'Nokia C20',1,2290000,5,'Thu, 04 Nov 2021 18:47:20 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(73,'Nokia C20',5,2290000,0,'Fri, 24 Sep 2021 19:31:47 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(789,73,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-c20-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(790,73,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-c20-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(791,73,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/o/nokia-c20-12.jpg');
@@ -3670,7 +3670,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2301,7
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2302,73,30,'4.2, A2DP');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2303,73,31,'A-GPS');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2304,73,32,'Giọt nước');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(74,'Realme 7',1,6990000,2,'Sat, 10 Apr 2021 20:04:54 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(74,'Realme 7',6,6990000,1,'Sat, 02 Oct 2021 18:13:49 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(799,74,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-7-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(800,74,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-7-2.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2305,74,1,'6.5 inches');
@@ -3716,7 +3716,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(414,74,37,'X
 INSERT INTO capacities(id, name) VALUES(38,'Realme 7 Pro');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(415,74,38,'Bạc',7590000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(416,74,38,'Xanh ',7590000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(75,'Realme 7 Pro',1,8990000,1,'Fri, 12 Feb 2021 14:15:04 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(75,'Realme 7 Pro',6,8990000,3,'Mon, 18 Oct 2021 07:58:21 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(801,75,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-7-pro-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(802,75,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-7-pro-1.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2339,75,1,'6.44 inches');
@@ -3759,7 +3759,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(419,75,37,'T
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(420,75,37,'Xanh',5090000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(421,75,38,'Bạc',7590000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(422,75,38,'Xanh ',7590000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(76,'Realme 8',1,7290000,5,'Sat, 22 May 2021 00:45:47 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(76,'Realme 8',6,7290000,0,'Thu, 29 Apr 2021 16:22:36 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(803,76,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-8-1_2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(804,76,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-8-2.png');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2373,76,1,'6.4 inches');
@@ -3805,7 +3805,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(426,76,40,'�
 INSERT INTO capacities(id, name) VALUES(41,'Realme 8 Pro');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(427,76,41,'Xanh dương',7890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(428,76,41,'Đen ',7890000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(77,'Realme 8 Pro',1,8690000,4,'Thu, 13 May 2021 19:50:06 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(77,'Realme 8 Pro',6,8690000,1,'Mon, 12 Jul 2021 01:45:10 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(805,77,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-8-pro-2_2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(806,77,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-8-pro-1_4.png');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2407,77,1,'6.4 inches');
@@ -3848,7 +3848,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(431,77,40,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(432,77,40,'Đen',6790000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(433,77,41,'Xanh dương',7890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(434,77,41,'Đen ',7890000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(78,'Realme C11 2021',1,2690000,3,'Sat, 24 Jul 2021 03:02:18 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(78,'Realme C11 2021',6,2690000,3,'Wed, 19 May 2021 16:10:31 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(807,78,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme_c11_0001_layer_3_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(808,78,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme_c11_0000_layer_4_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(809,78,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme_c11_0003_layer_1_2_2.jpg');
@@ -3891,7 +3891,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(436,78,42,'X
 INSERT INTO capacities(id, name) VALUES(43,'Realme C11 2020');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(437,78,43,'Xanh',2490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(438,78,43,'Đen ',2490000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(79,'Realme 7i',1,6290000,4,'Sat, 20 Nov 2021 20:11:45 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(79,'Realme 7i',6,6290000,3,'Mon, 03 May 2021 06:11:11 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(811,79,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-7i-xanh-la_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(812,79,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-7i-xanh-duong_1.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2473,79,1,'6.5 inches');
@@ -3934,7 +3934,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(441,79,37,'T
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(442,79,37,'Xanh',5090000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(443,79,38,'Bạc',7590000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(444,79,38,'Xanh ',7590000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(80,'Realme 6',1,5990000,4,'Thu, 23 Dec 2021 23:08:33 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(80,'Realme 6',6,5990000,0,'Tue, 02 Nov 2021 09:46:28 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(813,80,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637201445440499743_realme-6-xanh-1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(814,80,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637201445439359934_realme-6-xanh-5.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(815,80,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637201445441599736_realme-6-xanh-3.png');
@@ -3967,7 +3967,7 @@ INSERT INTO capacities(id, name) VALUES(44,'Realme 6 8GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(445,80,44,'original',4990000);
 INSERT INTO capacities(id, name) VALUES(45,'Realme 6 4GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(446,80,45,'original',4390000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(81,'Realme C15',1,4190000,3,'Fri, 25 Jun 2021 19:10:28 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(81,'Realme C15',6,4190000,1,'Tue, 15 Jun 2021 22:47:50 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(819,81,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637400871435200601_realme-c15-bac-1_2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(820,81,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637400868092278961_realme-c15-xanh-1_2.png');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2529,81,1,'6.5 inches');
@@ -4004,7 +4004,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2559,8
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2560,81,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2561,81,33,'Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2562,81,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(82,'Realme 8 5G',1,7990000,4,'Sat, 06 Feb 2021 22:32:50 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(82,'Realme 8 5G',6,7990000,4,'Sat, 18 Sep 2021 10:20:26 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(821,82,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-8-5g-blue-1-600x600_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(822,82,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-8-5g_1.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2563,82,1,'6.5 inches');
@@ -4042,7 +4042,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(447,82,39,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(448,82,39,'Đen ',7190000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(449,82,41,'Xanh dương',7890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(450,82,41,'Đen ',7890000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(83,'Realme C11',1,2690000,1,'Wed, 24 Nov 2021 01:30:57 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(83,'Realme C11',6,2690000,2,'Sat, 18 Sep 2021 01:50:39 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(823,83,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme_c11_0001_layer_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(824,83,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme_c11_0000_layer_4.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(825,83,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme_c11_0003_layer_1_2.jpg');
@@ -4084,7 +4084,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(451,83,42,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(452,83,42,'Xanh',2490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(453,83,43,'Xanh',2490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(454,83,43,'Đen ',2490000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(84,'Realme Narzo 30A',1,3990000,4,'Sun, 02 May 2021 11:05:34 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(84,'Realme Narzo 30A',6,3990000,0,'Fri, 01 Oct 2021 06:55:18 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(827,84,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-narzo-30a.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(828,84,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-narzo-30a-11.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(829,84,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-narzo-30a-14.jpg');
@@ -4123,7 +4123,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2654,8
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2655,84,30,'5.0, A2DP, LE');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2656,84,31,'Có, hỗ trợ A-GPS, GLONASS');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2657,84,33,'Chụp góc rộng, Chụp xóa phông');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(85,'Realme C20',1,2690000,4,'Wed, 03 Mar 2021 03:28:31 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(85,'Realme C20',6,2690000,1,'Fri, 12 Mar 2021 19:19:15 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(834,85,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c20-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(835,85,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c20-2.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2658,85,1,'6.5 inches');
@@ -4157,7 +4157,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2685,8
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2686,85,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2687,85,33,'Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2688,85,34,'Nhận diện khuôn mặt');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(86,'Realme C25',1,4690000,3,'Fri, 23 Jul 2021 15:56:01 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(86,'Realme C25',6,4690000,1,'Wed, 21 Jul 2021 05:38:13 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(836,86,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c25-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(837,86,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c25-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(838,86,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c25-11.jpg');
@@ -4200,7 +4200,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2717,8
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2718,86,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2719,86,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2720,86,34,'Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(87,'Realme C12',1,3490000,2,'Tue, 23 Feb 2021 02:18:55 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(87,'Realme C12',6,3490000,2,'Mon, 16 Aug 2021 19:58:36 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(846,87,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme_c12_0000_realme-c12-600x600-removebg-preview.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(847,87,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme_c12_0001_realme_c12-removebg-preview.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(848,87,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c12-do.png');
@@ -4237,7 +4237,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2750,8
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2751,87,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2752,87,33,'Chụp macro, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2753,87,34,'Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(88,'Realme C17',1,5290000,2,'Sat, 06 Nov 2021 20:39:57 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(88,'Realme C17',6,5290000,5,'Sat, 23 Oct 2021 02:12:55 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(849,88,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c17_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(850,88,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c17_2_.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2754,88,1,'6.5 inches');
@@ -4274,7 +4274,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2784,8
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2785,88,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2786,88,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2787,88,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(89,'Realme C21Y',1,3490000,2,'Mon, 19 Jul 2021 01:13:10 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(89,'Realme C21Y',6,3490000,3,'Fri, 25 Jun 2021 01:09:18 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(851,89,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c21y.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(852,89,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/realme-c21y-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(853,89,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/5/1536-1024_1__3.jpg');
@@ -4318,7 +4318,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2812,8
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2813,89,31,'A-GPS');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2814,89,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2815,89,33,'Chụp macro, Chụp xóa phông');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(90,'Vsmart Live 4',1,4290000,3,'Mon, 08 Feb 2021 02:04:48 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(90,'Vsmart Live 4',7,4290000,4,'Sat, 18 Sep 2021 12:22:17 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(866,90,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-live-_4_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(867,90,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-live-_4_3_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(868,90,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-live-_4_2_.jpg');
@@ -4357,7 +4357,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2842,9
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2843,90,32,'Tràn viền (Không khiếm khuyết)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2844,90,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(2845,90,34,'Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(91,'Vsmart Joy 4',1,3290000,2,'Sun, 05 Dec 2021 07:38:53 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(91,'Vsmart Joy 4',7,3290000,0,'Mon, 22 Mar 2021 01:14:23 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(874,91,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4_2_.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(875,91,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4_1_.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(876,91,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4-trang-200x200_2.jpg');
@@ -4401,7 +4401,7 @@ INSERT INTO capacities(id, name) VALUES(47,'3GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(458,91,47,'Trắng',2390000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(459,91,47,'Xanh',2390000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(460,91,47,'Đen ',2390000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(92,'Vsmart Star 5',1,2690000,2,'Mon, 21 Jun 2021 08:27:03 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(92,'Vsmart Star 5',7,2690000,1,'Sat, 31 Jul 2021 12:53:17 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(887,92,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-star-5-3_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(888,92,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-star-5-2_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(889,92,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-star-5-1_3.jpg');
@@ -4447,7 +4447,7 @@ INSERT INTO capacities(id, name) VALUES(48,'3GB - 32GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(464,92,48,'Xanh bạc hà',1990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(465,92,48,'Xanh lá',1990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(466,92,48,'Đen ',1990000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(93,'Vsmart Active 3 6GB Ram',1,3990000,5,'Sun, 21 Feb 2021 05:41:30 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(93,'Vsmart Active 3 6GB Ram',7,3990000,1,'Sat, 06 Mar 2021 04:22:49 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(894,93,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-active-3_2_.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(895,93,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-active-3_1_.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(896,93,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-active-3_4_.png');
@@ -4473,7 +4473,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(468,93,50,'T
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(469,93,50,'Xanh dương',2890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(470,93,50,'Xanh lá',2890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(471,93,50,'Đen ',2890000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(94,'Vsmart Aris 6GB 64GB',1,5990000,5,'Sat, 13 Feb 2021 18:21:53 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(94,'Vsmart Aris 6GB 64GB',7,5990000,2,'Wed, 29 Sep 2021 09:10:46 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(898,94,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_2_1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(899,94,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_3_1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(900,94,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_1_4.png');
@@ -4521,7 +4521,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(475,94,52,'�
 INSERT INTO capacities(id, name) VALUES(53,'Aris 6GB | 64GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(476,94,53,'Xanh lá',3990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(477,94,53,'Đen ',3990000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(95,'Vsmart Joy 4 4GB',1,3590000,0,'Thu, 25 Mar 2021 21:20:12 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(95,'Vsmart Joy 4 4GB',7,3590000,4,'Wed, 03 Feb 2021 15:12:59 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(916,95,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4-trang_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(917,95,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4_1__2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(918,95,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4_2__2.png');
@@ -4553,7 +4553,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(480,95,46,'�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(481,95,47,'Trắng',2390000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(482,95,47,'Xanh',2390000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(483,95,47,'Đen ',2390000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(96,'Vsmart Star 5 4GB 64GB',1,3290000,0,'Sun, 27 Jun 2021 18:07:22 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(96,'Vsmart Star 5 4GB 64GB',7,3290000,3,'Mon, 25 Oct 2021 05:24:05 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(919,96,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-star-5-4gb-64gb-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(920,96,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-star-5-4gb-64gb-3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(921,96,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-star-5-4gb-64gb-4.jpg');
@@ -4598,7 +4598,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(486,96,21,'�
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(487,96,48,'Xanh bạc hà',1990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(488,96,48,'Xanh lá',1990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(489,96,48,'Đen ',1990000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(97,'Vsmart Aris Pro',1,9990000,4,'Sun, 13 Jun 2021 21:23:01 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(97,'Vsmart Aris Pro',7,9990000,0,'Thu, 04 Feb 2021 23:44:07 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(926,97,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_2_2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(927,97,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_3_2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(928,97,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_1_8.png');
@@ -4637,7 +4637,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(492,97,52,'X
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(493,97,52,'Đen',5490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(494,97,53,'Xanh lá',3990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(495,97,53,'Đen ',3990000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(98,'Vsmart Active 3 4GB Ram',1,3490000,0,'Fri, 22 Jan 2021 03:08:04 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(98,'Vsmart Active 3 4GB Ram',7,3490000,3,'Sat, 24 Jul 2021 23:54:18 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(943,98,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-active-3_3__2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(944,98,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-active-3_2__2.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(945,98,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-active-3_1__2.png');
@@ -4662,7 +4662,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(499,98,50,'T
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(500,98,50,'Xanh dương',2890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(501,98,50,'Xanh lá',2890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(502,98,50,'Đen ',2890000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(99,'Vsmart Star 4',1,2490000,4,'Sat, 19 Jun 2021 09:42:47 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(99,'Vsmart Star 4',7,2490000,3,'Sun, 07 Feb 2021 03:36:20 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(947,99,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart_star_4.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(948,99,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart_star_4_trang_1.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3014,99,1,'6.09 inches');
@@ -4697,7 +4697,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(507,99,55,'T
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(508,99,55,'Xanh dương',1790000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(509,99,55,'Xanh lá',1790000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(510,99,55,'Đen',1790000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(100,'Vsmart Aris 8GB 128GB',1,6690000,1,'Wed, 20 Jan 2021 07:27:14 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(100,'Vsmart Aris 8GB 128GB',7,6690000,3,'Thu, 27 May 2021 14:14:22 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(949,100,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_2_1_1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(950,100,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_3_1_1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(951,100,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/1/11_1_4_1.png');
@@ -4742,7 +4742,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(513,100,52,'
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(514,100,52,'Đen',5490000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(515,100,53,'Xanh lá',3990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(516,100,53,'Đen ',3990000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(101,'Vsmart Joy 3 4GB',1,3290000,5,'Sun, 05 Sep 2021 21:27:52 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(101,'Vsmart Joy 3 4GB',7,3290000,1,'Mon, 27 Sep 2021 20:00:40 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(967,101,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-3-1_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(968,101,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/j/o/joy-3-4g-tim.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(969,101,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/j/o/joy-3-4g-den.jpg');
@@ -4775,7 +4775,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(518,101,56,'
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(519,101,56,'Đen ',2290000);
 INSERT INTO capacities(id, name) VALUES(57,'2G/32GB');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(520,101,57,'original',0);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(102,'Vsmart Joy 4 6GB',1,3990000,3,'Sat, 14 Aug 2021 02:24:12 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(102,'Vsmart Joy 4 6GB',7,3990000,4,'Mon, 18 Jan 2021 00:29:33 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(971,102,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4-trang-200x200_4.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(972,102,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4_1__2_2_4.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(973,102,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4_2__2_2_3.png');
@@ -4812,7 +4812,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(524,102,46,'
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(525,102,47,'Trắng',2390000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(526,102,47,'Xanh',2390000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(527,102,47,'Đen ',2390000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(103,'Vsmart Star 4 2GB',1,2050000,0,'Tue, 27 Apr 2021 13:28:00 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(103,'Vsmart Star 4 2GB',7,2050000,1,'Fri, 27 Aug 2021 05:58:20 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(980,103,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart_star_4_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(981,103,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart_star_4_trang_1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(982,103,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart_star_4_0000_202007070823285140_hhm-khung-_nh-s_n-ph_m-17.jpg');
@@ -4847,7 +4847,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(532,103,55,'
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(533,103,55,'Xanh dương',1790000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(534,103,55,'Xanh lá',1790000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(535,103,55,'Đen',1790000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(104,'Vsmart Live 4 4GB 64GB',1,4090000,1,'Fri, 12 Feb 2021 04:22:48 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(104,'Vsmart Live 4 4GB 64GB',7,4090000,4,'Fri, 29 Oct 2021 19:15:08 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(984,104,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-live-4-4gb-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(985,104,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-live-4-4gb-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(986,104,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-live-4-4gb-3.jpg');
@@ -4878,7 +4878,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3142,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3143,104,29,'Wi-Fi 802.11 a/b/g/n/ac');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3144,104,30,'v5.0');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3145,104,31,'A-GPS');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(105,'ASUS ROG Phone 5 chính hãng',1,22990000,3,'Fri, 16 Apr 2021 06:18:46 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(105,'ASUS ROG Phone 5 chính hãng',8,22990000,0,'Wed, 22 Sep 2021 06:41:36 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(987,105,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/s/asus-rog-phone-5_0002_gsmarena_001.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(988,105,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/a/s/asus-rog-phone-5_0001_rog_phone_5_storm_white_1200x768.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(989,105,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/o/rog_5_1.jpg');
@@ -4930,7 +4930,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3176,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3177,105,32,'Tràn viền (Không khiếm khuyết)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3178,105,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Chụp Zoom xa, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3179,105,34,'Hỗ trợ 5G, Sạc không dây, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(106,'ASUS ROG Phone 3 Chính hãng',1,22990000,5,'Tue, 12 Oct 2021 10:07:40 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(106,'ASUS ROG Phone 3 Chính hãng',8,22990000,0,'Fri, 26 Mar 2021 05:25:28 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1004,106,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/o/rog_3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1005,106,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/o/rog_phone_3_0002_layer_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1006,106,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/o/rog_phone_3_0003_layer_1.jpg');
@@ -4969,7 +4969,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3207,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3208,106,32,'Tràn viền (Không khiếm khuyết)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3209,106,33,'Chụp macro, Chụp góc rộng, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3210,106,34,'Hỗ trợ 5G, Sạc không dây, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(107,'Vivo V20',1,8490000,1,'Thu, 04 Mar 2021 19:06:08 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(107,'Vivo V20',9,8490000,2,'Wed, 12 May 2021 21:00:46 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1011,107,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-v20_1_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1012,107,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-v20_2_.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3211,107,1,'6.44 inches');
@@ -5000,7 +5000,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(537,107,59,'
 INSERT INTO capacities(id, name) VALUES(60,'V20 SE');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(538,107,60,'Xanh ',5890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(539,107,60,'Đen',5890000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(108,'Vivo V21 5G',1,9990000,5,'Sun, 24 Oct 2021 04:17:07 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(108,'Vivo V21 5G',9,9990000,3,'Thu, 29 Jul 2021 14:54:02 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1013,108,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-v21-5g-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1014,108,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-v21-5g-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1015,108,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-v21-13.jpg');
@@ -5040,7 +5040,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3259,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3260,108,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3261,108,33,'Chụp macro, Chụp góc rộng, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3262,108,34,'Hỗ trợ 5G, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(109,'Vivo X60 Pro 5G',1,19990000,2,'Mon, 27 Sep 2021 08:30:30 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(109,'Vivo X60 Pro 5G',9,19990000,3,'Fri, 10 Dec 2021 01:53:32 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1022,109,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-x60-pro-1_1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1023,109,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-x60-pro-3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1024,109,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-x60-pro-8.jpg');
@@ -5081,7 +5081,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3291,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3292,109,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3293,109,33,'Chụp macro, Chụp xóa phông, Chụp Zoom xa, Chống rung, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3294,109,34,'Hỗ trợ 5G, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(110,'Vivo Y12s (2021)',1,3290000,2,'Thu, 11 Mar 2021 04:30:59 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(110,'Vivo Y12s (2021)',9,3290000,5,'Fri, 25 Jun 2021 12:44:31 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1030,110,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y12s-162620-112633-600x600.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1031,110,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y12s.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3295,110,1,'6.5 inches');
@@ -5106,7 +5106,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3313,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3314,110,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3315,110,33,'Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3316,110,34,'Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(111,'Vivo Y20 (2021)',1,3990000,5,'Sun, 19 Dec 2021 22:43:59 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(111,'Vivo Y20 (2021)',9,3990000,2,'Mon, 22 Nov 2021 09:50:17 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1032,111,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y20_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1033,111,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y20_1__1.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3317,111,1,'6.5 inches');
@@ -5127,7 +5127,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3331,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3332,111,20,'Nhựa');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3333,111,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3334,111,33,'Chụp macro, Chụp xóa phông');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(112,'Vivo Y20',1,3990000,4,'Fri, 27 Aug 2021 22:13:30 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(112,'Vivo Y20',9,3990000,4,'Fri, 05 Nov 2021 18:41:44 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1034,112,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y20.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1035,112,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y20.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3335,112,1,'6.5 inches');
@@ -5156,7 +5156,7 @@ INSERT INTO capacities(id, name) VALUES(61,'Vivo Y20s');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(540,112,61,'original',4190000);
 INSERT INTO capacities(id, name) VALUES(62,'Vivo Y20');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(541,112,62,'original',3190000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(113,'Vivo V20 SE',1,7190000,4,'Sat, 01 May 2021 15:35:09 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(113,'Vivo V20 SE',9,7190000,2,'Thu, 06 May 2021 14:28:48 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1036,113,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637399143538220514_vivo-v20-se-den-1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1037,113,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/6/3/637399141340520661_vivo-v20-se-xanh-1.png');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3357,113,1,'6.39 inches');
@@ -5183,7 +5183,7 @@ INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(542,113,59,'
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(543,113,59,'Đen',6800000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(544,113,60,'Xanh ',5890000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(545,113,60,'Đen',5890000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(114,'Vivo Y72 5G',1,7990000,3,'Tue, 05 Jan 2021 17:32:52 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(114,'Vivo Y72 5G',9,7990000,0,'Fri, 26 Feb 2021 01:16:44 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1038,114,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y72.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1039,114,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y72-5g-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1040,114,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y72-5g-11.jpg');
@@ -5223,7 +5223,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3402,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3403,114,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3404,114,33,'Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3405,114,34,'Hỗ trợ 5G, Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(115,'Vivo V19',1,8990000,4,'Tue, 23 Nov 2021 02:49:07 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(115,'Vivo V19',9,8990000,2,'Fri, 07 May 2021 03:01:32 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1048,115,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-v19-_1.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1049,115,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-v19-_3.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1050,115,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-v19-_4.png');
@@ -5254,7 +5254,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3424,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3425,115,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3426,115,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3427,115,34,'Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(116,'Vivo Y53S',1,6990000,4,'Tue, 12 Oct 2021 11:11:36 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(116,'Vivo Y53S',9,6990000,4,'Tue, 28 Dec 2021 03:07:52 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1056,116,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo_y53s_blue_bg.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1057,116,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/d/o/download_1_9.png');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1058,116,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/5/1536-1024_7__2_1.jpg');
@@ -5298,7 +5298,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3453,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3454,116,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3455,116,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông, Chống rung');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3456,116,34,'Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(117,'Vivo Y51 2020',1,6290000,1,'Sun, 25 Jul 2021 10:46:39 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(117,'Vivo Y51 2020',9,6290000,5,'Mon, 27 Sep 2021 13:47:22 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1070,117,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y51-cty_2_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1071,117,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y51-cty_1_.jpg');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3457,117,1,'6.58 inches');
@@ -5323,7 +5323,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3475,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3476,117,32,'Giọt nước');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3477,117,33,'Chụp macro, Chụp góc rộng, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3478,117,34,'Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(118,'Vivo Y20S',1,4990000,4,'Wed, 07 Apr 2021 20:57:37 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(118,'Vivo Y20S',9,4990000,1,'Thu, 16 Sep 2021 21:15:47 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1072,118,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y20s.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1073,118,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/i/vivo-y20s.png');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3479,118,1,'6.5 inches');
@@ -5350,7 +5350,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3499,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3500,118,34,'Bảo mật vân tay');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(546,118,61,'original',4190000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(547,118,62,'original',3190000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(119,'OnePlus Nord CE 5G',1,8990000,4,'Wed, 16 Jun 2021 03:25:46 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(119,'OnePlus Nord CE 5G',10,8990000,3,'Fri, 23 Apr 2021 11:28:51 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1074,119,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/n/one_plus-1_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1075,119,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/5/1536-1024_8__2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1076,119,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/1/5/1536-1024_9__2_1.jpg');
@@ -5394,7 +5394,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3525,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3526,119,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3527,119,33,'Chụp macro, Chụp góc rộng');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3528,119,34,'Hỗ trợ 5G, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(120,'Oneplus Nord N10 5G',1,7990000,3,'Thu, 11 Feb 2021 10:26:41 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(120,'Oneplus Nord N10 5G',10,7990000,4,'Tue, 27 Jul 2021 08:55:11 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1089,120,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/n/oneplus-nord-n10-5g_2_.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1090,120,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/n/oneplus-nord-n10-5g.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1091,120,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/n/oneplus-nord-n10-5g-2-org-01.jpg');
@@ -5433,7 +5433,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3558,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3559,120,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3560,120,33,'Chụp góc rộng, Quay video 4K');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3561,120,34,'Hỗ trợ 5G, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(121,'OnePlus 8T 5G',1,18990000,2,'Tue, 26 Oct 2021 03:12:54 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(121,'OnePlus 8T 5G',10,18990000,4,'Thu, 03 Jun 2021 19:32:36 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1094,121,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/n/oneplus-8t-600x600-1-200x200.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1095,121,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/n/oneplus-8t-3.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1096,121,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/o/n/oneplus-8t-2.jpg');
@@ -5467,7 +5467,7 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3588,1
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3589,121,32,'Đục lỗ (Nốt ruồi)');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3590,121,33,'Chụp macro, Chụp xóa phông');
 INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3591,121,34,'Hỗ trợ 5G, Kháng nước, kháng bụi, Nhận diện khuôn mặt, Bảo mật vân tay');
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(122,'Nubia Red Magic 6',1,17990000,3,'Mon, 02 Aug 2021 08:16:30 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(122,'Nubia Red Magic 6',11,17990000,2,'Mon, 08 Feb 2021 22:17:45 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1097,122,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/red-magic-6-1.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1098,122,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/red-magic-6-2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1099,122,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/u/nubia-redmagic-6-11.jpg');
@@ -5516,7 +5516,7 @@ INSERT INTO capacities(id, name) VALUES(63,'Red Magic 6 Pro');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(548,122,63,'Bạc ',19990000);
 INSERT INTO capacities(id, name) VALUES(64,'Red Magic 6');
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(549,122,64,'Đen ',16990000);
-INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(123,'Nubia Red Magic 6 Pro',1,19990000,3,'Sat, 20 Mar 2021 22:16:47 GMT');
+INSERT INTO mobiles(id, full_name, brand_id, price, rating, created_at) VALUES(123,'Nubia Red Magic 6 Pro',11,19990000,4,'Wed, 09 Jun 2021 03:49:58 GMT');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1107,123,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/n/u/nubia-red-magic-6_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1108,123,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/red-magic-6-2_2.jpg');
 INSERT INTO pictures(id, imageable_id, imageable_type, link) VALUES(1109,123,'mobile','https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/r/e/red-magic-6-1_2.jpg');
@@ -5556,16 +5556,17 @@ INSERT INTO configurations(id, mobile_id, specification_id, value) VALUES(3658,1
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(550,123,63,'Bạc ',19990000);
 INSERT INTO options(id, mobile_id, capacity_id, name, price) VALUES(551,123,64,'Đen ',16990000);
 
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(1, 'amanville0', 'wg62gB7', 'Ashia Manville', '786 Fairfield Plaza', 'ed66839a-a270-40ff-af8b-c6dc3c451ecd', '294 882 5183', 'https://robohash.org/situtquam.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(2, 'cminette1', 'rnsyT5JKX', 'Celina Minette', '26 Marquette Junction', 'e4d5c96a-1b2c-4360-81c7-f828bd04f00a', '635 806 7158', 'https://robohash.org/velremid.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(3, 'mtogwell2', 'VBB08TBgQGdL', 'Mia Togwell', '3 Macpherson Pass', 'c3180005-fe5e-469b-ac36-1d0271a3f102', '516 953 2510', 'https://robohash.org/doloremomnisut.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(4, 'agatteridge3', 'otRQ9quzTY', 'Axel Gatteridge', '25 Moulton Place', 'd87ad31a-122d-4576-9954-631ee7030e85', '419 713 9013', 'https://robohash.org/nihilsuntvoluptatem.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(5, 'asquire4', 'FhwQSir', 'Ashton Squire', '43 Dayton Terrace', '28d88b69-a51c-4629-a78f-33da8cc505c2', '619 729 1739', 'https://robohash.org/ducimusodiototam.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(6, 'nghidetti5', 'I27Nrh2t9', 'Nolana Ghidetti', '9 Rutledge Trail', '06b8926d-06c3-4c1a-a3c1-f60de1dbf2c6', '891 625 4188', 'https://robohash.org/occaecatiisteaut.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(7, 'tovell6', 'ru6Ny8omPCg', 'Therine Ovell', '9 Welch Parkway', '4b00b599-a449-4c2e-a087-e69084e054ae', '800 454 2055', 'https://robohash.org/voluptatemnonet.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(8, 'jthomel7', 'nM72msOT', 'Joseph Thomel', '26 Sommers Hill', 'a9374091-958c-4943-a7b9-51f655c5b2a3', '586 677 8240', 'https://robohash.org/eumnecessitatibuset.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(9, 'rdedmam8', 'uailbW4f4Qo', 'Rosaleen Dedmam', '4 Steensland Terrace', '584cc3cf-3191-4409-ab5b-92e653d2a84c', '710 181 1668', 'https://robohash.org/nemoetvel.png?size=50x50&set=set1');
-INSERT INTO users (id, username, password, full_name, address, uid, phone_number, avatar) VALUES(10, 'ngannan9', 'DrOcaftMSct', 'Nanette Gannan', '987 Chive Way', '0fbab097-bed7-4c25-b6d5-d8168bf7e16e', '244 355 7061', 'https://robohash.org/aliquamsolutaoccaecati.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (1, 'amanville0', 'wg62gB7', 'Ashia Manville', '786 Fairfield Plaza', 'ed66839a-a270-40ff-af8b-c6dc3c451ecd', '294 882 5183', 'https://robohash.org/situtquam.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (2, 'cminette1', 'rnsyT5JKX', 'Celina Minette', '26 Marquette Junction', 'e4d5c96a-1b2c-4360-81c7-f828bd04f00a', '635 806 7158', 'https://robohash.org/velremid.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (3, 'mtogwell2', 'VBB08TBgQGdL', 'Mia Togwell', '3 Macpherson Pass', 'c3180005-fe5e-469b-ac36-1d0271a3f102', '516 953 2510', 'https://robohash.org/doloremomnisut.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (4, 'agatteridge3', 'otRQ9quzTY', 'Axel Gatteridge', '25 Moulton Place', 'd87ad31a-122d-4576-9954-631ee7030e85', '419 713 9013', 'https://robohash.org/nihilsuntvoluptatem.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (5, 'asquire4', 'FhwQSir', 'Ashton Squire', '43 Dayton Terrace', '28d88b69-a51c-4629-a78f-33da8cc505c2', '619 729 1739', 'https://robohash.org/ducimusodiototam.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (6, 'nghidetti5', 'I27Nrh2t9', 'Nolana Ghidetti', '9 Rutledge Trail', '06b8926d-06c3-4c1a-a3c1-f60de1dbf2c6', '891 625 4188', 'https://robohash.org/occaecatiisteaut.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (7, 'tovell6', 'ru6Ny8omPCg', 'Therine Ovell', '9 Welch Parkway', '4b00b599-a449-4c2e-a087-e69084e054ae', '800 454 2055', 'https://robohash.org/voluptatemnonet.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (8, 'jthomel7', 'nM72msOT', 'Joseph Thomel', '26 Sommers Hill', 'a9374091-958c-4943-a7b9-51f655c5b2a3', '586 677 8240', 'https://robohash.org/eumnecessitatibuset.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (9, 'rdedmam8', 'uailbW4f4Qo', 'Rosaleen Dedmam', '4 Steensland Terrace', '584cc3cf-3191-4409-ab5b-92e653d2a84c', '710 181 1668', 'https://robohash.org/nemoetvel.png?size=50x50&set=set1');
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (10, 'ngannan9', 'DrOcaftMSct', 'Nanette Gannan', '987 Chive Way', '0fbab097-bed7-4c25-b6d5-d8168bf7e16e', '244 355 7061', 'https://robohash.org/aliquamsolutaoccaecati.png?size=50x50&set=set1');
+
 
 INSERT INTO orders(id, user_id, state, created_at) VALUES(1, 1, 'waiting to confirm', 'Wed, 12 May 2021 21:54:55 GMT');
 INSERT INTO orders(id, user_id, state, created_at) VALUES(2, 2, 'delivering', 'Thu, 05 Aug 2021 09:55:22 GMT');
@@ -5597,3 +5598,14 @@ INSERT INTO cart_details(id, cart_id, option_id) VALUES(5, 2, 231);
 
 INSERT INTO cart_details(id, cart_id, option_id) VALUES(6, 3, 534);
 INSERT INTO cart_details(id, cart_id, option_id) VALUES(7, 3, 494);
+
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (1, 1, 12, 'good', 5, '1/2/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (2, 2, 23, 'normal thing', 3, '10/14/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (3, 3, 121, ':|', 1, '4/16/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (4, 3, 56, 'so sad', 4, '10/18/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (5, 5, 67, 'It&quot;s look good', 5, '1/2/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (6, 2, 54, 'fast delivery', 4, '2/18/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (7, 5, 34, 'normal thing', 4, '8/26/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (8, 6, 54, 'excellent', 5, '5/30/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (9, 4, 39, 'perfect', 5, '4/4/2021');
+insert into comments (id, user_id, mobile_id, body, rating, created_at) values (10, 7, 45, 'nothing to say', 4, '2/2/2021');
