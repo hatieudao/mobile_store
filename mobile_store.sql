@@ -1,7 +1,7 @@
 --\i D:/web/mobile_store/mobile_store.sql
--- DROP DATABASE mobile_store;
--- DROP SCHEMA public CASCADE;
--- CREATE SCHEMA public;
+DROP DATABASE mobile_store;
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
 CREATE DATABASE mobile_store;
 \c mobile_store;
 CREATE TABLE "users" (
