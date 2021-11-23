@@ -28,32 +28,33 @@ function initModels(sequelize) {
   var specifications = _specifications(sequelize, DataTypes);
   var users = _users(sequelize, DataTypes);
 
-  mobiles.belongsTo(brands, { as: "brand", foreignKey: "brand_id" });
-  brands.hasMany(mobiles, { as: "mobiles", foreignKey: "brand_id" });
-  options.belongsTo(capacities, { as: "capacity", foreignKey: "capacity_id" });
-  capacities.hasMany(options, { as: "options", foreignKey: "capacity_id" });
-  cart_details.belongsTo(cart, { as: "cart", foreignKey: "cart_id" });
-  cart.hasMany(cart_details, { as: "cart_details", foreignKey: "cart_id" });
-  comments.belongsTo(mobiles, { as: "mobile", foreignKey: "mobile_id" });
-  mobiles.hasMany(comments, { as: "comments", foreignKey: "mobile_id" });
-  configurations.belongsTo(mobiles, { as: "mobile", foreignKey: "mobile_id" });
-  mobiles.hasMany(configurations, { as: "configurations", foreignKey: "mobile_id" });
-  options.belongsTo(mobiles, { as: "mobile", foreignKey: "mobile_id" });
-  mobiles.hasMany(options, { as: "options", foreignKey: "mobile_id" });
-  pictures.belongsTo(mobiles, { as: "imageable", foreignKey: "imageable_id" });
-  mobiles.hasMany(pictures, { as: "pictures", foreignKey: "imageable_id" });
-  order_details.belongsTo(options, { as: "option", foreignKey: "option_id" });
-  options.hasMany(order_details, { as: "order_details", foreignKey: "option_id" });
-  order_details.belongsTo(orders, { as: "order", foreignKey: "order_id" });
-  orders.hasMany(order_details, { as: "order_details", foreignKey: "order_id" });
-  configurations.belongsTo(specifications, { as: "specification", foreignKey: "specification_id" });
-  specifications.hasMany(configurations, { as: "configurations", foreignKey: "specification_id" });
-  cart.belongsTo(users, { as: "user", foreignKey: "user_id" });
-  users.hasMany(cart, { as: "carts", foreignKey: "user_id" });
-  comments.belongsTo(users, { as: "user", foreignKey: "user_id" });
-  users.hasMany(comments, { as: "comments", foreignKey: "user_id" });
-  orders.belongsTo(users, { as: "user", foreignKey: "user_id" });
-  users.hasMany(orders, { as: "orders", foreignKey: "user_id" });
+  mobiles.belongsTo(brands, { as: "brand", foreignKey: "brand_id"});
+  brands.hasMany(mobiles, { as: "mobiles", foreignKey: "brand_id"});
+  options.belongsTo(capacities, { as: "capacity", foreignKey: "capacity_id"});
+  capacities.hasMany(options, { as: "options", foreignKey: "capacity_id"});
+  cart_details.belongsTo(cart, { as: "cart", foreignKey: "cart_id"});
+  cart.hasMany(cart_details, { as: "cart_details", foreignKey: "cart_id"});
+  comments.belongsTo(mobiles, { as: "mobile", foreignKey: "mobile_id"});
+  mobiles.hasMany(comments, { as: "comments", foreignKey: "mobile_id"});
+  configurations.belongsTo(mobiles, { as: "mobile", foreignKey: "mobile_id"});
+  mobiles.hasMany(configurations, { as: "configurations", foreignKey: "mobile_id"});
+  options.belongsTo(mobiles, { as: "mobile", foreignKey: "mobile_id"});
+  mobiles.hasMany(options, { as: "options", foreignKey: "mobile_id"});
+  pictures.belongsTo(mobiles, { as: "mobile", foreignKey: "mobile_id"});
+  mobiles.hasMany(pictures, { as: "pictures", foreignKey: "mobile_id"});
+  order_details.belongsTo(options, { as: "option", foreignKey: "option_id"});
+  options.hasMany(order_details, { as: "order_details", foreignKey: "option_id"});
+  order_details.belongsTo(orders, { as: "order", foreignKey: "order_id"});
+  orders.hasMany(order_details, { as: "order_details", foreignKey: "order_id"});
+  configurations.belongsTo(specifications, { as: "specification", foreignKey: "specification_id"});
+  specifications.hasMany(configurations, { as: "configurations", foreignKey: "specification_id"});
+  cart.belongsTo(users, { as: "user", foreignKey: "user_id"});
+  users.hasMany(cart, { as: "carts", foreignKey: "user_id"});
+  comments.belongsTo(users, { as: "user", foreignKey: "user_id"});
+  users.hasMany(comments, { as: "comments", foreignKey: "user_id"});
+  orders.belongsTo(users, { as: "user", foreignKey: "user_id"});
+  users.hasMany(orders, { as: "orders", foreignKey: "user_id"});
+
   return {
     brands,
     capacities,

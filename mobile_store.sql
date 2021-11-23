@@ -93,8 +93,7 @@ CREATE TABLE "brands" (
 
 CREATE TABLE "pictures" (
   "id" SERIAL PRIMARY KEY,
-  "imageable_id" integer NOT NULL,
-  "imageable_type" varchar(10) NOT NULL,
+  "mobile_id" integer NOT NULL,
   "link" text NOT NULL
 );
 
@@ -118,7 +117,7 @@ ALTER TABLE "comments" ADD CONSTRAINT "fk_comments_mobiles" FOREIGN KEY ("mobile
 
 ALTER TABLE "mobiles" ADD CONSTRAINT "fk_mobiles_brands" FOREIGN KEY ("brand_id") REFERENCES "brands" ("id");
 
-ALTER TABLE "pictures" ADD CONSTRAINT "fk_pictures_mobiles" FOREIGN KEY ("imageable_id") REFERENCES "mobiles" ("id");
+ALTER TABLE "pictures" ADD CONSTRAINT "fk_pictures_mobiles" FOREIGN KEY ("mobile_id") REFERENCES "mobiles" ("id");
 
 ALTER TABLE "options" ADD FOREIGN KEY ("mobile_id") REFERENCES "mobiles" ("id");
 

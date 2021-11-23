@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     state: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.STRING(30),
       allowNull: true
     },
     created_at: {

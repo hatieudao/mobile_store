@@ -7,17 +7,13 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       primaryKey: true
     },
-    imageable_id: {
+    mobile_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'mobiles',
         key: 'id'
       }
-    },
-    imageable_type: {
-      type: DataTypes.STRING(10),
-      allowNull: false
     },
     link: {
       type: DataTypes.TEXT,
