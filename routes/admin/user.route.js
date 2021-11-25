@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function (req, res, next) {
-  res.render('admin/user/userList', { title: 'User List', layout: 'admin/layout.hbs' });
-});
+const userController = require('../../controllers/admin/admin.user.controller');
+
+router.get('/',userController.userList);
 
 router.get('/:userId', function (req, res, next) {
   const id = req.params.userId

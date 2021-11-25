@@ -1,89 +1,195 @@
 <div class="container">
-    <div class="admin-product-add-item">
-        <header class="admin-product-add-item-header">
-            <h1 class="row py-4 text-primary admin-product-add-item-header__title">
+    <div class="admin-container-content">
+        <header class="admin-container-content-header">
+            <h1 class="row py-4 text-primary admin-container-content-header__title">
                 Thêm sản phẩm
             </h1>
         </header>
         <div class="">
-            <div class="row">
-                <div class="col">
-                    <button type="button" class="btn btn-primary" data-toggle="modal">
-                        <i class="fas fa-check-circle"></i>
-                        Thêm
-                    </button>
+            <div class="">
+                <div class="row justify-content-end">
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                            <i class="fa fa-pencil"></i>
+                            Thêm mới
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="py-4 admin-product-add-item">
-                <div class="row py-2">
-                    <div class="col-sm-2">
-                        Sản phẩm
-                    </div>
-                    <div class="col-sm-10">
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Thương hiệu
+                    </h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
                         <div class="row">
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="ID">
+                            <div class="col-lg-3 py-2">
+                                Tên thương hiệu
                             </div>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" placeholder="Tên sản phẩm">
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" type="text" placeholder="Tên thương hiệu">
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="row py-2">
-                    <div class="col-sm-2">
-                        Thương hiệu
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="ID">
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="d-flex justify-content-between">
-                                    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Thương hiệu">
-                                    <div class="">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <div class="dropdown-item" href="#">Samsung</div>
-                                            <div class="dropdown-item" href="#">Apple</div>
-                                        </div>
-                                    </div>
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Configuration
+                    </h2>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-lg-3 py-2">
+                                    Giá trị
+                                </div>
+                                <div class="col-lg-9 py-2">
+                                    <input class="form-control shadow-none" type="text" placeholder="Tên thương hiệu">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-sm-2">
-                        Giá
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="Giá mua">
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="Giá bán">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-sm-2">
-                        Mô tả chung về sản phẩm
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="input-group">
-                            <textarea class="form-control admin-product-add-item-input-description" aria-label="With textarea">
-                                
-                            </textarea>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <table class="table table-bordered py-2 admin-add-propertye-table">
+                                <thead class="admin-add-propertye-table-thead">
+                                    <tr>
+                                        <th>
+                                            Specification
+                                        </th>
+                                        <th>
+                                            Giá trị
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="admin-add-propertye-table-tbody">
+                                    <tr>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" id="">
+                                        </td>
+                                        <td>Công nghệ màn hình</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" id="">
+                                        </td>
+                                        <td>Công nghệ màn hình</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" id="">
+                                        </td>
+                                        <td>Công nghệ màn hình</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" id="">
+                                        </td>
+                                        <td>Công nghệ màn hình</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" id="">
+                                        </td>
+                                        <td>Công nghệ màn hình</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" id="">
+                                        </td>
+                                        <td>Công nghệ màn hình</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Options
+                    </h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-3 py-2">
+                                Giá trị
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" type="text" placeholder="Tên thương hiệu">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 py-2">
+                                Giá
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" type="text" placeholder="Tên thương hiệu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <table class="table table-bordered py-2 admin-add-propertye-table">
+                            <thead class="admin-add-propertye-table-thead">
+                                <tr>
+                                    <th>
+                                        Capticities
+                                    </th>
+                                    <th>
+                                        Giá trị
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="admin-add-propertye-table-tbody">
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" id="">
+                                    </td>
+                                    <td>Công nghệ màn hình</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" id="">
+                                    </td>
+                                    <td>Công nghệ màn hình</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" id="">
+                                    </td>
+                                    <td>Công nghệ màn hình</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" id="">
+                                    </td>
+                                    <td>Công nghệ màn hình</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" id="">
+                                    </td>
+                                    <td>Công nghệ màn hình</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" id="">
+                                    </td>
+                                    <td>Công nghệ màn hình</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-
     </div>
 </div>

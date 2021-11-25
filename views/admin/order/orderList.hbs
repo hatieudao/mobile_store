@@ -1,372 +1,215 @@
-                <div class="container">
-                    <div class="admin-order">
-                        <header class="admin-order-header">
-                            <h1 class="row py-4 text-primary admin-order-header__title">
-                                Danh sách đơn hàng
-                            </h1>
-
-                            <div class="row admin-order-header-filter">
-                                <div class="col-3">
-                                    <div class="d-flex justify-content-between">
-                                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                        <div class="">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Năm</button>
-                                            <div class="dropdown-menu">
-                                                <div class="dropdown-item" href="#">2020</div>
-                                                <div class="dropdown-item" href="#">2021</div>
-                                            </div>
-                                        </div>
-                                    </div>
+<div class="container">
+    <div class="admin-container-content">
+        <header class="admin-container-content-header">
+            <h1 class="row py-4 text-primary admin-container-content-header__title">
+                Danh sách đơn hàng
+            </h1>
+        </header>
+        <div class="row py-4">
+            <div class="col-sm-12">
+                <div class="row align-items-start admin-container-content-filter">
+                    <div class="col-sm-10">
+                        <div class="row pb-2">
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID">
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID khách hàng">
                                 </div>
-                                <div class="col-3">
-                                    <div class="d-flex justify-content-between">
-                                        <input type="text" class="form-control" placeholder="Tên khách hàng">
-                                    </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên khách hàng">
                                 </div>
-                                <div class="col-3">
-                                    <div class="d-flex justify-content-between">
-                                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                                        <div class="">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sản phẩm</button>
-                                            <div class="dropdown-menu">
-                                                <div class="dropdown-item" href="#">Galaxy</div>
-                                                <div class="dropdown-item" href="#">Iphone X</div>
-                                            </div>
+                            </div>
+                        </div>
+                        <div class="row pb-2">
+                            <div class="col-sm-3 d-flex align-items-center">
+                                Bắt đầu từ
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Ngày">
+                                    <div class="">
+                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-item" href="#">Samsung</div>
+                                            <div class="dropdown-item" href="#">Apple</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </header>
-                        <div class="row py-4">
-                            <table class="table table-striped admin-order-table">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            ID
-                                        </th>
-
-                                        <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            Tên người mua
-                                        </th>
-                                        <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            Số lượng
-                                        </th>
-                                        <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            Thời gian
-                                        </th>
-                                        <th>
-                                            Tổng tiền
-                                        </th>
-                                        <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            Xem chi tiết
-                                        </th>
-                                        <th>
-                                            Tình trạng
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>6</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    <tr>
-                                        <td>OD0001</td>
-                                        <td>Trần Ngọc Sang</td>
-                                        <td>5</td>
-                                        <td>15:00-10/11/2021</td>
-                                        <td>
-                                            <span class="text-info">1.000.000đ</span>
-                                        </td>
-                                        <td> 
-                                            <a href="/admin/order/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            Chưa xử lý
-                                        </td>    
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
+                            <div class="col-sm-3">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tháng">
+                                    <div class="">
+                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-item" href="#">Samsung</div>
+                                            <div class="dropdown-item" href="#">Apple</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Năm">
+                                    <div class="">
+                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-item" href="#">Samsung</div>
+                                            <div class="dropdown-item" href="#">Apple</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <footer class="row justify-content-center admin-order-footer">
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination justify-content-center">
-                                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                              </nav>
-                        </footer>
+                        <div class="row pb-2">
+                            <div class="col-sm-3 d-flex align-items-center">
+                                Đến
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Ngày">
+                                    <div class="">
+                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-item" href="#">Samsung</div>
+                                            <div class="dropdown-item" href="#">Apple</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tháng">
+                                    <div class="">
+                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-item" href="#">Samsung</div>
+                                            <div class="dropdown-item" href="#">Apple</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Năm">
+                                    <div class="">
+                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-item" href="#">Samsung</div>
+                                            <div class="dropdown-item" href="#">Apple</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pb-2">
+                            <div class="col-sm-4">
+                                <div class="d-flex justify-content-between">
+                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tình trạng">
+                                    <div class="">
+                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-item" href="#">Chưa xử lý</div>
+                                            <div class="dropdown-item" href="#">Chờ vận chuyển</div>
+                                            <div class="dropdown-item" href="#">Đang vận chuyển</div>
+                                            <div class="dropdown-item" href="#">Đã nhận</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <button id="" type="button" class="btn btn-primary left"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="" id="">
+            <label>
+                Hiển thị
+                <select name="" class="">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="-1">Tất cả</option>
+                </select>
+                dòng
+            </label>
+        </div>
+        <div class="row py-4">
+            <table class="table table-bordered admin-table">
+                <thead class="admin-table-thead">
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        ID Khách hàng
+                    </th>
+                    <th>
+                        Username
+                    </th>
+                    <th>
+                        Tên khách hàng
+                    </th>
+                    <th>
+                        Thời gian
+                    </th>
+                    <th>
+                        Xem chi tiết
+                    </th>
+                    <th>
+                        Tình trạng
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="admin-table-tbody">
+                     {{#each orders}}
+                    <tr>
+                        <td>
+                            {{id}}
+                        </td>
+                         <td>
+                            {{user_id}}
+                        </td>
+                         <td>
+                            {{user.username}}
+                        </td>
+                         <td>
+                            {{user.full_name}}
+                        </td>
+                         <td>
+                            {{created_at}}
+                        </td>
+                        <td>
+                            <a href="/:orderItemOD0001" class="link-primary text-primary text-decoration-none">
+                                Chi tiết
+                            </a>
+                        </td>
+                         <td>
+                            {{state}}
+                        </td>
+                        
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <footer class="row justify-content-center admin-order-footer">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</div>

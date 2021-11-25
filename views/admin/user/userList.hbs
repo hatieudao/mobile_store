@@ -1,482 +1,154 @@
                 <div class="container">
-                    <div class="admin-user">
-                        <header class="admin-order-header">
-                            <h1 class="row py-4 text-primary admin-order-header__title">
-                                Danh sách sản phẩm
+                    <div class="admin-container-content">
+                        <header class="admin-container-content-header">
+                            <h1 class="row py-2 text-primary admin-container-content-header__title">
+                                Danh sách người dùng
                             </h1>
                         </header>
                         <div class="row py-4">
                             <div class="col-sm-8">
-                                <div class="row align-items-stretch admin-order-header-filter ">
+                                <div class="row align-items-start admin-container-content-filter">
                                     <div class="col-sm-10">
-                                        <div class="row">
+                                        <div class="row pb-2">
                                             <div class="col-sm-4">                                        
-                                                <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="ID">                                        
-                                            </div>
-                                            <div class="col-sm-4">                                        
-                                                <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Tên">                                        
+                                                <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID">                                        
                                             </div>
                                             <div class="col-sm-4">
-                                                <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Số điện thoại">                                        
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-4">                                        
-                                                <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Username">                                        
-                                            </div>
-                                            <div class="col-sm-4">                                        
-                                                <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Email">                                        
+                                                <div class="d-flex justify-content-between">
+                                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên">
+                                                    <div class="">
+                                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <div class="dropdown-item" href="#">Galaxy</div>
+                                                            <div class="dropdown-item" href="#">Iphone X</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="col-sm-4">
-                                                <select class="form-select">
-                                                    <option value="1" selected>Tất cả</option>
-                                                    <option value="2">Khóa</option>
-                                                    <option value="3">Không khóa</option>
-                                                </select>                                                
+                                                <div class="d-flex justify-content-between">
+                                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Thương hiệu">
+                                                    <div class="">
+                                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <div class="dropdown-item" href="#">Samsung</div>
+                                                            <div class="dropdown-item" href="#">Apple</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!-- <div class="row pb-2">
+                                            <div class="col-sm-4">                                        
+                                                <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID">                                        
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="d-flex justify-content-between">
+                                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên">
+                                                    <div class="">
+                                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                                        <div class="dropdown-menu">
+                                                            <div class="dropdown-item" href="#">Galaxy</div>
+                                                            <div class="dropdown-item" href="#">Iphone X</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="d-flex justify-content-between">
+                                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Thương hiệu">
+                                                    <div class="">
+                                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                                        <div class="dropdown-menu">
+                                                            <div class="dropdown-item" href="#">Samsung</div>
+                                                            <div class="dropdown-item" href="#">Apple</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
                                     </div>
                                     <div class="col-sm-2">
-                                        <button id="" type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                        <button id="" type="button" class="btn btn-primary left"><i class="fa fa-search"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4 text-center">
-                                <button type="button" class="btn btn-warning" data-toggle="modal">
-                                    <i class="fas fa-lock"></i>
-                                    Khóa/Mở khóa
-                                </button>
-                                <button type="button" class="btn btn-danger">
-                                    <i class="fa fa-times-circle"></i>
-                                    Xóa
-                                </button>
+                                    <a class="" href="/product/productAddItem.html">
+                                        <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                                            <i class="fa fa-pencil"></i>
+                                            Thêm mới
+                                        </button>
+                                    </a>
+                                    <button type="button" class="btn btn-danger shadow-none">
+                                        <i class="fa fa-times-circle"></i>
+                                        Xóa
+                                    </button>
                             </div>
-                        </div>   
+                        </div>    
+                        <div class="" id="">
+                            <label>
+                                Hiển thị 
+                                <select name="" class="">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="-1">Tất cả</option>
+                                </select> 
+                                dòng
+                            </label>
+                        </div>
                         <div class="row py-4">
-                            <table class="table table-striped admin-user-table">
-                                <thead class="thead-dark">
+                            <table class="table table-bordered admin-table">
+                                <thead class="admin-table-thead">
                                     <tr>
                                         <th>
                                             Chọn
                                         </th>
                                         <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            ID
+                                            ID  
                                         </th>
 
                                         <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            Tên
-                                        </th>
-                                        <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
                                             Username
                                         </th>
                                         <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
+                                            Tên
+                                        </th>
+                                        <th>
                                             Số điện thoại
                                         </th>
                                         <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            Email
-                                        </th>
-                                        <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
                                             Ngày tạo
                                         </th>
                                         <th>
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
-                                            Tình trạng
-                                        </th>
-                                        <td> 
-                                            <button class="btn">
-                                                <i class="fas fa-sort"></i>
-                                            </button>
                                             Xem chi tiết
-                                        </td>
+                                        </th>
+                                        <th>
+                                            Ảnh
+                                        </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="admin-table-tbody">
+                                    {{#each users}}
                                     <tr>
                                         <td>
                                             <input class="form-check-input" type="checkbox" id="">
                                         </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
+                                        <td>{{id}}</td>
+                                        <td>{{username}}</td>
+                                        <td>{{full_name}}</td>
+                                        <td>{{phone_number}}</td>
+                                        <td>{{created_at}}</td>
                                         <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
+                                            <a href="/:userKH0001">
                                                 Chi tiết
                                             </a>
                                         </td>
-                                    </tr>
-                                    <tr>
                                         <td>
-                                            <input class="form-check-input" type="checkbox" id="">
+                                            <img src="{{avatar}}" alt="" class="">
                                         </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>KH0001</td>
-                                        <td>Nguyễn Đình Hiệu</td>
-                                        <td>dinhhieu123</td>
-                                        <td>1223424</td>
-                                        <td>dh@gmail.com</td>
-                                        <td>
-                                            20/9/2021
-                                        </td>
-                                        <td>
-                                            Không khóa
-                                        </td>
-                                        <td>
-                                            <a href="/admin/user/001" class="link-primary text-primary text-decoration-none">
-                                                Chi tiết
-                                            </a>
-                                        </td>
+                                        {{/each}}
                                     </tr>
                                 </tbody>
                             </table>
