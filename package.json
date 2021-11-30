@@ -17,8 +17,8 @@
     "sequelize": "^6.12.0-alpha.1"
   },
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon --inspect index",
+    "start": "node ./bin/www",
+    "dev": "nodemon --inspect ./bin/www",
     "lint": "yarn run eslint src --ignore-path .gitignore",
     "lint:fix": "yarn run eslint --fix",
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
