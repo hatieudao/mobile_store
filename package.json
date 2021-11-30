@@ -27,5 +27,8 @@
     "eslint": "^8.2.0",
     "nodemon": "^2.0.14",
     "sequelize-auto": "^0.8.5"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
