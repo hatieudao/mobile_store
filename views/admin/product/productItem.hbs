@@ -1,0 +1,235 @@
+<div class="container">
+        <div class="admin-container-content">
+        <header class="admin-container-content-header">
+            <h1 class="row py-4 text-primary admin-container-content-header__title">
+               Sản phẩm
+            </h1>
+        </header>
+        <form name="deleteProductForm" id="deleteProductForm" action="/admin/product/{{product.id}}/delete">
+        </form>
+        <form class="" action="/admin/product/{{product.id}}/update">
+            <div class="">
+                <div class="row justify-content-end">
+                    <div class="col-sm-4 text-center">
+                        <button type="submit" class="btn btn-success shadow-none" data-toggle="modal">
+                            <i class="fa fa-pencil"></i>
+                            Chỉnh sửa
+                        </button>
+                        <button type="submit" class="btn btn-danger shadow-none" form="deleteProductForm">
+                            <i class="fa fa-times-circle"></i>
+                            Xóa
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Sản phẩm {{product.id}}
+                    </h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Tên sản phẩm
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="fullName" type="text" placeholder="Tên sản phẩm" value="{{product.full_name}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Giá
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="price" type="number" step="0.01" min="0" placeholder="Giá" value="{{product.price}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Rating
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="rating" type="number" step="0.01" min="0" placeholder="Rating" value="{{product.rating}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Ngày tạo
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="rating" step="0.01" min="0" placeholder="Ngày tạo" value="{{product.created_at}}" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Ngày cập nhập
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="rating" step="0.01" min="0" placeholder="Ngày cập nhập" value="{{product.updated_at}}" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Thương hiệu
+                    </h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Tên thương hiệu
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="brandName" type="text" placeholder="Tên thương hiệu" value="{{product.brand.name}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+         <div>
+             <div class="">
+                 <div class="row justify-content-center">
+                     <h2 class="row py-4 text-secondary">
+                         Configuration
+                     </h2>
+                 </div>
+                 <a class="" href="/admin/product/{{product.id}}/addConfigurationPage">
+                     <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                         <i class="fa fa-pencil"></i>
+                         Thêm mới
+                     </button>
+                 </a>
+                 <div class="row justify-content-center">
+                     <div class="col-lg-8">
+                         <div class="row align-items-center">
+                            <div class="row py-4">
+                                     <table class="table table-bordered admin-table">
+                                         <thead class="admin-table-thead">
+                                         <tr>
+                                             <th>
+                                                 ID
+                                             </th>
+                                             <th>
+                                                 Giá trị
+                                             </th>
+                                             <th>
+                                                Specification
+                                             </th>
+                                         </tr>
+                                         </thead>
+                                         <tbody class="admin-table-tbody">
+                                         {{#each configurations}}
+                                             <tr>
+                                                 <td>{{id}}</td>
+                                                 <td>{{value}}</td>
+                                                 <td>{{specification.name}}</td>
+                                             </tr>
+                                         {{/each}}
+                                         </tbody>
+                                     </table>
+                     </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Option
+                    </h2>
+                </div>
+                <a class="" href="/admin/product/{{product.id}}/addOptionPage">
+                    <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                        <i class="fa fa-pencil"></i>
+                        Thêm mới
+                    </button>
+                </a>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="row py-4">
+                                <table class="table table-bordered admin-table">
+                                    <thead class="admin-table-thead">
+                                    <tr>
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Tên
+                                        </th>
+                                        <th>
+                                            Giá
+                                        </th>
+                                        <th>
+                                            Capacity
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="admin-table-tbody">
+                                    {{#each options}}
+                                        <tr>
+                                            <td>{{id}}</td>
+                                            <td>{{name}}</td>
+                                            <td>{{price}}</td>
+                                            <td>{{capacity.name}}</td>
+                                        </tr>
+                                    {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Pictures
+                    </h2>
+                </div>
+                <a class="" href="/admin/product/{{product.id}}/addPicturePage">
+                    <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                        <i class="fa fa-pencil"></i>
+                        Thêm mới
+                    </button>
+                </a>
+                <div class="border mt-4 p-4" style="border-radius: 10px; border-color: 1px #ccc; ">
+                    <div class="row justify-content-start mt-4">
+                            {{#each pictures}}
+                            <div class="col-lg-1 col-md-3 col-sm-6 mb-4">
+                                <img src="{{link}}" style="width: 80%"/>
+                            </div>
+                            {{/each}}
+
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
+
+

@@ -7,14 +7,20 @@
     --admin-sidebar-widtht: 250px;
 }
 
-table{
-    border: 1px solid #ccc;
+.admin-table{
+    border-color: #d0d8e0;
+    background-color: var(--white-color);
 }
 
+.admin-table-thead{
+    background-color: #ADD8E6;
+
+}
 th, td {
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
 }
+
 
 .pagination{
     padding: 10px;
@@ -28,4 +34,84 @@ th, td {
 
 td img{
     width: 50px;
+}
+
+
+.admin-content{
+    background-color: #dcdbe0;
+}
+
+.admin-container{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: #dcdbe0;
+}
+
+.admin-container-content{
+    border-radius: 10px;
+    background-color: var(--white-color);
+    padding: 64px;
+}
+
+.admin-container-content.admin-add-product{
+    width: 600px;
+    max-width: 100%;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    margin: 100px auto;
+    padding: 80px;
+}
+
+.admin-add-propertye-table{
+    border-color: #d0d8e0;
+    background-color: var(--white-color);
+}
+
+.admin-add-propertye-table-thead{
+    background-color: #ADD8E6;
+}
+
+.admin-add-propertye-table-tbody{
+
+}
+
+
+.admin-add-configuration-table{
+    border-color: #d0d8e0;
+    background-color: var(--white-color);
+}
+
+.admin-add-configuration-table-thead{
+    background-color: #ADD8E6;
+}
+
+.admin-add-configuration-table-tbody{
+
+}
+
+
+.admin-add-option-table{    
+    border-color: #d0d8e0;
+    background-color: var(--white-color);    
+}
+
+.admin-add-option-table-thead{
+    background-color: #ADD8E6;    
+}
+
+.admin-add-option-table-tbody{
+    
+}
+
+.admin-add-image-table{    
+    border-color: #d0d8e0;
+    background-color: var(--white-color);    
+}
+
+.admin-add-image-table-thead{
+    background-color: #ADD8E6;    
+}
+
+.admin-add-image-table-tbody{
+    
 }

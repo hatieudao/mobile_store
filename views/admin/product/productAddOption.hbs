@@ -1,0 +1,64 @@
+<form class="container" id="" action="/admin/product/{{producId}}/addOption">
+    <div class="admin-container-content">
+        <header class="admin-container-content-header">
+            <h1 class="row py-4 text-primary admin-container-content-header__title">
+                Option
+            </h1>
+        </header>
+        <div class="">
+            <div class="">
+                <div class="row justify-content-end">
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-primary shadow-none" data-toggle="modal">
+                            <i class="fa fa-pencil"></i>
+                            Thêm mới
+                        </button>
+                        <a href="/admin/product/{{producId}}">
+                            <button type="button" class="btn btn-success shadow-none" data-toggle="modal">
+                                Quay về
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Tên
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="name" type="text" placeholder="Giá trị" value="{{name}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Giáo
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="price" type="text" placeholder="Giá" value="{{price}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Capacity
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="capacityName" type="text" placeholder="Capacity" value="{{capacityName}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
