@@ -1,89 +1,258 @@
-<div class="container">
-    <div class="admin-product-add-item">
-        <header class="admin-product-add-item-header">
-            <h1 class="row py-4 text-primary admin-product-add-item-header__title">
+<form class="container" id="addProductForm" action="/admin/product/add">
+    <div class="admin-container-content">
+        <header class="admin-container-content-header">
+            <h1 class="row py-4 text-primary admin-container-content-header__title">
                 Thêm sản phẩm
             </h1>
         </header>
         <div class="">
-            <div class="row">
-                <div class="col">
-                    <button type="button" class="btn btn-primary" data-toggle="modal">
-                        <i class="fas fa-check-circle"></i>
-                        Thêm
-                    </button>
+            <div class="">
+                <div class="row justify-content-end">
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-primary shadow-none" data-toggle="modal">
+                            <i class="fa fa-pencil"></i>
+                            Thêm mới
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="py-4 admin-product-add-item">
-                <div class="row py-2">
-                    <div class="col-sm-2">
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
                         Sản phẩm
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="ID">
+                    </h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Tên sản phẩm
                             </div>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" placeholder="Tên sản phẩm">
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="fullName" type="text" placeholder="Tên sản phẩm">
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="row py-2">
-                    <div class="col-sm-2">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Giá
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="price" type="number" step="0.01" min="0" placeholder="Giá"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Rating
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="rating" type="number" step="0.01" min="0" placeholder="Rating"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
                         Thương hiệu
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="ID">
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="d-flex justify-content-between">
-                                    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Thương hiệu">
-                                    <div class="">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu">
-                                            <div class="dropdown-item" href="#">Samsung</div>
-                                            <div class="dropdown-item" href="#">Apple</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </h2>
                 </div>
-                <div class="row py-2">
-                    <div class="col-sm-2">
-                        Giá
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="Giá mua">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Tên thương hiệu
                             </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="Giá bán">
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="brandName" type="text" placeholder="Tên thương hiệu">
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-2">
-                    <div class="col-sm-2">
-                        Mô tả chung về sản phẩm
-                    </div>
-                    <div class="col-sm-10">
-                        <div class="input-group">
-                            <textarea class="form-control admin-product-add-item-input-description" aria-label="With textarea">
-                                
-                            </textarea>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            {{!-- <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Configuration
+                    </h2>
+                    <div class="row py-4 justify-content-center">
+                        <div class="col-lg-8 d-flex justify-content-end">
+                            <button type="button" id="addNewConfigurationRowBtn" class="btn btn-success shadow-none" data-toggle="modal">
+                                <i class="fa fa-pencil"></i>
+                                Thêm Dòng
+                            </button>
+                            <button type="button" id="deleteNewConfigurationRowBtn" class="btn btn-danger shadow-none" data-toggle="modal">
+                                <i class="fa fa-pencil"></i>
+                                Xóa dòng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <table class="table table-bordered admin-add-configuration-table">
+                                <thead class="admin-add-configuration-table-thead">
+                                    <tr>
+                                        <th>
+                                            Values
+                                        </th>
+                                        <th>
+                                            Specification
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-add-configuration-row-list" class="admin-add-configuration-table-tbody">
+                                    <!-- <tr>
+                                        <td>
+                                            <input class="form-control shadow-none" name="configurationValue0" type="text" placeholder="Nhập configuration">
+                                        </td>
+                                        <td>
+                                            <input class="form-control shadow-none" name="specification0" type="text" placeholder="Nhập Specification">
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Option
+                    </h2>
+                    <div class="row py-4 justify-content-center">
+                        <div class="col-lg-8 d-flex justify-content-end">
+                            <button type="button" id="addNewOptionRowBtn" class="btn btn-success shadow-none" data-toggle="modal">
+                                <i class="fa fa-pencil"></i>
+                                Thêm Dòng
+                            </button>
+                            <button type="button" id="deleteNewOptionRowBtn" class="btn btn-danger shadow-none" data-toggle="modal">
+                                <i class="fa fa-pencil"></i>
+                                Xóa dòng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <table class="table table-bordered admin-add-option-table">
+                                <thead class="admin-add-option-table-thead">
+                                    <tr>
+                                        <th>
+                                            Values
+                                        </th>
+                                        <th>
+                                            Price
+                                        </th>
+                                        <th>
+                                            Capacity
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-add-option-row-list" class="admin-add-option-table-tbody">
+                                    <!-- <tr>
+                                        <td>
+                                            <input class="form-control shadow-none" name="addOptionName0" type="text" placeholder="Nhập Option">
+                                        </td>
+                                        <td>
+                                            <input class="form-control shadow-none" name="addCapacityForPrice0" type="text" placeholder="Nhập Capacity">
+                                        </td>
+                                        <td>
+                                            <input class="form-control shadow-none" name="addCapacityForOption0" type="text" placeholder="Nhập Capacity">
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <h2 class="row py-4 text-secondary">
+                        Image
+                    </h2>
+                    <div class="row py-4 justify-content-center">
+                        <div class="col-lg-8 d-flex justify-content-end">
+                            <button type="button" id="addNewImageRowBtn" class="btn btn-success shadow-none" data-toggle="modal">
+                                <i class="fa fa-pencil"></i>
+                                Thêm Dòng
+                            </button>
+                            <button type="button" id="deleteNewImageRowBtn" class="btn btn-danger shadow-none" data-toggle="modal">
+                                <i class="fa fa-pencil"></i>
+                                Xóa dòng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <table class="table table-bordered admin-add-image-table">
+                                <thead class="admin-add-image-table-thead">
+                                    <tr>
+                                        <th>
+                                            Link
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-add-image-row-list" class="admin-add-image-table-tbody">
+                                    <!-- <tr>
+                                        <td>
+                                            <input class="form-control shadow-none" name="addImageLink0" type="text" placeholder="Nhập Image Link">
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
         </div>
 
+
+        {{!-- <input placeholder="" name="brandip">
+        <table class="table table-bordered admin-table">
+            <thead class="admin-table-thead">
+            <tr>
+                <th>
+                    Chọn
+                </th>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Tên
+                </th>
+                <th>
+                    Thương hiệu
+                </th>
+            </tr>
+            </thead>
+            <tbody class="admin-table-tbody">
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="radioip" id="" value="sang1">
+                    </td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="form-check-input" type="radio" name="radioip" id="" value="sang2">
+                    </td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table> --}}
     </div>
-</div>
+</form>
