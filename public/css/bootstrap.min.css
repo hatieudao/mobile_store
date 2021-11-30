@@ -4760,7 +4760,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     }
 
     .navbar-collapse.collapse {
-        background-color: lightskyblue;
+        /*background-color: lightskyblue;*/
         display: block !important;
         height: auto !important;
         padding-bottom: 0;
