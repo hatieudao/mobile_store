@@ -4,11 +4,16 @@ const dbDev = new Sequelize(process.env.DB_DATABASE, process.env.DB_USERNAME, pr
   host: 'localhost',
   dialect: 'postgres'
 });
-const dbProduct = new Sequelize(process.env.DATABASE_URL, {
+const dbDev = new Sequelize(process.env.HDB_DATABASE, process.env.HDB_USERNAME, process.env.HDB_PASSWORD, {
+  host: process.env.HOST,
+  dialect: 'postgres',
   dialectOptions: {
-    ssl: true
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
   }
-})
+});
 
 const db = (process.env.NODE_ENV === 'production' ? dbProduct : dbDev)
 
