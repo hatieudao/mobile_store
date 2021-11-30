@@ -38,7 +38,6 @@ const adminRouter = require('./routes/admin')
 app.set("views", "./views")
 app.set('view engine', 'hbs')
 
-app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
@@ -58,9 +57,7 @@ app.use('/wishlist', wishListRouter)
 app.use('/admin', adminRouter)
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404))
-})
+app.use('*', (req, res) => res.render('404', { layout: '404' }))
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -73,4 +70,4 @@ app.use(function (err, req, res, next) {
   res.render('error')
 })
 
-module.exports = app
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`))
