@@ -29,7 +29,7 @@ th, td {
 .paginatio-first{
     border: 1px solid #ccc;
     border-radius: 10px;
-
+    
 }
 
 td img{
@@ -73,4 +73,45 @@ td img{
 
 .admin-add-propertye-table-tbody{
 
+}
+
+
+.admin-add-configuration-table{
+    border-color: #d0d8e0;
+    background-color: var(--white-color);
+}
+
+.admin-add-configuration-table-thead{
+    background-color: #ADD8E6;
+}
+
+.admin-add-configuration-table-tbody{
+
+}
+
+
+.admin-add-option-table{    
+    border-color: #d0d8e0;
+    background-color: var(--white-color);    
+}
+
+.admin-add-option-table-thead{
+    background-color: #ADD8E6;    
+}
+
+.admin-add-option-table-tbody{
+    
+}
+
+.admin-add-image-table{    
+    border-color: #d0d8e0;
+    background-color: var(--white-color);    
+}
+
+.admin-add-image-table-thead{
+    background-color: #ADD8E6;    
+}
+
+.admin-add-image-table-tbody{
+    
 }

@@ -1,0 +1,40 @@
+<form class="container" id="" action="/admin/product/{{producId}}/addPicture">
+    <div class="admin-container-content">
+        <header class="admin-container-content-header">
+            <h1 class="row py-4 text-primary admin-container-content-header__title">
+                Picture
+            </h1>
+        </header>
+        <div class="">
+            <div class="">
+                <div class="row justify-content-end">
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-primary shadow-none" data-toggle="modal">
+                            <i class="fa fa-pencil"></i>
+                            Thêm mới
+                        </button>
+                        <a href="/admin/product/{{producId}}">
+                            <button type="button" class="btn btn-success shadow-none" data-toggle="modal">
+                                Quay về
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 py-2">
+                                Link
+                            </div>
+                            <div class="col-lg-9 py-2">
+                                <input class="form-control shadow-none" name="link" type="text" placeholder="Link">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

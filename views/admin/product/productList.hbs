@@ -5,78 +5,94 @@
                 Danh sách sản phẩm
             </h1>
         </header>
-        <div class="row py-4">
-            <div class="col-sm-8">
-                <div class="row align-items-start admin-container-content-filter">
-                    <div class="col-sm-10">
-                        <div class="row pb-2">
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID">
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="d-flex justify-content-between">
-                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên">
-                                    <div class="">
-                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <div class="dropdown-item" href="#">Galaxy</div>
-                                            <div class="dropdown-item" href="#">Iphone X</div>
-                                        </div>
+        <div>
+            <div class="row py-4">
+                <form class="col-sm-8" name="PaginationAndFilterForm">
+                    <div class="row align-items-start admin-container-content-filter">
+                        <div class="col-sm-10">
+                            <div class="row pb-2">
+    <!--                            <div class="col-sm-4">-->
+    <!--                                <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID">-->
+    <!--                            </div>-->
+                                <div class="col-sm-6">
+                                    <div class="d-flex justify-content-between">
+                                        <input name="productName" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên sản phẩm"
+                                        {{#if filter.productName}}
+                                               value="{{filter.productName}}"
+                                        {{/if}}
+                                        >
+    <!--                                    <div class="">-->
+    <!--                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>-->
+    <!--                                        <div class="dropdown-menu dropdown-menu-right">-->
+    <!--                                            <div class="dropdown-item" href="#">Galaxy</div>-->
+    <!--                                            <div class="dropdown-item" href="#">Iphone X</div>-->
+    <!--                                        </div>-->
+    <!--                                    </div>-->
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex justify-content-between">
+                                    <input name="brandName" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên thương hiệu"
+                                        {{#if filter.brandName}}
+                                           value="{{filter.brandName}}"
+                                        {{/if}}
+                                    >
+    <!--                                    <div class="">-->
+    <!--                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>-->
+    <!--                                        <div class="dropdown-menu dropdown-menu-right">-->
+    <!--                                            <div class="dropdown-item" href="#">Samsung</div>-->
+    <!--                                            <div class="dropdown-item" href="#">Apple</div>-->
+    <!--                                        </div>-->
+    <!--                                    </div>-->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
-                                <div class="d-flex justify-content-between">
-                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Thương hiệu">
-                                    <div class="">
-                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <div class="dropdown-item" href="#">Samsung</div>
-                                            <div class="dropdown-item" href="#">Apple</div>
-                                        </div>
+                            <div class="row pb-2 d-flex align-items-center">
+                                <div class="col-sm-2">
+                                    Số dòng
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between">
+                                        <input name="limit" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Số dòng"
+                                            {{#if pagination.limit}}
+                                               value="{{pagination.limit}}"
+                                            {{/if}}
+                                        >
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-sm-2">
+                            <button id="" type="submit" class="btn btn-primary left"><i class="fa fa-search"></i></button>
+                        </div>
                     </div>
-                    <div class="col-sm-2">
-                        <button id="" type="button" class="btn btn-primary left"><i class="fa fa-search"></i></button>
-                    </div>
+                </form>
+                <div class="col-sm-4 text-center">
+                    <a class="" href="/admin/product/addPage">
+                        <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                            <i class="fa fa-pencil"></i>
+                            Thêm mới
+                        </button>
+                    </a>
+<!--                    <button type="submit" class="btn btn-danger shadow-none" form="deleteForm">-->
+<!--                        <i class="fa fa-times-circle"></i>-->
+<!--                        Xóa-->
+<!--                    </button>-->
                 </div>
             </div>
-            <div class="col-sm-4 text-center">
-                <a class="" href="/admin/product/:add">
-                    <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
-                        <i class="fa fa-pencil"></i>
-                        Thêm mới
-                    </button>
-                </a>
-                <button type="button" class="btn btn-danger shadow-none">
-                    <i class="fa fa-times-circle"></i>
-                    Xóa
-                </button>
-            </div>
+
+
+
         </div>
-        <div class="" id="">
-            <label>
-                Hiển thị
-                <select name="" class="">
-                    <option value="10">10</option>
-                    <option value="25">25</option>
-                    <option value="50">50</option>
-                    <option value="-1">Tất cả</option>
-                </select>
-                dòng
-            </label>
-        </div>
-        <div class="row py-4">
+        <form class="row py-4" name="deleteForm" id="deleteForm">
+<!--        <form class="row py-4" name="deleteForm" id="deleteForm" action="/admin/product/delete">-->
+<!--            <input type="hidden" name="countProduct" value="{{products.length}}">-->
             <table class="table table-bordered admin-table">
                 <thead class="admin-table-thead">
                 <tr>
-                    <th>
-                        Chọn
-                    </th>
+<!--                    <th>-->
+<!--                        Chọn-->
+<!--                    </th>-->
                     <th>
                         ID
                     </th>
@@ -99,16 +115,16 @@
                         Ngày cập nhập
                     </th>
                     <th>
-                        Ảnh
+                        Chi tiết
                     </th>
                 </tr>
                 </thead>
                 <tbody class="admin-table-tbody">
                 {{#each products}}
                 <tr>
-                    <td>
-                        <input class="form-check-input" type="checkbox" id="">
-                    </td>
+<!--                    <td>-->
+<!--                        <input class="form-check-input" type="checkbox" id="" name="pr{{@index}}" value="{{id}}">-->
+<!--                    </td>-->
                     <td>{{id}}</td>
                     <td>{{full_name}}</td>
                     <td>{{brand.name}}</td>
@@ -120,24 +136,38 @@
                     <td>
                         {{updated_at}}
                     </td>
-                    <td>
-                        <img src="{{pictures.0.link}}"></img>
+                    <td class="text-center">
+                        <a href="/admin/product/{{id}}">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
                     </td>
                 </tr>                             
                 {{/each}}
                 </tbody>
             </table>
-        </div>
+        </form>
         <footer class="row justify-content-center admin-order-footer">
             <nav aria-label="Page navigation">
                 <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="{{pagination.prevPageLink}}">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">{{pagination.curPage}}</a></li>
+                    <li class="page-item"><a class="page-link" href="{{pagination.nextPageLink}}">Next</a></li>
                 </ul>
             </nav>
         </footer>
     </div>
 </div>
+
+<!--<script>-->
+<!--    console.log("sang")-->
+
+<!--    let urlParams = URLSearchParams(location.search);-->
+<!--    let params = {-->
+
+<!--    };-->
+<!--    function selectParam(key, value){-->
+<!--        urlParams.set(key,value);-->
+<!--        let url = `/product?${urlParams.toString()}`;-->
+<!--        location.href = url;-->
+<!--    }-->
+<!--</script>-->
