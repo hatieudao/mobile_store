@@ -1,0 +1,319 @@
+<div class="mainmenu-area">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/product">Product</a></li>
+                    <li><a href="/cart">Cart</a></li>
+                    <li><a href="/checkout">Checkout</a></li>
+                    <li><a href="/wishlist">Wishlist</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> <!-- End mainmenu area -->
+
+<!--<div class="product-big-title-area">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <div class="product-bit-title text-center">-->
+<!--                    <h2>Product</h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 single-sidebar">
+                <h2 class="sidebar-title">Search Products</h2>
+                <form action="">
+                    <!--                        <input type="text" placeholder="Search products...">-->
+                    <div class="product-search">
+                        <div class="row">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Products</h2>
+                    {{#each lastedProduct}}
+                        <div class="thubmnail-recent">
+                            <img src="{{pictures.0.link}}" class="recent-thumb" alt="">
+                            <a class="small-title-product" href="/product/{{id}}">{{full_name}}</a>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div class="col-md-10">
+                <div class="product-content-right">
+                    {{#with mb}}
+                        <div class="product-breadcroumb">
+                            <a href="/">Home</a>
+                            <a href="/product">Product</a>
+                            <span>{{full_name}}</span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="product-images">
+                                    <div class="product-main-img">
+                                        <img src={{pictures.0.link}} alt="">
+                                    </div>
+
+                                    <div class="product-gallery">
+                                        <img src={{pictures.1.link}} alt="">
+                                        <img src={{pictures.2.link}} alt="">
+                                        <img src={{pictures.3.link}} alt="">
+                                    </div>
+                                </div>
+                                <p class="parameter__title">Thông tin chi tiết:</p>
+                                <div class="parameter">
+                                    <ul class="parameter__list">
+                                        {{#each configurations}}
+                                            <li data-index="0" data-prop="0">
+                                                <p class="lileft">{{name}}</p>
+                                                <div class="liright">{{value}}</div>
+                                            </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="product-inner">
+                                    <h2 class="product-name">{{full_name}}</h2>
+                                    <div class="product-inner-price">
+                                        <ins>{{price}}đ</ins>
+                                        <!--                                    <del>$100.00</del>-->
+                                    </div>
+
+                                    <form action="" class="cart">
+                                        <div class="quantity">
+                                            <input type="number" size="4" class="input-text qty text" title="Qty"
+                                                   value="1"
+                                                   name="quantity" min="1" step="1">
+                                        </div>
+                                        <button class="add_to_cart_button" type="submit">Add to cart</button>
+                                    </form>
+
+                                    <div class="product-inner-category">
+                                        <p>Category: <a href="">Summer</a>. Tags: <a href="">awesome</a>, <a
+                                                href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
+                                    </div>
+
+                                    <div role="tabpanel">
+                                        <ul class="product-tab" role="tablist">
+                                            <li role="presentation" class="active"><a href="#home" aria-controls="home"
+                                                                                      role="tab" data-toggle="tab">Description</a>
+                                            </li>
+                                            <li role="presentation"><a href="#profile" aria-controls="profile"
+                                                                       role="tab"
+                                                                       data-toggle="tab">Reviews</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                                <h2>Product Description</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                                                    tristique,
+                                                    diam in consequat iaculis, est purus iaculis mauris, imperdiet
+                                                    facilisis
+                                                    ante ligula at nulla. Quisque volutpat nulla risus, id maximus ex
+                                                    aliquet ut. Suspendisse potenti. Nulla varius lectus id turpis
+                                                    dignissim
+                                                    porta. Quisque magna arcu, blandit quis felis vehicula, feugiat
+                                                    gravida
+                                                    diam. Nullam nec turpis ligula. Aliquam quis blandit elit, ac
+                                                    sodales
+                                                    nisl. Aliquam eget dolor eget elit malesuada aliquet. In varius
+                                                    lorem
+                                                    lorem, semper bibendum lectus lobortis ac.</p>
+
+                                                <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex.
+                                                    Nulla facilisi. Etiam scelerisque tincidunt quam facilisis lobortis.
+                                                    In
+                                                    malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus,
+                                                    non
+                                                    malesuada sem accumsan in. Morbi vel sodales libero.</p>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade" id="profile">
+                                                <h2>Reviews</h2>
+                                                <div class="submit-review">
+                                                    <p><label for="name">Name</label> <input name="name" type="text">
+                                                    </p>
+                                                    <p><label for="email">Email</label> <input name="email"
+                                                                                               type="email">
+                                                    </p>
+                                                    <div class="rating-chooser">
+                                                        <p>Your rating</p>
+
+                                                        <div class="rating-wrap-post">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <p><label for="review">Your review</label> <textarea name="review"
+                                                                                                         id=""
+                                                                                                         cols="30"
+                                                                                                         rows="10"></textarea>
+                                                    </p>
+                                                    <p><input type="submit" value="Submit"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {{/with}}
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="related-products-wrapper">
+                <h2 class="related-products-title">Related Products</h2>
+                <div class="related-products-carousel">
+                    {{#each relatedProduct}}
+                        <div class="single-product">
+                            <div class="product-f-image image-style-relative-product">
+                                <img class="related-products-image" src="{{pictures.0.link}}" alt="">
+                                <div class="product-hover">
+                                    <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
+                                        cart</a>
+                                    <a href="/product/{{id}}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                </div>
+                            </div>
+
+                            <h2><a href="/product/{{id}}">{{full_name}}</a></h2>
+
+                            <div class="product-carousel-price">
+                                <ins>{{price}}đ</ins>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="bg-light p-2">
+            <div class="d-flex flex-row align-items-start"><img class="rounded-circle"
+                                                                src="https://i.imgur.com/RpzrMR2.jpg"
+                                                                width="40"><textarea
+                    class="form-control ml-1 shadow-none textarea"></textarea></div>
+            <div class="mt-2 text-right">
+                <button class="btn btn-primary btn-sm shadow-none" type="button">Post
+                    comment
+                </button>
+                <button class="btn btn-outline-primary btn-sm ml-1 shadow-none"
+                        type="button">Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Recent Comments</h4>
+                    <h6 class="card-subtitle">Latest Comments section by users</h6>
+                </div>
+                <div class="comment-widgets m-b-20">
+                    <div class="d-flex flex-row comment-row">
+                        <div class="p-2"><span class="round"><img src="https://i.imgur.com/uIgDDDd.jpg" alt="user"
+                                                                  width="50"></span></div>
+                        <div class="comment-text w-100">
+                            <h5>Samso Nagaro</h5>
+                            <div class="comment-footer"><span class="date">April 14, 2019</span></div>
+                            <p class="m-b-5 m-t-10">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                1500s,
+                                when an unknown printer took a galley of type and scrambled it</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row comment-row ">
+                        <div class="p-2"><span class="round"><img src="https://i.imgur.com/tT8rjKC.jpg" alt="user"
+                                                                  width="50"></span></div>
+                        <div class="comment-text active w-100">
+                            <h5>Jonty Andrews</h5>
+                            <div class="comment-footer"><span class="date">March 13, 2020</span></div>
+                            <p class="m-b-5 m-t-10">Contrary to popular belief, Lorem Ipsum is not simply random
+                                text.
+                                It has roots in a piece of classical Latin literature from 45 BC, making it over
+                                2000
+                                years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                Virginia,
+                                looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
+                                passage,
+                                and going through the cites</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row comment-row">
+                        <div class="p-2"><span class="round"><img src="https://i.imgur.com/cAdLHeY.jpg" alt="user"
+                                                                  width="50"></span></div>
+                        <div class="comment-text w-100">
+                            <h5>Sarah Tim</h5>
+                            <div class="comment-footer"><span class="date">Jan 20, 2020</span></div>
+                            <p class="m-b-5 m-t-10">There are many variations of passages of Lorem Ipsum available,
+                                but
+                                the majority have suffered alteration in some form, by injected humour, or
+                                randomised
+                                words which don't look even slightly believable. If you are going to use a passage
+                                of
+                                Lorem Ipsum, you need to be sure</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row comment-row">
+                        <div class="p-2"><span class="round"><img src="https://i.imgur.com/uIgDDDd.jpg" alt="user"
+                                                                  width="50"></span></div>
+                        <div class="comment-text w-100">
+                            <h5>Samso Nagaro</h5>
+                            <div class="comment-footer"><span class="date">March 20, 2020</span></div>
+                            <p class="m-b-5 m-t-10">It uses a dictionary of over 200 Latin words, combined with a
+                                handful of model sentence structures, to generate Lorem Ipsum which looks
+                                reasonable.
+                                The generated Lorem Ipsum is therefore always free from repetition, injected humour,
+                                or
+                                non-characteristic words etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
