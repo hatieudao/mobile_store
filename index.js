@@ -9,6 +9,9 @@ const path = require('path')
 const bodyParser = require('body-parser')
 
 
+let hbs = require('hbs');
+hbs.registerPartials(__dirname + '/views/partials', function (err) { });
+
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
@@ -20,12 +23,11 @@ db.authenticate()
 
 
 // Public route
-const homeRouter = require('./routes/public/home.route')
-const registerRouter = require('./routes/public/register.route')
-const shopPageRouter = require('./routes/public/shopPage.route')
-const contactRouter = require('./routes/public/contact.route')
-const loginRouter = require('./routes/public/login.route')
-const sigleproductRouter = require('./routes/public/singleProduct.route')
+const homeRouter = require('./routes/public/home.route');
+const registerRouter = require('./routes/public/register.route');
+const productRouter = require('./routes/public/product.route');
+const contactRouter = require('./routes/public/contact.route');
+const loginRouter = require('./routes/public/login.route');
 // User route
 const cartRouter = require('./routes/user/cart.route')
 const checkoutRouter = require('./routes/user/checkout.route')
@@ -44,8 +46,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', homeRouter)
-app.use('/shop-page', shopPageRouter)
-app.use('/single-product', sigleproductRouter)
+app.use('/product', productRouter)
 app.use('/login', loginRouter)
 app.use('/register', registerRouter)
 app.use('/contact', contactRouter)

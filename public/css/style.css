@@ -28,6 +28,7 @@ a:focus {
 img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .fix {
@@ -102,7 +103,7 @@ body {
 }
 
 .mainmenu-area {
-    background: none repeat scroll 0 0 #fbfbfb;
+    background: none repeat scroll 0 0 #ece7e7;
     font-family: "Roboto Condensed", sans-serif;
     text-transform: uppercase;
     width: 100%;
@@ -143,7 +144,7 @@ body {
 }
 
 .cart-amunt {
-    color: #5a88ca;
+    color: #ece4e4 !important;
     font-weight: 700;
 }
 
@@ -168,7 +169,7 @@ body {
 
 
 .shopping-item:hover {
-    background: none repeat scroll 0 0 #853f33;
+    background: none repeat scroll 0 0 #072548;
     border-color: #202002;
 }
 
@@ -194,8 +195,8 @@ body {
 
 .mainmenu-area ul.navbar-nav li:hover a,
 .mainmenu-area ul.navbar-nav li.active a {
-    background: #a33cbc;
-    color: #FFF;
+    background: #c2c4ef;
+    color: #000;
 }
 
 .mainmenu-area .nav>li>a:focus {
@@ -474,6 +475,7 @@ body {
 
 .product-f-image {
     position: relative;
+    border-radius: 8px;
 }
 
 .product-hover {
@@ -484,6 +486,7 @@ body {
     width: 100%;
     overflow: hidden;
     border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
 .product-hover:after {
@@ -499,7 +502,7 @@ body {
 }
 
 .product-hover a {
-    background: none repeat scroll 0 0 #5c3f60;
+    background: rgb(26, 148, 255);;
     border-radius: 5px;
     color: #fff;
     display: block;
@@ -517,7 +520,7 @@ body {
 }
 
 .product-hover a:hover {
-    background: #000;
+    background: #1c289b;
     text-decoration: none;
     border-color: #444;
 }
@@ -562,6 +565,7 @@ body {
 
 .single-product {
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .single-product:hover {}
@@ -571,7 +575,7 @@ body {
 }
 
 .single-product:hover .product-hover a.view-details-link {
-    bottom: 32%;
+    bottom: 25%;
 }
 
 .single-product:hover .product-hover:after {
@@ -591,7 +595,7 @@ body {
 
 .latest-product .owl-nav div,
 .related-products-wrapper .owl-nav div {
-    background: #fa8072;
+    background: rgb(26, 148, 255);
     color: #FFF;
     display: inline-block;
     margin-left: 15px;
@@ -602,7 +606,7 @@ body {
 .brand-wrapper .owl-nav div:hover,
 .related-products-wrapper .owl-nav div:hover {
     color: #FFF;
-    background: #f95f5f;
+    background: #1c289b;
 }
 
 .brand-list {
@@ -624,7 +628,7 @@ body {
 }
 
 .brand-wrapper .owl-nav div {
-    background: #fa8072;
+    background: rgb(26, 148, 255);;
     color: #FFF;
     display: inline-block;
     margin-left: 15px;
@@ -694,7 +698,7 @@ body {
 
 .wid-view-more:hover {
     color: #fff;
-    background-color: #222;
+    background-color: #1c289b;
     text-decoration: none
 }
 
@@ -793,9 +797,9 @@ body {
 }
 
 .newsletter-form input[type="submit"] {
-    background: none repeat scroll 0 0 #a33cbc;
+    /*background: none repeat scroll 0 0 #a33cbc;*/
     border: medium none;
-    color: #fff;
+    color: #000000;
     display: inline-block;
     font-size: 18px;
     padding: 7px 20px;
@@ -804,8 +808,8 @@ body {
 }
 
 .newsletter-form input[type="submit"]:hover {
-    background: #222;
-    border-color: #666
+    /*background: #222;*/
+    border-color: #050c32
 }
 
 .newsletter-form {
@@ -932,22 +936,25 @@ textarea {
 
 input[type="submit"],
 button[type=submit] {
-    background: none repeat scroll 0 0 #a33cbc;
+    /*background: none repeat scroll 0 0 #a33cbc;*/
+    background: rgb(26, 148, 255);
     border-radius: 33px;
     border: medium none;
-    color: #fff;
+    color: #000000;
     padding: 11px 20px;
     text-transform: uppercase;
 }
 
 input[type="submit"]:hover,
 button[type=submit]:hover {
-    background-color: #222
+    /*background-color: #222*/
+    background-color: #1c289b;
+    border-color: #050c32;
 }
 
 .single-sidebar input[type="text"] {
     margin-bottom: 10px;
-    width: 100%;
+    width: 95%;
 }
 
 .thubmnail-recent {
@@ -1043,6 +1050,7 @@ button[type=submit]:hover {
     font-weight: 700;
     margin-right: 10px;
     text-decoration: none;
+    font-size: 25px;
 }
 
 .quantity {
@@ -1057,7 +1065,7 @@ button[type=submit]:hover {
 }
 
 .add_to_cart_button {
-    background: none repeat scroll 0 0 #5c3f60;
+    background: rgb(26, 148, 255);
     border: medium none;
     border-radius: 33px;
     color: #fff;
@@ -1066,7 +1074,7 @@ button[type=submit]:hover {
 }
 
 .add_to_cart_button:hover {
-    background-color: #222;
+    background-color: #1c289b;
     color: #fff;
     text-decoration: none
 }
@@ -1092,7 +1100,7 @@ form.cart {
 }
 
 .product-tab li.active {
-    background: none repeat scroll 0 0 #a33cbc;
+    background: none repeat scroll 0 0 #6ca7d2;
 }
 
 .product-tab li.active a {
@@ -1400,10 +1408,10 @@ table.shop_table td.product-name a:hover {
     text-decoration: none
 }
 
-div.quantity input.plus:hover,
-div.quantity input.minus:hover {
-    background-color: #222
-}
+/*div.quantity input.plus:hover,*/
+/*div.quantity input.minus:hover {*/
+/*    background-color: #222*/
+/*}*/
 
 div.cart-collaterals ul.products li.product a:hover h3 {
     color: #5a88ca
@@ -1413,9 +1421,9 @@ div.cart-collaterals ul.products li.product a:hover {
     text-decoration: none
 }
 
-div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
-    background-color: #222
-}
+/*div.cart-collaterals ul.products li.product:hover .add_to_cart_button {*/
+/*    background-color: #222*/
+/*}*/
 
 
 .cart-collaterals .shipping_calculator {
@@ -2360,9 +2368,12 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 }
 
 .wishlist-page .table .qty {
+    /*display: inline-block;*/
+    /*width: 100px;*/
+    /*font-size: 0;*/
     display: inline-block;
-    width: 100px;
-    font-size: 0;
+    width: 50px;
+    font-size: 15px;
 }
 
 .wishlist-page .table button {
@@ -2371,9 +2382,14 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
     font-size: 14px;
     text-align: center;
     color: #ffffff;
-    background: #FF6F61;
+    background: rgb(26, 148, 255);
     border: none;
     border-radius: 4px;
+}
+
+.table button:hover{
+    background: #1c289b;
+    color: #ffffff;
 }
 
 .wishlist-page .table button.btn-minus {
@@ -2388,15 +2404,15 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
     width: auto;
 }
 
-.wishlist-page .table input {
-    width: 40px;
-    height: 30px;
-    font-size: 16px;
-    color: #ffffff;
-    text-align: center;
-    background: #000000;
-    border: none;
-}
+/*.wishlist-page .table input {*/
+/*    width: 40px;*/
+/*    height: 30px;*/
+/*    font-size: 16px;*/
+/*    color: #ffffff;*/
+/*    text-align: center;*/
+/*    background: #000000;*/
+/*    border: none;*/
+/*}*/
 
 /* ------------------------------------------------------------------- */
 .product-view {
@@ -2420,7 +2436,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 }
 
 .product-search input {
-    width: 100%;
+    width: 96%;
     height: 35px;
     padding: 0 15px;
     color: #999999;
@@ -2453,14 +2469,13 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 }
 
 .product-search button:hover {
-    background: #FF6F61;
+    background: #1c289b;
     color: #ffffff;
 }
 
 /* ----------------------------------------------------- */
 
 .shop-search{
-    padding: auto;
     margin-bottom: 30px;
 }
 
@@ -2529,3 +2544,173 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 }
 
 /* ------------------------------------------------- */
+.filter-item, .filter-total {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 8px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.filter-item__title {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+
+.style-color-header{
+    background: rgb(26, 148, 255);
+}
+
+.filter-style{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.style-img-product{
+    width: auto;
+    height: 260px;
+    border-radius: 5px;
+}
+
+/*-----------------------------*/
+.product-area {
+    height: 460px;
+    width: 280px;
+    padding: 25px;
+}
+
+.title-product-name-style{
+   width: 220px;
+    padding-top: 8px;
+}
+
+.parameter__title{
+    height: 50px;
+    background-color: #f1f1f1;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.parameter__list{
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.parameter__list li {
+    align-items: flex-start;
+    display: flex;
+    padding: 10px;
+}
+
+.parameter__list .lileft {
+    width: 140px;
+}
+
+.parameter__list .liright {
+    padding-left: 50px;
+    padding-right: 15px;
+    width: calc(100% - 140px);
+}
+
+.form-title{
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.form-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.form-label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.form-label input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.form-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.form-label .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.image-style-latest-product{
+    height: 250px;
+    width: auto;
+}
+
+.small-title-product{
+    font-size: 12px;
+}
+
+.image-style-relative-product{
+    width: 250px;
+    height: auto;
+}
+
+.related-products-image{
+    height: 300px;
+    width: auto;
+}
+
+.middle-pagination{
+    text-align: center;
+}
