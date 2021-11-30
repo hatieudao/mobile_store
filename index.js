@@ -30,7 +30,7 @@ const sigleproductRouter = require('./routes/public/singleProduct.route')
 const cartRouter = require('./routes/user/cart.route')
 const checkoutRouter = require('./routes/user/checkout.route')
 const myAccountRouter = require('./routes/user/myAccount.route')
-const wishListRouter = require('./routes/user/wishList.route')
+const wishListRouter = require('./routes/user/wishlist.route')
 // Admin route
 
 const adminRouter = require('./routes/admin')
