@@ -12,18 +12,16 @@
     <link rel="stylesheet" href="/adminStyle/assets/css/responsive.css">    
 </head>
 <body>
-    {{!-- Bỏ class admin--hide để hiện --}}
-    {{!-- Thêm class admin--hide để ẩn --}}
-    <div id="adminWrapper" class="admin-wrapper">  
+    <div id="adminWrapper" class="admin-wrapper">
         <nav id="adminSidebar" class="admin-sidebar">
             <div class="admin-sidebar-header">
                 <h3 class="admin-sidebar-header__title">Admin</h3>
-                <div class="admin-sidebar-header-infor d-flex flex-column justify-content-center">
-                    <div href="" class="admin-sidebar-header-avatar rounded-circle">
+                <a href="/admin/adminUser/currentAccount" class="admin-sidebar-header-infor d-flex flex-column justify-content-center text-decoration-none text-white">
+                    <div class="admin-sidebar-header-avatar rounded-circle">
                         <img src="/adminStyle/assets/img/avatar/avatar01.png" alt="admin-avatar" class="admin-sidebar-header-avatar__img">
                     </div>
                     <span class="admin-sidebar-header-infor__name mt-2">Transang123</span>
-                </div>
+                </a>
             </div>
 
 
@@ -40,6 +38,14 @@
                 <li class="admin-sidebar-item">
                     <a href="/admin/user" class="admin-sidebar-item__link">Người dùng</a>
                 </li>
+                <li class="admin-sidebar-item">
+                    <a href="/admin/adminUser" class="admin-sidebar-item__link">Người quản trị</a>
+                </li>
+                <li class="admin-sidebar-item">
+                    <a href="/admin/auth/logout" class="admin-sidebar-item__link d-flex align-items-center">
+                        Đăng xuất
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -53,9 +59,9 @@
                             <!-- <span>Toggle admin-Sidebar</span> -->
                         </button>
                         <div class="collapse navbar-collapse" id="">
-                            <ul class="navbar-nav admin-header-nav-list">
+                            <ul class="navbar-nav admin-header-nav-list d-flex align-items-center">
                               <li class="nav-item admin-header-nav-item admin-header-account">
-                                <a href="/admin/adminAccount" class="nav-link  d-flex align-items-center admin-header-nav__link">
+                                <a href="/admin/adminUser/currentAccount" class="nav-link  d-flex align-items-center admin-header-nav__link">
                                     <div class="rounded-circle admin-header-avatar">
                                         <img src="/adminStyle/assets/img/avatar/avatar01.png" alt="admin-avatar" class="admin-header-avatar__img">
                                     </div>
@@ -71,55 +77,6 @@
             
             <div class="admin-container">
                 {{{body}}}
-            </div>
-        </div>
-
-
-    </div>
-
-    {{!-- Bỏ class admin--hide để hiện --}}
-    {{!-- Thêm class admin--hide để ẩn --}}
-    <div class="admin-login admin--hide">
-        <div class="admin-login-content">
-            <div class="py-4 px-4 admin-login-container">
-                <header class="py-0 admin-login-header">
-                    <h3 class="text-center text-dark pt-5">Login form</h3>
-                </header>
-                <form action="" class="container admin-login-form">
-                    <div class="row py-3 px-2">
-                        <div class="col-md-4">
-                            Username
-                        </div>
-                        <div class="col-md-8">
-                            <input type="text" placeholder="admin" class="w-100">
-                        </div>
-                    </div>
-                    <div class="row py-3 px-2">
-                        <div class="col-md-4">
-                            Password
-                        </div>
-                        <div class="col-md-8">
-                            <input type="password" placeholder="1234" class="w-100">
-                        </div>
-                    </div>
-                    <div class="row py-3 px-2">
-                        <div class="col-md-6">
-                            <input type="checkbox" name="" id="" checked>
-                            <span>Remmember me</span>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="" class="">
-                                Quên mật khẩu
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row py-3 px-2">
-                        <div class="col text-center">
-                            <button class="w-50 btn btn-success admin-login-btn">Đăng nhập</button>
-                        </div>
-                    </div>
-                </form>
-                
             </div>
         </div>
     </div>

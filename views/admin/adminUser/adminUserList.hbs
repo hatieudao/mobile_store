@@ -1,0 +1,134 @@
+<div class="container">
+    <div class="admin-container-content">
+
+        <div>
+            <div class="row py-4">
+                <form class="col-sm-8" name="PaginationAndFilterForm">
+                    <div class="row align-items-start admin-container-content-filter">
+                        <div class="col-sm-10">
+                            <div class="row pb-2">
+                                <!--                            <div class="col-sm-4">-->
+                                <!--                                <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID">-->
+                                <!--                            </div>-->
+                                <div class="col-sm-4">
+                                    <div class="d-flex justify-content-between">
+                                        <input name="username" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Username"
+                                            {{#if filter.username}}
+                                               value="{{filter.username}}"
+                                            {{/if}}
+                                        >
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="d-flex justify-content-between">
+                                        <input name="fullName" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên"
+                                            {{#if filter.fullname}}
+                                               value="{{filter.fullName}}"
+                                            {{/if}}
+                                        >
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="d-flex justify-content-between">
+                                        <input name="phoneNumber" type="number" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Số điện thoại"
+                                            {{#if filter.phoneNumber}}
+                                               value="{{filter.phoneNumber}}"
+                                            {{/if}}
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pb-2 d-flex align-items-center">
+                                <div class="col-sm-2">
+                                    Số dòng
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="d-flex justify-content-between">
+                                        <input name="limit" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Số dòng"
+                                            {{#if pagination.limit}}
+                                               value="{{pagination.limit}}"
+                                            {{/if}}
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button id="" type="submit" class="btn btn-primary left"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-sm-4 text-center">
+                    <a class="" href="/admin/adminUser/addPage">
+                        <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                            <i class="fa fa-pencil"></i>
+                            Thêm mới
+                        </button>
+                    </a>
+                    <!--                    <button type="submit" class="btn btn-danger shadow-none" form="deleteForm">-->
+                    <!--                        <i class="fa fa-times-circle"></i>-->
+                    <!--                        Xóa-->
+                    <!--                    </button>-->
+                </div>
+            </div>
+        </div>
+        <form class="row py-4" name="deleteForm" id="deleteForm">
+            <table class="table table-bordered admin-table">
+                <thead class="admin-table-thead">
+                <tr>
+                    <th>
+                        ID
+                    </th>
+
+                    <th>
+                        Username
+                    </th>
+                    <th>
+                        Tên
+                    </th>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Ngày tạo
+                    </th>
+                    <th>
+                        Xem chi tiết
+                    </th>
+                    <th>
+                        Ảnh
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="admin-table-tbody">
+                {{#each adminUsers}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{username}}</td>
+                        <td>{{full_name}}</td>
+                        <td>{{phone_number}}</td>
+                        <td>{{created_at}}</td>
+                        <td class="text-center">
+                            <a href="/admin/adminUser/{{id}}">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <img src="{{avatar}}" alt="" class="">
+                        </td>
+                {{/each}}
+                </tr>
+                </tbody>
+            </table>
+        </form>
+        <footer class="row justify-content-center admin-order-footer">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="{{pagination.prevPageLink}}">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">{{pagination.curPage}}</a></li>
+                    <li class="page-item"><a class="page-link" href="{{pagination.nextPageLink}}">Next</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</div>

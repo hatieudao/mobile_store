@@ -8,10 +8,10 @@
 CREATE TABLE "users" (
   "id" SERIAL PRIMARY KEY,
   "username" varchar(50) NOT NULL,
-  "password" varchar(50) NOT NULL,
+  "password" varchar(200) NOT NULL,
   "full_name" varchar(50) NOT NULL,
   "address" varchar(150),
-  "avatar" varchar(150),
+  "avatar" varchar(400),
   "uid" uuid NOT NULL,
   "role" varchar(5) NOT NULL DEFAULT 'user',
   "phone_number" varchar(15),

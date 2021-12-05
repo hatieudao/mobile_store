@@ -36,3 +36,15 @@
 + `specifications` has name and `configurations` has value of a `mobile`
 + `capacities` : 64 GB, 128 GB,...
 + `options` include a `mobile`, a `capacity`, and something more such as color, special model. Example `iPhone 13 128GB black`
+
+
+##Fix Database:
+users avatar:  varchar(400)
+users password: varchar(200) 
+
+create first admin
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar, role)
+values (11, 'transang', 'https://robohash.org/9KH.png?set=set2&size=150x150', 'Trần Ngọc Sang', 'Quảng Ngãi', '79e78c5e-9f4d-43c6-aee9-f03439453190', '012345678', 'https://robohash.org/9KH.png?set=set2&size=150x150','admin');
+
+username: transang
+password: 3003sang

@@ -1,10 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function (req, res, next) {
-    res.render('admin/auth/login', { title: `auth`, layout: 'admin/loginLayout.hbs' });
-});
+const authController = require('../../controllers/admin/admin.auth.controller')
 
+const passport = require('../../auth/admin/passport');
+
+
+router.get('/login', authController.loginPage);
+
+router.get('/logout', authController.logout);
+
+
+router.post('/login',
+    passport.authenticate('local'
+        , { successRedirect: '/admin',
+    failureRedirect: '/admin/auth/login?loginFailed',
+    }
+    ),
+);
 
 
 module.exports = router;
