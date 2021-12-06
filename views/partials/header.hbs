@@ -51,10 +51,10 @@
                         <li><a href="/checkout"><i class="fa fa-user"></i> Checkout</a></li>
                         <li><a href="/admin"><i class="fa fa-user"></i> Demo Admin</a></li>
                         {{#if user}}
-                            <li><a href="/myaccount/{{user.username}}"><i class="fa fa-user"></i> My Account</a></li>
+                            <li><a href="/myaccount"><i class="fa fa-user"></i> My Account</a></li>
                             <!--                            <li><a href="/myaccount/{{user.username}}"><i class="fa fa-user"></i> My Account</a></li>-->
                             <li><a href="/logout"><i class="fa fa-user"></i> Logout</a></li>
-                            <b>Hi {{user.full_name}}</b>
+<!--                            <b>Hi {{user.full_name}}</b>-->
                         {{else}}
                             <li><a href="/login"><i class="fa fa-user"></i> Login</a></li>
                         {{/if}}

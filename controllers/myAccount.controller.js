@@ -2,14 +2,14 @@ const authService = require('../services/authService');
 const bcrypt = require("bcrypt");
 
 exports.myAccount = async (req, res) => {
-    const {username} = req.params;
+    const {username} = req.user;
     const userInfo = await authService.getUserbyUsername(username);
     res.render('myAccount', {userInfo});
 }
 
 exports.updateAccount = async (req, res) => {
     const {deleteAccount} = req.body;
-    const {username} = req.params;
+    const {username} = req.user;
     if (deleteAccount !== undefined) {
         await authService.delAccount(username);
         req.logout();
@@ -50,4 +50,13 @@ exports.updateAccount = async (req, res) => {
 
 async function validPassword(user, password) {
     return bcrypt.compare(password, user.password);
+}
+
+exports.isLogin = async (req, res, next) => {
+    if (req.user) {
+        next();
+    }
+    else {
+        res.redirect('/login');
+    }
 }
