@@ -14,7 +14,6 @@ for (let key in params) {
 }
 
 
-
 $(document).ready(() =>{
     for (let key in params){
         const control = $(`#${key}${urlParams.get(key)}`);
@@ -38,11 +37,11 @@ $(document).ready(() =>{
 })
 
 function selectParam(key, value, reset = false) {
-    if (reset) {
-        for (let key in params) {
-            urlParams.set(key, params[key]);
-        }
-    }
+    //if (reset) {
+    //    for (let key in params) {
+    //        urlParams.set(key, params[key]);
+    //    }
+    //}
 
     urlParams.set(key, value);
     let url = `/product?${urlParams.toString()}`;

@@ -2714,3 +2714,18 @@ div.cart-collaterals ul.products li.product a:hover {
 .middle-pagination{
     text-align: center;
 }
+
+.title-field {
+    float: right;
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+.style-btn-myaccount {
+    justify-content: center;
+    display: flex;
+}
+
+.magin-title-myaccount{
+    margin-top: 30px;
+}

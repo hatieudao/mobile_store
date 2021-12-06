@@ -12,7 +12,8 @@
     <title>Ustora Demo</title>
 
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+          type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
@@ -27,7 +28,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/owl.carousel.css">
-    <link rel="stylesheet" href="/css/style.css"
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -45,12 +46,18 @@
             <div class="col-md-8">
                 <div class="user-menu">
                     <ul>
-                        <li><a href="/myaccount"><i class="fa fa-user"></i> My Account</a></li>
                         <li><a href="/wishlist"><i class="fa fa-heart"></i> Wishlist</a></li>
                         <li><a href="/cart"><i class="fa fa-user"></i> My Cart</a></li>
                         <li><a href="/checkout"><i class="fa fa-user"></i> Checkout</a></li>
-                        <li><a href="/login"><i class="fa fa-user"></i> Login</a></li>
                         <li><a href="/admin"><i class="fa fa-user"></i> Demo Admin</a></li>
+                        {{#if user}}
+                            <li><a href="/myaccount/{{user.username}}"><i class="fa fa-user"></i> My Account</a></li>
+                            <!--                            <li><a href="/myaccount/{{user.username}}"><i class="fa fa-user"></i> My Account</a></li>-->
+                            <li><a href="/logout"><i class="fa fa-user"></i> Logout</a></li>
+                            <b>Hi {{user.full_name}}</b>
+                        {{else}}
+                            <li><a href="/login"><i class="fa fa-user"></i> Login</a></li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>
@@ -59,7 +66,9 @@
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">currency: </span><span class="value">USD </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span
+                                    class="key">currency: </span><span class="value">VND </span><b
+                                    class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">USD</a></li>
                                 <li><a href="#">VNĐ</a></li>
@@ -67,7 +76,9 @@
                         </li>
 
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">language: </span><span class="value">English </span><b class="caret"></b></a>
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span
+                                    class="key">language: </span><span class="value">Tiếng việt </span><b
+                                    class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">English</a></li>
                                 <li><a href="#">Vietnamese</a></li>
@@ -86,13 +97,14 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img src="/img/logo.png"></a></h1>
+                    <h1><a href="/"><img src="/img/logo.png"></a></h1>
                 </div>
             </div>
 
             <div class="col-sm-6">
                 <div class="shopping-item">
-                    <a href="/cart" class="cart-amunt">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    <a href="/cart" class="cart-amunt">Cart - <span class="cart-amunt">$100</span> <i
+                            class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ const productController = require('../../controllers/product.controller');
 /* GET home page. */
 router.get('/', productController.listMobilePage);
 
-router.get('/:id',productController.detailMobile);
+router.get('/:id', productController.detailMobile);
 
 //router.get('/', productController.filterMobile);
 
