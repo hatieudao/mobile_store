@@ -1,4 +1,4 @@
-SET CLIENT_ENCODING TO 'utf8';
+SET CLIENT_ENCODING TO 'unicode';
 
 insert into brands (id, name) values(1, 'apple');
 insert into brands (id, name) values(2, 'samsung');
@@ -5567,7 +5567,7 @@ insert into users (id, username, password, full_name, address, uid, phone_number
 insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (8, 'jthomel7', 'nM72msOT', 'Joseph Thomel', '26 Sommers Hill', 'a9374091-958c-4943-a7b9-51f655c5b2a3', '586 677 8240', 'https://robohash.org/eumnecessitatibuset.png?size=50x50&set=set1');
 insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (9, 'rdedmam8', 'uailbW4f4Qo', 'Rosaleen Dedmam', '4 Steensland Terrace', '584cc3cf-3191-4409-ab5b-92e653d2a84c', '710 181 1668', 'https://robohash.org/nemoetvel.png?size=50x50&set=set1');
 insert into users (id, username, password, full_name, address, uid, phone_number, avatar) values (10, 'ngannan9', 'DrOcaftMSct', 'Nanette Gannan', '987 Chive Way', '0fbab097-bed7-4c25-b6d5-d8168bf7e16e', '244 355 7061', 'https://robohash.org/aliquamsolutaoccaecati.png?size=50x50&set=set1');
-
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar, role) values (11, 'transang', '$2b$05$aiQe0bUqGHU7ZtWchNH4EeneVgErk/YcmU0VVxM6EA0FLr9xLXHeq','Trần Ngọc Sang', 'Quảng Ngãi', '79e78c5e-9f4d-43c6-aee9-f03439453190', '012345678', 'https://robohash.org/9KH.png?set=set2&size=150x150','admin');
 
 INSERT INTO orders(id, user_id, state, created_at) VALUES(1, 1, 'waiting to confirm', 'Wed, 12 May 2021 21:54:55 GMT');
 INSERT INTO orders(id, user_id, state, created_at) VALUES(2, 2, 'delivering', 'Thu, 05 Aug 2021 09:55:22 GMT');

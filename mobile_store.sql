@@ -1,17 +1,17 @@
 --\i D:/web/mobile_store/mobile_store.sql
--- DROP DATABASE mobile_store;
--- DROP SCHEMA public CASCADE;
--- CREATE SCHEMA public;
--- CREATE DATABASE mobile_store;
--- \c mobile_store;
-\c dd973o83irqds8;
+DROP DATABASE mobile_store;
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
+CREATE DATABASE mobile_store;
+\c mobile_store;
+-- \c dd973o83irqds8;
 CREATE TABLE "users" (
   "id" SERIAL PRIMARY KEY,
   "username" varchar(50) NOT NULL,
-  "password" varchar(50) NOT NULL,
+  "password" varchar(200) NOT NULL,
   "full_name" varchar(50) NOT NULL,
   "address" varchar(150),
-  "avatar" varchar(150),
+  "avatar" varchar(400),
   "uid" uuid NOT NULL,
   "role" varchar(5) NOT NULL DEFAULT 'user',
   "phone_number" varchar(15),

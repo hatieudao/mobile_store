@@ -26,6 +26,20 @@ db.authenticate()
   .then(() => console.log("DB connected..........."))
   .catch(err => console.log("Error......." + err))
 
+//////////////////////
+
+//passport
+
+app.use(session({ secret: process.env.SESSION_SECRET }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+///////////////////////
+app.use(function (req, res, next) {
+  res.locals.currentAdminUser = req.user;
+  next();
+});
+
 
 // Public route
 const homeRouter = require('./routes/public/home.route');
@@ -40,7 +54,11 @@ const myAccountRouter = require('./routes/user/myAccount.route')
 const wishListRouter = require('./routes/user/wishlist.route')
 // Admin route
 
+
 const adminRouter = require('./routes/admin')
+
+
+
 
 app.set("views", "./views")
 app.set('view engine', 'hbs')
@@ -51,7 +69,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.use(function (req, res, next){
+app.use(function (req, res, next) {
   res.locals.user = req.user;
   next();
 });
@@ -67,6 +85,7 @@ app.use('/myaccount', myAccountRouter);
 app.use('/wishlist', wishListRouter);
 
 app.use('/admin', adminRouter);
+
 
 // catch 404 and forward to error handler
 app.use('*', (req, res) => res.render('404', { layout: '404' }))
