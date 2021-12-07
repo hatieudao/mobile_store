@@ -1,66 +1,65 @@
 const passport = require('passport')
-    ,LocalStrategy = require('passport-local').Strategy;
+  , LocalStrategy = require('passport-local').Strategy;
 const { models } = require('../../models');
 // const User = require('../../models/users');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 passport.use(new LocalStrategy(
-    {
-        usernameField: 'username',
-        passwordField: 'password',
-    },
-    async function(username, password, done) {
-        console.log(username,password);
+  {
+    usernameField: 'username',
+    passwordField: 'password',
+  },
+  async function (username, password, done) {
+    console.log(username, password);
 
-        try
-        {
+    try {
 
-            const user = await models.users.findOne({
-                where: {
-                    username: username,
-                    role: "admin"
-                },
-                raw: true
-            });
-            if (!user) {
-                console.log('Sai username');
-                return done(null, false, { message: 'Incorrect username.' });
-            }
-            const match = await validPassword(user,password);
-            if (!match) {
-                console.log('Sai pass');
-                return done(null, false, { message: 'Incorrect password.' });
-            }
-            console.log('user: ',user);
-            return done(null, user);
-        }
-        catch (err){
-            done(err);
-        }
+      const user = await models.users.findOne({
+        where: {
+          username: username,
+          role: "admin"
+        },
+        raw: true
+      });
+      if (!user) {
+        console.log('Sai username');
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      const match = await validPassword(user, password);
+      if (!match) {
+        console.log('Sai pass');
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+      console.log('user: ', user);
+      return done(null, user);
     }
+    catch (err) {
+      done(err);
+    }
+  }
 
 ));
 
-passport.serializeUser(function(user, done) {
-    done(null, {id: user.id, username: user.username, name: user.full_name});
+passport.serializeUser(function (user, done) {
+  done(null, { id: user.id, username: user.username, name: user.full_name });
 });
 
 
-passport.deserializeUser(async function(user, done) {
-    // try
-    // {
-    //
-    //     const user = await models.users.findOne({
-    //         where: ({ id: id }),
-    //         raw: true
-    //     });
-    //     console.log('user: ',user);
-    //     return done(null, user);
-    // }
-    // catch (err){
-    //     done(err);
-    // }
-    return done(null, user);
+passport.deserializeUser(async function (user, done) {
+  // try
+  // {
+  //
+  //     const user = await models.users.findOne({
+  //         where: ({ id: id }),
+  //         raw: true
+  //     });
+  //     console.log('user: ',user);
+  //     return done(null, user);
+  // }
+  // catch (err){
+  //     done(err);
+  // }
+  return done(null, user);
 });
 
 
@@ -81,8 +80,8 @@ passport.deserializeUser(async function(user, done) {
 //     return done(null, user);
 // });
 
-async function validPassword(user,password){
-    return bcrypt.compare(password, user.password);
+async function validPassword(user, password) {
+  return bcrypt.compare(password, user.password);
 }
 
 module.exports = passport;
