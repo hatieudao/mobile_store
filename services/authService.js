@@ -3,7 +3,6 @@ const { where } = require("sequelize");
 const { create } = require("hbs");
 const bcrypt = require("bcryptjs");
 const { v4: uuidv4 } = require('uuid');
-const { add } = require("nodemon/lib/rules");
 
 exports.getUserbyUsername = (username) => models.users.findOne({ where: { username }, raw: true });
 
