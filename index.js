@@ -8,7 +8,6 @@ const logger = require('morgan')
 const path = require('path')
 const bodyParser = require('body-parser')
 
-
 let hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials', function (err) { });
 
@@ -20,6 +19,22 @@ const db = require('./config/database')
 db.authenticate()
   .then(() => console.log("DB connected..........."))
   .catch(err => console.log("Error......." + err))
+
+//////////////////////
+
+//passport
+const passport = require('passport');
+const session = require('express-session');
+
+app.use(session({ secret: process.env.SESSION_SECRET }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+///////////////////////
+app.use(function (req, res, next) {
+  res.locals.currentAdminUser = req.user;
+  next();
+});
 
 
 // Public route
@@ -35,7 +50,11 @@ const myAccountRouter = require('./routes/user/myAccount.route')
 const wishListRouter = require('./routes/user/wishlist.route')
 // Admin route
 
+
 const adminRouter = require('./routes/admin')
+
+
+
 
 app.set("views", "./views")
 app.set('view engine', 'hbs')
@@ -56,6 +75,7 @@ app.use('/myaccount', myAccountRouter)
 app.use('/wishlist', wishListRouter)
 
 app.use('/admin', adminRouter)
+
 
 // catch 404 and forward to error handler
 app.use('*', (req, res) => res.render('404', { layout: '404' }))
