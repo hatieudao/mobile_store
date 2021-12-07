@@ -71,18 +71,15 @@ exports.deleteProduct = async (req, res) => {
 
 
 exports.addProductPage = (req, res) => {
-
     res.render('admin/product/productAddItem', { title: 'Product', layout: 'admin/layout.hbs' });
 }
 
 
 exports.addProduct = async (req, res) => {
     const { fullName, price, rating, brandName } = req.query;
-
     const addNewProduct = await productService.addProduct(fullName, price, rating, brandName);
     console.log(addNewProduct);
     const id = addNewProduct.id;
-
     res.redirect('/admin/product/'+ id);
 }
 
