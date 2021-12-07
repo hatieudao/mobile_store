@@ -38,7 +38,7 @@
 + `options` include a `mobile`, a `capacity`, and something more such as color, special model. Example `iPhone 13 128GB black`
 
 
-##Fix Database:
+## Fix Database:
 users avatar:  varchar(400)
 users password: varchar(200) 
 

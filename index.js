@@ -7,9 +7,15 @@ const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const path = require('path')
 const bodyParser = require('body-parser')
+const session = require("express-session")
+const passport = require('./auth/passport')
 
 let hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials', function (err) { });
+
+app.use(session({ secret: process.env.SESSION_SECRET }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
@@ -23,8 +29,6 @@ db.authenticate()
 //////////////////////
 
 //passport
-const passport = require('passport');
-const session = require('express-session');
 
 app.use(session({ secret: process.env.SESSION_SECRET }));
 app.use(passport.initialize());
@@ -39,10 +43,10 @@ app.use(function (req, res, next) {
 
 // Public route
 const homeRouter = require('./routes/public/home.route');
-const registerRouter = require('./routes/public/register.route');
+//const registerRouter = require('./routes/public/register.route');
 const productRouter = require('./routes/public/product.route');
 const contactRouter = require('./routes/public/contact.route');
-const loginRouter = require('./routes/public/login.route');
+const authRouter = require('./routes/public/auth.route');
 // User route
 const cartRouter = require('./routes/user/cart.route')
 const checkoutRouter = require('./routes/user/checkout.route')
@@ -64,17 +68,23 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/', homeRouter)
-app.use('/product', productRouter)
-app.use('/login', loginRouter)
-app.use('/register', registerRouter)
-app.use('/contact', contactRouter)
-app.use('/cart', cartRouter)
-app.use('/checkout', checkoutRouter)
-app.use('/myaccount', myAccountRouter)
-app.use('/wishlist', wishListRouter)
 
-app.use('/admin', adminRouter)
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
+app.use('/', homeRouter);
+app.use('/product', productRouter);
+app.use('/', authRouter);
+//app.use('/register', registerRouter);
+app.use('/contact', contactRouter);
+app.use('/cart', cartRouter);
+app.use('/checkout', checkoutRouter);
+app.use('/myaccount', myAccountRouter);
+app.use('/wishlist', wishListRouter);
+
+app.use('/admin', adminRouter);
 
 
 // catch 404 and forward to error handler

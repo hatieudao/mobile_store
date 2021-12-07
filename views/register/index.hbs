@@ -29,13 +29,15 @@
     <div class="form_container">
         <div class="title_container">
             <h2>Responsive Registration Form</h2>
+            {{#if message}}
+                <div class="row">
+                    <b>{{message}}</b>
+                </div>
+            {{/if}}
         </div>
         <div class="row clearfix">
             <div class="">
-                <form>
-                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                        <input type="email" name="email" placeholder="Email" required />
-                    </div>
+                <form method="post">
                     <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
                         <input type="text" name="username" placeholder="Username" required />
                     </div>
@@ -43,29 +45,23 @@
                         <input type="password" name="password" placeholder="Password" required />
                     </div>
                     <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                        <input type="password" name="password" placeholder="Re-type Password" required />
+                        <input type="password" name="reTypePassword" placeholder="Re-type Password" required />
                     </div>
-                    <div class="row clearfix">
-                        <div class="col_half">
-                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                                <input type="text" name="name" placeholder="First Name" />
-                            </div>
-                        </div>
-                        <div class="col_half">
-                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                                <input type="text" name="name" placeholder="Last Name" required />
-                            </div>
-                        </div>                        
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                        <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                        <input type="text" name="fullName" placeholder="Full Name" />
                     </div>
                     <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
-                        <input type="tel" name="phonenumber" placeholder="Phone number" required />
+                        <input type="tel" name="phoneNumber" placeholder="Phone number" required />
                     </div>
-                    <div class="input_field radio_option">
-                        <input type="radio" name="radiogroup1" id="rd1">
+                    <!--<div class="input_field radio_option">
+                        <input type="radio" name="male" id="male">
                         <label for="rd1">Male</label>
-                        <input type="radio" name="radiogroup1" id="rd2">
+                        <input type="radio" name="female" id="female">
                         <label for="rd2">Female</label>
-                    </div>
+                    </div>-->
                     <div class="input_field"> <span><i aria-hidden="true" class="fa fa-address-card"></i></span>
                         <input type="text" name="address" placeholder="Address" required />
                     </div>

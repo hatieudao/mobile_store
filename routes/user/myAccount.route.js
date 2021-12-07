@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
+myAccountController = require('../../controllers/myAccount.controller');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('myAccount', { title: 'MyAccount' });
-});
+router.get('/', myAccountController.isLogin, myAccountController.myAccount);
+router.post('/', myAccountController.isLogin, myAccountController.updateAccount);
 
 module.exports = router;

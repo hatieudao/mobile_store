@@ -42,49 +42,106 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-9">
-                <div class="tab-content">
-                    <div class="account-detail">
-                        <h2>Account Details</h2>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input class="form-control acc-detail-form" type="text" placeholder="First Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input class="form-control acc-detail-form" type="text" placeholder="Last Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input class="form-control acc-detail-form" type="text" placeholder="Phone number">
-                            </div>
-                            <div class="col-md-6">
-                                <input class="form-control acc-detail-form" type="text" placeholder="Email">
-                            </div>
-                            <div class="col-md-12">
-                                <input class="form-control acc-detail-form" type="text" placeholder="Address">
-                            </div>
-                            <div class="col-md-12">
-                                <button class="btn acc-detail-form">Update Account</button>
-                                <br><br>
-                            </div>
+            <div class="col-md-4">
+                <form action="" method="post">
+                    <div class="tab-content">
+                        <h3> Avatar </h3>
+                        {{#if userInfo.avatar}}
+                            <img src="{{userInfo.avatar}}" class="img-user-account"/>
+                        {{else}}
+                            <b>Không có ảnh</b>
+                        {{/if}}
+                        <div class="col-md-12">
+                            <input class="form-control acc-detail-form" type="text" name="linkPicture"
+                                   placeholder="Link ảnh">
                         </div>
-                        <h4>Password change</h4>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input class="form-control acc-detail-form" type="password" placeholder="Current Password">
-                            </div>
-                            <div class="col-md-6">
-                                <input class="form-control acc-detail-form" type="password" placeholder="New Password">
-                            </div>
-                            <div class="col-md-6">
-                                <input class="form-control acc-detail-form" type="password" placeholder="Confirm Password">
-                            </div>
-                            <div class="col-md-12">
-                                <button class="btn acc-detail-form">Save Changes</button>
+                        <div class="col-md-12">
+                            <div class="style-btn-myaccount">
+                                <input class="button" type="submit" value="Update"/>
                             </div>
                         </div>
                     </div>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content">
+                    <div class="account-detail">
+                        <h2>Account Details</h2>
+                        <form method="post">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="col-md-2">
+                                        <span class="title-field"> Tên: </span>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="form-control acc-detail-form" type="text" placeholder="Full Name"
+                                               name="fullName"
+                                               value="{{userInfo.full_name}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="col-md-2">
+                                        <span class="title-field"> SĐT: </span>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="form-control acc-detail-form" type="text"
+                                               placeholder="Phone number" name="phoneNumber"
+                                               value="{{userInfo.phone_number}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="col-md-2">
+                                        <span class="title-field"> Địa chỉ: </span>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="form-control acc-detail-form" type="text" placeholder="Address"
+                                               name="address"
+                                               value="{{userInfo.address}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="style-btn-myaccount">
+                                        <input class="btn acc-detail-form" type="submit" value="Update Account"/>
+                                        <input class="btn acc-detail-form" type="submit" name="deleteAccount" value="Delete Account"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="magin-title-myaccount">
+                            <h4>Password change</h4>
+                        </div>
+                        {{#if message}}
+                            <b>{{message}}</b>
+                        {{/if}}
+                        <form method="post">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="col-md-10">
+                                        <input class="form-control acc-detail-form" type="password"
+                                               name="currentPassword"
+                                               placeholder="Current Password">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <input class="form-control acc-detail-form" type="password" name="newPassword"
+                                               placeholder="New Password">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <input class="form-control acc-detail-form" type="password"
+                                               name="confirmPassword"
+                                               placeholder="Confirm Password">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="style-btn-myaccount">
+                                            <input class="btn acc-detail-form" type="submit" value="Save Change"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
