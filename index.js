@@ -9,9 +9,14 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const session = require("express-session")
 const passport = require('./auth/passport')
+const pagiHelper = require('express-handlebars-paginate');
+const expressHandlebarsSections = require('express-handlebars-sections');
 
 let hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials', function (err) { });
+hbs.registerHelper('createPagination', pagiHelper.createPagination);
+hbs.registerHelper('section',expressHandlebarsSections());
+
 
 app.use(session({ secret: process.env.SESSION_SECRET }));
 app.use(passport.initialize());

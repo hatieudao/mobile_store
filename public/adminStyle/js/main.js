@@ -1,8 +1,7 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 
-const adminSidebarCollapse = $("#adminSidebarCollapse");
-const adminSidebar = $("#adminSidebar");
+
+const adminSidebarCollapse =  document.querySelector("#adminSidebarCollapse");
+const adminSidebar =  document.querySelector("#adminSidebar");
 
 adminSidebarCollapse.onclick = function(){
     adminWrapper.classList.toggle('admin-sidebar--hide');

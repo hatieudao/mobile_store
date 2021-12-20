@@ -7,7 +7,12 @@ const pictureService = require('../../services/admin/admin.picture.service');
 const {stack} = require("sequelize/dist/lib/utils");
 
 exports.productList = async (req, res) => {
-    const { page, limit } = req.query;
+
+    const data = req.query;
+
+    const page = parseInt(data.page) || 1;
+    const limit = parseInt(data.limit) || 10;
+
     const productName = req.query.productName;
     const brandName = req.query.brandName;
 
@@ -40,19 +45,13 @@ exports.productList = async (req, res) => {
     //products
     const products = dataService.rows;
     //Số lượng các products
-    const countProduct = dataService.count;
+    const count = dataService.count;
 
 
-    const curPage = parseInt(page) || 1;
-    const curLimit = parseInt(limit) || 10;
-
-    //Số lượng page = ceil của (tổng sản phảm / số lượng sản phẩm trên 1 trang)
-    const countPage = Math.ceil(countProduct/curLimit);
     const pagination = {
-        curPage: curPage,
-        prevPageLink: curPage > 1 ? url + selectPage + (curPage - 1) : url + selectPage + curPage,
-        nextPageLink: curPage < countPage ? url + selectPage + (curPage + 1) : url + selectPage + curPage,
-        limit: parseInt(limit) || 10
+        page: page,
+        limit: limit,
+        totalRows: count
     }
 
     res.render('admin/product/productList', { title: 'Product List', layout: 'admin/layout.hbs', products, pagination, filter});
