@@ -20,3 +20,12 @@ exports.getBrandByName = async (name) => {
     }
     return brand;
 }
+
+exports.getAllBrandName = async (raw = false) => {
+    return await models.brands.findAll({
+        raw: raw,
+        attributes: [
+            "name"
+        ]
+    });
+}

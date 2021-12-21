@@ -3,38 +3,39 @@
     --black-color: #000;
     --sidebar-color: #132644;
     --admin-login-background: #132644;
-    --admin-header-height: 80px;
+    --admin-header-height: 60px;
     --admin-sidebar-widtht: 200px;
+    --body-color: rgb(220, 219, 224);
 }
 
-.admin-table{
-    border-color: #d0d8e0;
-    background-color: var(--white-color);
+body{
+    background: var(--body-color);
 }
 
-.admin-table-thead{
-    background-color: #ADD8E6;
-
+thead{
+    background: #ccc;
+    border-bottom-style: hidden;
 }
+
+td{
+    padding: 0;
+}
+
+td a{
+    text-decoration: none;
+    color: #6191c7;
+}
+
 th, td {
     text-align: left;
     vertical-align: middle;
 }
 
-
-.pagination{
-    padding: 10px;
-}
-
-.paginatio-first{
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    
-}
-
 td img{
     width: 50px;
 }
+
+
 
 
 .admin-content{
@@ -50,7 +51,7 @@ td img{
 .admin-container-content{
     border-radius: 10px;
     background-color: var(--white-color);
-    padding: 64px;
+    padding: 24px 40px;
 }
 
 .admin-container-content.admin-add-product{
@@ -60,58 +61,4 @@ td img{
     border-radius: 10px;
     margin: 100px auto;
     padding: 80px;
-}
-
-.admin-add-propertye-table{
-    border-color: #d0d8e0;
-    background-color: var(--white-color);
-}
-
-.admin-add-propertye-table-thead{
-    background-color: #ADD8E6;
-}
-
-.admin-add-propertye-table-tbody{
-
-}
-
-
-.admin-add-configuration-table{
-    border-color: #d0d8e0;
-    background-color: var(--white-color);
-}
-
-.admin-add-configuration-table-thead{
-    background-color: #ADD8E6;
-}
-
-.admin-add-configuration-table-tbody{
-
-}
-
-
-.admin-add-option-table{    
-    border-color: #d0d8e0;
-    background-color: var(--white-color);    
-}
-
-.admin-add-option-table-thead{
-    background-color: #ADD8E6;    
-}
-
-.admin-add-option-table-tbody{
-    
-}
-
-.admin-add-image-table{    
-    border-color: #d0d8e0;
-    background-color: var(--white-color);    
-}
-
-.admin-add-image-table-thead{
-    background-color: #ADD8E6;    
-}
-
-.admin-add-image-table-tbody{
-    
 }

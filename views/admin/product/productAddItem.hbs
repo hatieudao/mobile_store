@@ -71,55 +71,55 @@
                             <div class="col-lg-3 py-2">
                                 Tên thương hiệu
                             </div>
-                            <div class="col-lg-9 py-2">
-                                <input class="form-control shadow-none" name="brandName" type="text" placeholder="Tên thương hiệu">
+                            <div class="col-lg-9 py-2 d-flex justify-content-between dropdown-menu-group">
+                                <input name="brandName" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên thương hiệu"
+                                    {{#if filter.brandName}}
+                                       value="{{filter.brandName}}"
+                                    {{/if}}
+                                >
+                                <div class="">
+                                    <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        {{#each brandNames}}
+                                            <li class="dropdown-item">{{name}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            {{!-- <div class="">
+            <div class="">
                 <div class="row justify-content-center">
                     <h2 class="row py-4 text-secondary">
                         Configuration
                     </h2>
-                    <div class="row py-4 justify-content-center">
-                        <div class="col-lg-8 d-flex justify-content-end">
-                            <button type="button" id="addNewConfigurationRowBtn" class="btn btn-success shadow-none" data-toggle="modal">
-                                <i class="fa fa-pencil"></i>
-                                Thêm Dòng
-                            </button>
-                            <button type="button" id="deleteNewConfigurationRowBtn" class="btn btn-danger shadow-none" data-toggle="modal">
-                                <i class="fa fa-pencil"></i>
-                                Xóa dòng
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <table class="table table-bordered admin-add-configuration-table">
-                                <thead class="admin-add-configuration-table-thead">
+                </div>
+                <button id="addConfigurationRow" type="button" class="btn btn-primary shadow-none">
+                    <i class="fa fa-pencil"></i>
+                    Thêm mới
+                </button>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="row py-4">
+                                <table class="table table-bordered admin-table">
+                                    <thead class="admin-table-thead">
                                     <tr>
                                         <th>
-                                            Values
+                                            Giá trị
                                         </th>
                                         <th>
                                             Specification
                                         </th>
                                     </tr>
-                                </thead>
-                                <tbody id="admin-add-configuration-row-list" class="admin-add-configuration-table-tbody">
-                                    <!-- <tr>
-                                        <td>
-                                            <input class="form-control shadow-none" name="configurationValue0" type="text" placeholder="Nhập configuration">
-                                        </td>
-                                        <td>
-                                            <input class="form-control shadow-none" name="specification0" type="text" placeholder="Nhập Specification">
-                                        </td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody class="admin-table-tbody" id="configurationTable">
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,132 +127,105 @@
             <div class="">
                 <div class="row justify-content-center">
                     <h2 class="row py-4 text-secondary">
-                        Option
+                        Options
                     </h2>
-                    <div class="row py-4 justify-content-center">
-                        <div class="col-lg-8 d-flex justify-content-end">
-                            <button type="button" id="addNewOptionRowBtn" class="btn btn-success shadow-none" data-toggle="modal">
-                                <i class="fa fa-pencil"></i>
-                                Thêm Dòng
-                            </button>
-                            <button type="button" id="deleteNewOptionRowBtn" class="btn btn-danger shadow-none" data-toggle="modal">
-                                <i class="fa fa-pencil"></i>
-                                Xóa dòng
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <table class="table table-bordered admin-add-option-table">
-                                <thead class="admin-add-option-table-thead">
+                </div>
+                <button id="addOptionRow" type="button" class="btn btn-primary shadow-none">
+                    <i class="fa fa-pencil"></i>
+                    Thêm Option
+                </button>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row align-items-center">
+                            <div class="row py-4">
+                                <table class="table table-bordered admin-table">
+                                    <thead class="admin-table-thead">
                                     <tr>
                                         <th>
-                                            Values
+                                            Tên
                                         </th>
                                         <th>
-                                            Price
+                                            Giá
                                         </th>
                                         <th>
                                             Capacity
                                         </th>
                                     </tr>
-                                </thead>
-                                <tbody id="admin-add-option-row-list" class="admin-add-option-table-tbody">
-                                    <!-- <tr>
-                                        <td>
-                                            <input class="form-control shadow-none" name="addOptionName0" type="text" placeholder="Nhập Option">
-                                        </td>
-                                        <td>
-                                            <input class="form-control shadow-none" name="addCapacityForPrice0" type="text" placeholder="Nhập Capacity">
-                                        </td>
-                                        <td>
-                                            <input class="form-control shadow-none" name="addCapacityForOption0" type="text" placeholder="Nhập Capacity">
-                                        </td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody class="admin-table-tbody" id="optionTable">
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="">
-                <div class="row justify-content-center">
-                    <h2 class="row py-4 text-secondary">
-                        Image
-                    </h2>
-                    <div class="row py-4 justify-content-center">
-                        <div class="col-lg-8 d-flex justify-content-end">
-                            <button type="button" id="addNewImageRowBtn" class="btn btn-success shadow-none" data-toggle="modal">
-                                <i class="fa fa-pencil"></i>
-                                Thêm Dòng
-                            </button>
-                            <button type="button" id="deleteNewImageRowBtn" class="btn btn-danger shadow-none" data-toggle="modal">
-                                <i class="fa fa-pencil"></i>
-                                Xóa dòng
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <table class="table table-bordered admin-add-image-table">
-                                <thead class="admin-add-image-table-thead">
-                                    <tr>
-                                        <th>
-                                            Link
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody id="admin-add-image-row-list" class="admin-add-image-table-tbody">
-                                    <!-- <tr>
-                                        <td>
-                                            <input class="form-control shadow-none" name="addImageLink0" type="text" placeholder="Nhập Image Link">
-                                        </td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
-
-
-        {{!-- <input placeholder="" name="brandip">
-        <table class="table table-bordered admin-table">
-            <thead class="admin-table-thead">
-            <tr>
-                <th>
-                    Chọn
-                </th>
-                <th>
-                    ID
-                </th>
-                <th>
-                    Tên
-                </th>
-                <th>
-                    Thương hiệu
-                </th>
-            </tr>
-            </thead>
-            <tbody class="admin-table-tbody">
-                <tr>
-                    <td>
-                        <input class="form-check-input" type="radio" name="radioip" id="" value="sang1">
-                    </td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input class="form-check-input" type="radio" name="radioip" id="" value="sang2">
-                    </td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
-            </tbody>
-        </table> --}}
     </div>
 </form>
+
+{{#section 'script'}}
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script>
+
+
+        // let specifications = [];
+
+        // $.getJSON('/admin/api/product/specification',function (data){
+        //     console.log("specifications: ",data);
+        //     specifications = data.slice();
+        // });
+
+
+        let countConfiguration = 0;
+        let countOption = 0;
+
+        $('#addConfigurationRow').click(function (){
+            console.log("addConfigurationRow");
+
+            const configurationRow =
+                `<tr>
+                    <td>
+                        <input class="form-control shadow-none" name="configurations[${countConfiguration}][configurationValue]" type="text" placeholder="Giá trị">
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-between dropdown-menu-group">
+                            <input name="configurations[${countConfiguration}][specificationName]" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Giá trí">
+                        </div>
+                    </td>
+                </tr>`
+
+            $('#configurationTable').append(configurationRow);
+            countConfiguration++;
+        })
+
+        $('#addOptionRow').click(function (){
+            console.log("addOptionRow");
+
+            const optionRow =
+                    `<tr>
+                    <td>
+                        <input class="form-control shadow-none" name="options[${countOption}][optionName]" type="text" placeholder="Giá trị">
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-between dropdown-menu-group">
+                            <input name="options[${countOption}][optionPrice]" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Giá trí">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-between dropdown-menu-group">
+                            <input name="options[${countOption}][capacityName]" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Giá trí">
+                        </div>
+                    </td>
+                </tr>`
+
+            $('#optionTable').append(optionRow);
+            countOption++;
+        })
+
+    </script>
+    <script src="/adminStyle/js/filterSelect.js"></script>
+
+{{/section}}

@@ -22,8 +22,6 @@ exports.productList = (page, limit, filter) => {
                     }
                 },
             ],
-        offset: (page - 1) * limit,
-        limit: limit,
         order: [
             ['id', 'ASC'],
         ],
@@ -31,13 +29,21 @@ exports.productList = (page, limit, filter) => {
         },
     }
 
-    if (filter.productName){
-        options.where.full_name = filter.productName;
+    if(limit && page){
+        options.offset = (page - 1) * limit;
+        options.limit = limit;
     }
 
-    if (filter.brandName){
-        options.include[0].where.name = filter.brandName;
+    if(filter){
+        if (filter.productName){
+            options.where.full_name = filter.productName;
+        }
+
+        if (filter.brandName){
+            options.include[0].where.name = filter.brandName;
+        }
     }
+
 
     const result = models.mobiles.findAndCountAll(options);
 

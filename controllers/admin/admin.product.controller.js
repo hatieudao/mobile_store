@@ -13,39 +13,24 @@ exports.productList = async (req, res) => {
     const page = parseInt(data.page) || 1;
     const limit = parseInt(data.limit) || 10;
 
-    const productName = req.query.productName;
-    const brandName = req.query.brandName;
-
-
-    console.log('limit = ',limit);
-
-
     //filter
     //Lấy các giá trị filter
     const filter = {
-        productName: productName,
-        brandName: brandName
+        productName: data.productName,
+        brandName: data.brandName
     }
 
-    //pagination
-    //Lấy url gốc -> cắt chuỗi "page=" ra (nếu có)
-    const oriUrl = req.originalUrl;
-    const splitIndex = oriUrl.lastIndexOf("page=");
-    const url = splitIndex > -1 ? oriUrl.slice(0,splitIndex-1) : oriUrl;
-
-    //Kiểm tra xem trên có các query khác hay koS
-    const selectPage = url.lastIndexOf('?') > -1 ? '&page=' : '?page';
 
 
-
+    const brandNames = await brandService.getAllBrandName(true);
 
     //Lấy products
-    const dataService = await productService.productList(page || 1,limit || 10, filter);
+    const allProducts = await productService.productList(page,limit, filter);
 
     //products
-    const products = dataService.rows;
+    const products = allProducts.rows;
     //Số lượng các products
-    const count = dataService.count;
+    const count = allProducts.count;
 
 
     const pagination = {
@@ -54,7 +39,7 @@ exports.productList = async (req, res) => {
         totalRows: count
     }
 
-    res.render('admin/product/productList', { title: 'Product List', layout: 'admin/layout.hbs', products, pagination, filter});
+    res.render('admin/product/productList', { title: 'Product List', layout: 'admin/layout.hbs', products, pagination, filter, brandNames});
 }
 
 
@@ -69,17 +54,32 @@ exports.deleteProduct = async (req, res) => {
 }
 
 
-exports.addProductPage = (req, res) => {
-    res.render('admin/product/productAddItem', { title: 'Product', layout: 'admin/layout.hbs' });
+exports.addProductPage = async (req, res) => {
+    const brandNames = await brandService.getAllBrandName(true);
+    res.render('admin/product/productAddItem', { title: 'Product', layout: 'admin/layout.hbs', brandNames });
 }
 
 
 exports.addProduct = async (req, res) => {
+    const configurations = req.query.configurations;
+    const options = req.query.options;
     const { fullName, price, rating, brandName } = req.query;
     const addNewProduct = await productService.addProduct(fullName, price, rating, brandName);
     console.log(addNewProduct);
-    const id = addNewProduct.id;
-    res.redirect('/admin/product/'+ id);
+    const producId = addNewProduct.id;
+
+
+    for (let configuration of configurations){
+        const newConfiguration = await configurationService.addConfiguration(producId, configuration.configurationValue, configuration.specificationName);
+        console.log(newConfiguration);
+    };
+
+    for (let option of options){
+        const newOption = await optionService.addOption(producId, option.optionName, option.optionPrice, option.capacityName);
+        console.log(newOption);
+    };
+
+    res.redirect('/admin/product/'+ producId);
 }
 
 exports.productItem = async (req, res) => {
