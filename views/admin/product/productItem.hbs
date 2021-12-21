@@ -108,128 +108,190 @@
                     </div>
                 </div>
             </div>
-        </form>
-
-         <div>
-             <div class="">
-                 <div class="row justify-content-center">
-                     <h2 class="row py-4 text-secondary">
-                         Configuration
-                     </h2>
-                 </div>
-                 <a class="" href="/admin/product/{{product.id}}/addConfigurationPage">
-                     <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
-                         <i class="fa fa-pencil"></i>
-                         Thêm mới
-                     </button>
-                 </a>
-                 <div class="row justify-content-center">
-                     <div class="col-lg-8">
-                         <div class="row align-items-center">
-                            <div class="row py-4">
-                                     <table class="table table-bordered admin-table">
-                                         <thead class="admin-table-thead">
-                                         <tr>
-                                             <th>
-                                                 ID
-                                             </th>
-                                             <th>
-                                                 Giá trị
-                                             </th>
-                                             <th>
-                                                Specification
-                                             </th>
-                                         </tr>
-                                         </thead>
-                                         <tbody class="admin-table-tbody">
-                                         {{#each configurations}}
-                                             <tr>
-                                                 <td>{{id}}</td>
-                                                 <td>{{value}}</td>
-                                                 <td>{{specification.name}}</td>
-                                             </tr>
-                                         {{/each}}
-                                         </tbody>
-                                     </table>
-                     </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-            <div class="">
-                <div class="row justify-content-center">
-                    <h2 class="row py-4 text-secondary">
-                        Option
-                    </h2>
-                </div>
-                <a class="" href="/admin/product/{{product.id}}/addOptionPage">
-                    <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+            <div>
+                <div class="">
+                    <div class="row justify-content-center">
+                        <h2 class="row py-4 text-secondary">
+                            Configuration
+                        </h2>
+                    </div>
+                    <button id="addConfigurationRow" type="button" class="btn btn-primary shadow-none" data-toggle="modal">
                         <i class="fa fa-pencil"></i>
                         Thêm mới
                     </button>
-                </a>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="row align-items-center">
-                            <div class="row py-4">
-                                <table class="table table-bordered admin-table">
-                                    <thead class="admin-table-thead">
-                                    <tr>
-                                        <th>
-                                            ID
-                                        </th>
-                                        <th>
-                                            Tên
-                                        </th>
-                                        <th>
-                                            Giá
-                                        </th>
-                                        <th>
-                                            Capacity
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody class="admin-table-tbody">
-                                    {{#each options}}
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="row align-items-center">
+                                <div class="row py-4">
+                                    <table class="table table-bordered admin-table">
+                                        <thead class="admin-table-thead">
                                         <tr>
-                                            <td>{{id}}</td>
-                                            <td>{{name}}</td>
-                                            <td>{{price}}</td>
-                                            <td>{{capacity.name}}</td>
+                                            <th>Chọn</th>
+                                            <th>
+                                                ID
+                                            </th>
+                                            <th>
+                                                Giá trị
+                                            </th>
+                                            <th>
+                                                Specification
+                                            </th>
                                         </tr>
-                                    {{/each}}
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody class="admin-table-tbody" id="configurationTable">
+                                        {{#each configurations}}
+                                            <tr>
+                                                <td>
+                                                    <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="deleteConfigurations[]" value="{{id}}">
+                                                </td>
+                                                <td>{{id}}</td>
+                                                <td>{{value}}</td>
+                                                <td>{{specification.name}}</td>
+                                            </tr>
+                                        {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="">
-                <div class="row justify-content-center">
-                    <h2 class="row py-4 text-secondary">
-                        Pictures
-                    </h2>
-                </div>
-                <a class="" href="/admin/product/{{product.id}}/addPicturePage">
-                    <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                <div class="">
+                    <div class="row justify-content-center">
+                        <h2 class="row py-4 text-secondary">
+                            Option
+                        </h2>
+                    </div>
+                    <button id="addOptionRow" type="button" class="btn btn-primary shadow-none" data-toggle="modal">
                         <i class="fa fa-pencil"></i>
                         Thêm mới
                     </button>
-                </a>
-                <div class="border mt-4 p-4" style="border-radius: 10px; border-color: 1px #ccc; ">
-                    <div class="row justify-content-start mt-4">
-                            {{#each pictures}}
-                            <div class="col-lg-1 col-md-3 col-sm-6 mb-4">
-                                <img src="{{link}}" style="width: 80%"/>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="row align-items-center">
+                                <div class="row py-4">
+                                    <table class="table table-bordered admin-table">
+                                        <thead class="admin-table-thead">
+                                        <tr>
+                                            <th>Chọn</th>
+                                            <th>
+                                                ID
+                                            </th>
+                                            <th>
+                                                Tên
+                                            </th>
+                                            <th>
+                                                Giá
+                                            </th>
+                                            <th>
+                                                Capacity
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody class="admin-table-tbody" id="optionTable">
+                                        {{#each options}}
+                                            <tr>
+                                                <td>
+                                                    <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="deleteOptions[]" value="{{id}}">
+                                                </td>
+                                                <td>{{id}}</td>
+                                                <td>{{name}}</td>
+                                                <td>{{price}}</td>
+                                                <td>{{capacity.name}}</td>
+                                            </tr>
+                                        {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="row justify-content-center">
+                        <h2 class="row py-4 text-secondary">
+                            Pictures
+                        </h2>
+                    </div>
+                    <a class="" href="/admin/product/{{product.id}}/addPicturePage">
+                        <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
+                            <i class="fa fa-pencil"></i>
+                            Thêm mới
+                        </button>
+                    </a>
+                    <div class="border mt-4 p-4" style="border-radius: 10px; border-color: 1px #ccc; ">
+                        <div class="row justify-content-start mt-4">
+                            {{#each pictures}}
+                                <div class="col-lg-1 col-md-3 col-sm-6 mb-4">
+                                    <img src="{{link}}" style="width: 80%"/>
+                                </div>
                             {{/each}}
 
+                        </div>
                     </div>
                 </div>
             </div>
-         </div>
+        </form>
     </div>
 </div>
+
+{{#section 'script'}}
+
+    <script>
+
+        let countConfiguration = 0;
+        let countOption = 0;
+
+        $('#addConfigurationRow').click(function (){
+            console.log("addConfigurationRow");
+
+            const configurationRow =
+                    `<tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input class="form-control shadow-none" name="configurations[${countConfiguration}][configurationValue]" type="text" placeholder="Giá trị">
+                        </td>
+                        <td>
+                            <div class="d-flex justify-content-between dropdown-menu-group">
+                                <input name="configurations[${countConfiguration}][specificationName]" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Giá trí">
+                            </div>
+                        </td>
+                    </tr>`
+
+            $('#configurationTable').append(configurationRow);
+            countConfiguration++;
+        })
+
+        $('#addOptionRow').click(function (){
+            console.log("addOptionRow");
+
+            const optionRow =
+                    `<tr>
+                         <td></td>
+                         <td></td>
+                        <td>
+                            <input class="form-control shadow-none" name="options[${countOption}][optionName]" type="text" placeholder="Giá trị">
+                        </td>
+                        <td>
+                            <div class="d-flex justify-content-between dropdown-menu-group">
+                                <input name="options[${countOption}][optionPrice]" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Giá trí">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex justify-content-between dropdown-menu-group">
+                                <input name="options[${countOption}][capacityName]" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Giá trí">
+                            </div>
+                        </td>
+                    </tr>`
+
+            $('#optionTable').append(optionRow);
+            countOption++;
+        })
+
+    </script>
+    <script src="/adminStyle/js/filterSelect.js"></script>
+
+{{/section}}
 
 

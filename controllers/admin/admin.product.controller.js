@@ -103,12 +103,43 @@ exports.updateProduct = async (req, res) => {
     const id = parseInt(req.params.id);
     const { fullName, price, rating, brandName } = req.query;
 
+    const deleteOptions = req.query.deleteOptions;
+    const deleteConfigurations = req.query.deleteConfigurations;
+
     await productService.updateProduct(id, fullName, price, rating, brandName);
 
-    const data = await productService.findProductInforById(id);
-    const product = data[0];
+    const configurations = req.query.configurations;
+    const options = req.query.options;
 
-    res.render('admin/product/productItem', { title: 'Product', layout: 'admin/layout.hbs', product });
+    if(configurations)
+    {
+        for (let configuration of configurations){
+            const newConfiguration = await configurationService.addConfiguration(id, configuration.configurationValue, configuration.specificationName);
+            console.log(newConfiguration);
+        };
+    }
+    if(options)
+    {
+        for (let option of options){
+            const newOption = await optionService.addOption(id, option.optionName, option.optionPrice, option.capacityName);
+            console.log(newOption);
+        };
+    }
+
+
+    if(deleteConfigurations)
+    {
+        await configurationService.deleteConfigurationByIds(deleteConfigurations);
+    }
+
+    if(deleteOptions)
+    {
+        await optionService.deleteOptionByIds(deleteOptions);
+    }
+
+
+    res.redirect('/admin/product/'+id);
+
 }
 
 exports.addConfigurationPage = async (req, res) => {
