@@ -17,3 +17,9 @@ $('#resetBtn').click(function (){
     if(""){ console.log("true")}
     else{ console.log("false")}
 })
+
+const filterStatus = $('#filterStatus').val();
+console.log("filterSelect: ",filterStatus);
+console.log("$('#status').val: ",$('#status').val());
+$('#status').val(filterStatus);
+console.log("$('#status').val: ",$('#status').val());

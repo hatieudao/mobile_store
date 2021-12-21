@@ -25,8 +25,8 @@ exports.productList = async (req, res) => {
         maxRating: data.maxRating,
         minCreatedDate: data.minCreatedDate || new Date(2021, 0, 1),
         maxCreatedDate: data.maxCreatedDate || new Date(),
-        minUpdatedDate: data.minUpdatedDate || new Date(2021, 0, 1),
-        maxUpdatedDate: data.maxUpdatedDate || new Date()
+        // minUpdatedDate: data.minUpdatedDate || new Date(2021, 0, 1),
+        // maxUpdatedDate: data.maxUpdatedDate || new Date()
     }
 
 

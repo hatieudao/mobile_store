@@ -3,6 +3,7 @@ const {models} = require('../../models');
 
 const uuid = require('uuid');
 const bcrypt = require('bcrypt');
+const {Op} = require("sequelize");
 
 
 
@@ -19,30 +20,49 @@ exports.customerUserList = () => {
     return result;
 }
 
-exports.adminUserList = (page, limit, filter) => {
+exports.adminUserList = (page, limit, filter, raw = false) => {
     let options = {
-        offset: (page - 1) * limit,
-        limit: limit,
         order: [
             ['id', 'ASC'],
         ],
-        raw: true,
         where: {
             role: "admin",
         },
+        raw: raw
     }
 
-    // options.where.role = 'admin';
-
-    if (filter.username){
-        options.where.username = filter.username;
+    if(limit && page){
+        options.offset = (page - 1) * limit;
+        options.limit = limit;
     }
 
-    if (filter.fullName){
-        options.where.full_name = filter.fullName;
-    }
-    if (filter.phoneNumber){
-        options.where.phone_number = filter.phoneNumber;
+    if(filter){
+        if (filter.adminId){
+            options.where.id = filter.adminId;
+        }
+
+        if (filter.adminUserName){
+            options.where.username = filter.adminUserName;
+        }
+
+        if (filter.adminName){
+            options.where.full_name = filter.adminName;
+        }
+        if (filter.adminPhoneNumber){
+            options.where.phone_number = filter.adminPhoneNumber;
+        }
+
+        if(filter.status){
+            options.where.status = filter.status
+        }
+
+        if(filter.minCreatedDate && filter.maxCreatedDate) {
+            options.where.created_at = {
+                // [Op.between]: [filter.minCreatedDate, filter.maxCreatedDate]
+                [Op.gte]: filter.minCreatedDate,
+                [Op.lte]: filter.maxCreatedDate
+            };
+        }
     }
 
 
@@ -107,3 +127,14 @@ exports.findAdminUserByUsername = (username) => {
 
 }
 
+//
+// exports.foo = async () => {
+//     const x = new Date('Thu Nov 4 2021 09:03:00 GMT+0700 (Indochina Time)');
+//     const u = await this.findAdminUserById(11);
+//     u.update({
+//
+//         created_at: x
+//     })
+//
+//     await u.save();
+// }

@@ -5,48 +5,38 @@ const optionService = require("../../services/admin/admin.option.service");
 const pictureService = require("../../services/admin/admin.picture.service");
 
 exports.adminUserList = async (req, res) => {
-    const { page, limit } = req.query;
+
+    const data = req.query;
+
+    const page = parseInt(data.page) || 1;
+    const limit = parseInt(data.limit) || 10;
 
     const filter = {
-        username: req.query.username,
-        fullName: req.query.fullName,
-        phoneNumber: req.query.phoneNumber
+        adminId: data.adminId,
+        adminUserName: data.adminUserName,
+        adminName: data.adminName,
+        adminPhoneNumber: data.adminPhoneNumber,
+        status: data.status || "unlock",
+        minCreatedDate: data.minCreatedDate || new Date(2021, 0, 1),
+        maxCreatedDate: data.maxCreatedDate || new Date(),
     }
 
+    // await userService.foo();
 
-    //Lấy url gốc -> cắt chuỗi "page=" ra (nếu có)
-    const oriUrl = req.originalUrl;
-    const splitIndex = oriUrl.lastIndexOf("page=");
-    const url = splitIndex > -1 ? oriUrl.slice(0,splitIndex-1) : oriUrl;
-
-    //Kiểm tra xem trên có các query khác hay koS
-    const selectPage = url.lastIndexOf('?') > -1 ? '&page=' : '?page';
-
-
-
-
-    //Lấy products
-    const dataService = await userService.adminUserList(page || 1,limit || 10, filter);
+    const allAdminUser = await userService.adminUserList(page,limit, filter, true);
 
     //products
-    const adminUsers = dataService.rows;
+    const adminUsers = allAdminUser.rows;
     //Số lượng các products
-    const countAdminUsers = dataService.count;
+    const count = allAdminUser.count;
 
-
-    const curPage = parseInt(page) || 1;
-    const curLimit = parseInt(limit) || 10;
-
-    //Số lượng page = ceil của (tổng sản phảm / số lượng sản phẩm trên 1 trang)
-    const countPage = Math.ceil(countAdminUsers/curLimit);
     const pagination = {
-        curPage: curPage,
-        prevPageLink: curPage > 1 ? url + selectPage + (curPage - 1) : url + selectPage + curPage,
-        nextPageLink: curPage < countPage ? url + selectPage + (curPage + 1) : url + selectPage + curPage,
-        limit: parseInt(limit) || 10
+        page: page,
+        limit: limit,
+        totalRows: count
     }
 
-    res.render('admin/adminUser/adminUserList', { title: 'user List', layout: 'admin/layout.hbs', adminUsers, pagination });
+    res.render('admin/adminUser/adminUserList', { title: 'user List', layout: 'admin/layout.hbs', adminUsers, pagination, filter });
 }
 
 

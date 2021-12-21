@@ -10,7 +10,10 @@ const commentService = require('./admin.comment.service');
 
 const { Op } = require("sequelize")
 
-exports.productList = (page, limit, filter, raw = false) => {
+exports.productList = async (page, limit, filter, raw = false) => {
+
+    let x = new Date(2021,10,20);
+    let y = new Date(2021,11,20);
     let options = {
         include:
             [
@@ -26,6 +29,9 @@ exports.productList = (page, limit, filter, raw = false) => {
             ['id', 'ASC'],
         ],
         where: {
+            // created_at: {
+            //     [Op.between]: [filter.minCreatedDate, filter.maxCreatedDate]
+            // },
         },
         raw: raw
     }
@@ -34,10 +40,6 @@ exports.productList = (page, limit, filter, raw = false) => {
         options.offset = (page - 1) * limit;
         options.limit = limit;
     }
-
-    // options.where.rating  = {
-    //     [Op.between]: ['30', '40']
-    // };
 
     if(filter){
         if (filter.productId){
@@ -67,27 +69,26 @@ exports.productList = (page, limit, filter, raw = false) => {
         }
 
         if(filter.minCreatedDate && filter.maxCreatedDate) {
-            options.where.created_at  = {
-                [Op.between]: [filter.minCreatedDate, filter.maxCreatedDate]
+            options.where.created_at = {
+                // [Op.between]: [filter.minCreatedDate, filter.maxCreatedDate]
+                [Op.gte]: filter.minCreatedDate,
+                [Op.lte]: filter.maxCreatedDate
             };
         }
 
-        if(filter.minCreatedDate && filter.maxCreatedDate) {
-            options.where.created_at  = {
-                [Op.between]: [filter.minCreatedDate, filter.maxCreatedDate]
-            };
-        }
+        // if(filter.minUpdatedDate && filter.maxUpdatedDate) {
+        //     options.where.updated_at  = {
+        //         // [Op.between]: [filter.minUpdatedDate, filter.maxUpdatedDate]
+        //         [Op.gte]: filter.minUpdatedDate,
+        //         [Op.lte]: filter.maxUpdatedDate
+        //     };
+        // }
 
-        if(filter.minCreatedDate && filter.maxCreatedDate) {
-            options.where.created_at  = {
-                [Op.between]: [filter.minUpdatedDate, filter.maxUpdatedDate]
-            };
-        }
 
     }
 
 
-    const result = models.mobiles.findAndCountAll(options);
+    const result = await models.mobiles.findAndCountAll(options);
 
     return result;
 
@@ -186,5 +187,5 @@ exports.deleteProduct = async (id) => {
     })
 
 
-
 }
+
