@@ -35,7 +35,17 @@
                                         </ul>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div class="pb-2 col-lg-2 col-md-3 select-menu-group">
+                                <input type="hidden" id="filterStatus"
+                                    {{#if filter.status}}
+                                       value="{{filter.status}}"
+                                    {{/if}}
+                                >
+                                <select name="status" id="status" class="form-select">
+                                    <option value="exist">Tồn tại</option>
+                                    <option value="remove">Đã xóa</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -72,9 +82,9 @@
                                 Thêm mới
                             </button>
                         </a>
-                        <button type="submit" class="btn btn-danger shadow-none" form="deleteForm">
+                        <button type="submit" class="btn btn-danger shadow-none" form="deleteAllForm">
                             <i class="fa fa-times-circle"></i>
-                            Xóa
+                            Xóa sản phẩm
                         </button>
                     </div>
                 </div>
@@ -83,7 +93,7 @@
 
         </div>
 
-        <form class="row py-4" name="deleteForm" id="deleteForm">
+        <form class="row py-4" name="deleteAllForm" id="deleteAllForm" action="/admin/product/deleteAll">
             <table class="table table-bordered admin-table">
                 <thead class="admin-table-thead">
                     <tr>
@@ -114,17 +124,20 @@
                         <th>
                             Chi tiết
                         </th>
+                        <th>
+                            Trạng thái
+                        </th>
                     </tr>
                 </thead>
                 <tbody class="admin-table-tbody">
                 {{#each products}}
                 <tr>
                     <td>
-                        <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="optionArr[]" value="{{id}}">
+                        <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="deleteAll[]" value="{{id}}">
                     </td>
                     <td>{{id}}</td>
                     <td>{{full_name}}</td>
-                    <td>{{brand.name}}</td>
+                    <td>{{[brand.name]}}</td>
                     <td>{{price}}</td>
                     <td>{{rating}}</td>
                     <td>
@@ -137,6 +150,10 @@
                         <a href="/admin/product/{{id}}">
                             <i class="fas fa-info-circle"></i>
                         </a>
+                    </td>
+
+                    <td>
+                        {{status}}
                     </td>
                 </tr>                             
                 {{/each}}
@@ -153,6 +170,12 @@
 </div>
 
 {{#section 'script'}}
+    <script>
+        const filterStatus = $('#filterStatus').val();
+        console.log("filterSelect: ",filterStatus);
+        $(`#status option[value="${filterStatus}"]`).attr('selected','selected');
+
+    </script>
     <script src="/adminStyle/js/filterSelect.js"></script>
     <script src="/adminStyle/js/pagination.js"></script>
 {{/section}}

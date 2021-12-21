@@ -10,7 +10,7 @@ const commentService = require('./admin.comment.service');
 
 const { Op } = require("sequelize")
 
-exports.productList = (page, limit, filter) => {
+exports.productList = (page, limit, filter, raw = false) => {
     let options = {
         include:
             [
@@ -27,6 +27,7 @@ exports.productList = (page, limit, filter) => {
         ],
         where: {
         },
+        raw: raw
     }
 
     if(limit && page){
@@ -42,6 +43,10 @@ exports.productList = (page, limit, filter) => {
         if (filter.brandName){
             options.include[0].where.name = filter.brandName;
         }
+
+        if(filter.status){
+            options.where.status = filter.status
+        }
     }
 
 
@@ -53,7 +58,7 @@ exports.productList = (page, limit, filter) => {
 
 exports.findProductById = (id) => {
 
-    const result = models.mobiles.findAll({
+    const result = models.mobiles.findOne({
         where: ({ id: id })
     });
 
@@ -113,8 +118,7 @@ exports.updateProduct = async(id, fullName, price, rating, brandName) => {
     console.log('brandId: ',brandId);
     const updatedAt = new Date();
 
-    const data = await this.findProductById(id);
-    const product = data[0];
+    const product = await this.findProductById(id);
 
     product.update({
         full_name: fullName,
@@ -130,23 +134,24 @@ exports.updateProduct = async(id, fullName, price, rating, brandName) => {
 }
 
 exports.deleteProduct = async (id) => {
-    const pictureIdList = await pictureService.getPicturesIdByProductId(id);
-    await pictureService.deletePictureByIds(pictureIdList);
+    // const pictureIdList = await pictureService.getPicturesIdByProductId(id);
+    // await pictureService.deletePictureByIds(pictureIdList);
+    //
+    // const configurationIdList = await configurationService.getConfigurationsIdByProductId(id);
+    // await configurationService.deleteConfigurationByIds(configurationIdList);
+    //
+    // const optionIdList = await optionService.getOptionsIdByProductId(id);
+    // await optionService.deleteOptionByIds(optionIdList);
+    //
+    // const commentIdList = await commentService.getCommentsIdByProductId(id);
+    // await commentService.deleteCommentByIds(commentIdList);
 
-    const configurationIdList = await configurationService.getConfigurationsIdByProductId(id);
-    await configurationService.deleteConfigurationByIds(configurationIdList);
+    const product = await this.findProductById(id);
 
-    const optionIdList = await optionService.getOptionsIdByProductId(id);
-    await optionService.deleteOptionByIds(optionIdList);
-
-    const commentIdList = await commentService.getCommentsIdByProductId(id);
-    await commentService.deleteCommentByIds(commentIdList);
-
-    models.mobiles.destroy({
-        where: {
-            id: id
-        }
+    product.update({
+        status: "remove"
     })
+
 
 
 }

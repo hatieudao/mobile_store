@@ -17,7 +17,8 @@ exports.productList = async (req, res) => {
     //Lấy các giá trị filter
     const filter = {
         productName: data.productName,
-        brandName: data.brandName
+        brandName: data.brandName,
+        status: (data.status) || "exist"
     }
 
 
@@ -25,7 +26,7 @@ exports.productList = async (req, res) => {
     const brandNames = await brandService.getAllBrandName(true);
 
     //Lấy products
-    const allProducts = await productService.productList(page,limit, filter);
+    const allProducts = await productService.productList(page,limit, filter, true);
 
     //products
     const products = allProducts.rows;
@@ -53,6 +54,18 @@ exports.deleteProduct = async (req, res) => {
     res.redirect('/admin/product');
 }
 
+exports.deleteAllProduct = async (req, res) => {
+    const deleteAll = req.query.deleteAll;
+
+    if(deleteAll){
+        for (let productId of deleteAll)
+        {
+            await productService.deleteProduct(productId);
+        }
+    }
+
+    res.redirect('/admin/product');
+}
 
 exports.addProductPage = async (req, res) => {
     const brandNames = await brandService.getAllBrandName(true);
@@ -67,7 +80,6 @@ exports.addProduct = async (req, res) => {
     const addNewProduct = await productService.addProduct(fullName, price, rating, brandName);
     console.log(addNewProduct);
     const producId = addNewProduct.id;
-
 
     for (let configuration of configurations){
         const newConfiguration = await configurationService.addConfiguration(producId, configuration.configurationValue, configuration.specificationName);
@@ -141,43 +153,6 @@ exports.updateProduct = async (req, res) => {
     res.redirect('/admin/product/'+id);
 
 }
-
-exports.addConfigurationPage = async (req, res) => {
-    const producId = parseInt(req.params.id);
-
-
-    res.render('admin/product/productAddConfiguration', { title: 'Product', layout: 'admin/layout.hbs', producId });
-}
-
-exports.addConfiguration = async (req, res) => {
-    const producId = parseInt(req.params.id);
-    console.log('id = ', producId);
-    //
-    const { value, specificationName} = req.query;
-    console.log('specificationName: ',value);
-    console.log('specificationName: ',specificationName);
-
-    const addNewConfiguraion = await configurationService.addConfiguration(producId,value,specificationName);
-
-    res.render('admin/product/productAddConfiguration', { title: 'Product', layout: 'admin/layout.hbs',value, specificationName, producId });
-}
-
-exports.addOptionPage = async (req, res) => {
-    const producId = parseInt(req.params.id);
-
-    res.render('admin/product/productAddOption', { title: 'Product', layout: 'admin/layout.hbs', producId });
-}
-
-exports.addOption = async (req, res) => {
-    const producId = parseInt(req.params.id);
-    //
-    const { name, price, capacityName} = req.query;
-
-    const addNewOption = await optionService.addOption(producId, name, price, capacityName);
-
-    res.render('admin/product/productAddOption', { title: 'Product', layout: 'admin/layout.hbs', producId });
-}
-
 
 exports.addPicturePage = async (req, res) => {
     const producId = parseInt(req.params.id);

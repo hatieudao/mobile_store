@@ -2,12 +2,26 @@ const { models } = require('../../models');
 const capacityService = require('./admin.capacity.service')
 const orderDetailService = require('./admin.orderDetail.service')
 
+
 exports.getOptionsInforByProductId = (producId) => models.options.findAll({
-    where: ({mobile_id: producId }),
+    where: ({
+        mobile_id: producId,
+        status: "exist"
+    }),
     include: [
         { model: models.capacities, require: true, as: 'capacity' },
     ],
 })
+
+
+exports.getOptionsByIds = async (listIds, raw = false) => {
+    return await models.options.findAll({
+            where: ({id: listIds}),
+            raw: raw
+        }
+    )
+
+}
 
 exports.getOptionsIdByProductId = async (producId) => {
     const optionIds = await models.options.findAll({
@@ -15,7 +29,6 @@ exports.getOptionsIdByProductId = async (producId) => {
             attributes: ['id'],
         }
     )
-
     return optionIds.map(function (cur){
         return cur.id;
     });
@@ -56,16 +69,23 @@ exports.deleteOption = async (id) => {
 
 exports.deleteOptionByIds = async (listIds) => {
 
-    const orderDetailIdList =  await orderDetailService.getOrderDetailsIdByOptionIds(listIds);
-    console.log('orderDetailIdList: ',orderDetailIdList);
+    // const orderDetailIdList =  await orderDetailService.getOrderDetailsIdByOptionIds(listIds);
+    // console.log('orderDetailIdList: ',orderDetailIdList);
+    // await orderDetailService.deleteOrderDetailByIds(orderDetailIdList);
 
-    await orderDetailService.deleteOrderDetailByIds(orderDetailIdList);
+    let options = await this.getOptionsByIds(listIds);
 
-    models.options.destroy(
-        {
-            where: {
-                id: listIds
-            }
-        }
-    );
+    for (let option of options){
+        await option.update({
+            status: "remove"
+        })
+    }
+
+    // models.options.destroy(
+    //     {
+    //         where: {
+    //             id: listIds
+    //         }
+    //     }
+    // );
 }
