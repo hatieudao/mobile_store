@@ -35,9 +35,21 @@ exports.productList = (page, limit, filter, raw = false) => {
         options.limit = limit;
     }
 
+    // options.where.rating  = {
+    //     [Op.between]: ['30', '40']
+    // };
+
     if(filter){
+        if (filter.productId){
+            options.where.id = filter.productId;
+        }
+
         if (filter.productName){
             options.where.full_name = filter.productName;
+        }
+
+        if (filter.brandId){
+            options.where.brand_id = filter.brandId;
         }
 
         if (filter.brandName){
@@ -47,6 +59,31 @@ exports.productList = (page, limit, filter, raw = false) => {
         if(filter.status){
             options.where.status = filter.status
         }
+
+        if(filter.minRating && filter.maxRating) {
+            options.where.rating  = {
+                [Op.between]: [filter.minRating, filter.maxRating]
+            };
+        }
+
+        if(filter.minCreatedDate && filter.maxCreatedDate) {
+            options.where.created_at  = {
+                [Op.between]: [filter.minCreatedDate, filter.maxCreatedDate]
+            };
+        }
+
+        if(filter.minCreatedDate && filter.maxCreatedDate) {
+            options.where.created_at  = {
+                [Op.between]: [filter.minCreatedDate, filter.maxCreatedDate]
+            };
+        }
+
+        if(filter.minCreatedDate && filter.maxCreatedDate) {
+            options.where.created_at  = {
+                [Op.between]: [filter.minUpdatedDate, filter.maxUpdatedDate]
+            };
+        }
+
     }
 
 
@@ -72,10 +109,6 @@ exports.findProductInforById = (id) => {
     const result = models.mobiles.findAll({
         include: [
             { model: models.brands, require: true, as: 'brand' },
-            // { model: models.configurations, require: true, as: 'configurations' },
-        //     { model: models.options, require: true, as: 'options', attributes: ['name', 'price'] },
-        //     { model: models.pictures, require: true, as: 'pictures', attributes: ['link'] },
-        //     { model: models.comments, require: true, as: 'comments', attributes: ['user_id', 'body', 'created_at', 'updated_at'] }
         ],
         where: ({ id: id })
     });

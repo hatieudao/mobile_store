@@ -16,9 +16,17 @@ exports.productList = async (req, res) => {
     //filter
     //Lấy các giá trị filter
     const filter = {
+        productId: data.productId,
         productName: data.productName,
+        brandId: data.brandId,
         brandName: data.brandName,
-        status: (data.status) || "exist"
+        status: (data.status) || "exist",
+        minRating: data.minRating,
+        maxRating: data.maxRating,
+        minCreatedDate: data.minCreatedDate || new Date(2021, 0, 1),
+        maxCreatedDate: data.maxCreatedDate || new Date(),
+        minUpdatedDate: data.minUpdatedDate || new Date(2021, 0, 1),
+        maxUpdatedDate: data.maxUpdatedDate || new Date()
     }
 
 

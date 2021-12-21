@@ -12,5 +12,8 @@ $('#resetBtn').click(function (){
     console.log("sang");
     $('input[type=text]').val("");
     $('input[type=number]').val("");
+    $('input[type=date]').val("");
     $('#limit').val('10');
+    if(""){ console.log("true")}
+    else{ console.log("false")}
 })
