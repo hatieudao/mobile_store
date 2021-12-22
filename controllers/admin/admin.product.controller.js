@@ -20,7 +20,7 @@ exports.productList = async (req, res) => {
         productName: data.productName,
         brandId: data.brandId,
         brandName: data.brandName,
-        status: (data.status) || "exist",
+        status: ((data.status) === '0') ? undefined : data.status,
         minRating: data.minRating,
         maxRating: data.maxRating,
         minCreatedDate: data.minCreatedDate || new Date(2021, 0, 1),

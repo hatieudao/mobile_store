@@ -16,7 +16,7 @@ exports.adminUserList = async (req, res) => {
         adminUserName: data.adminUserName,
         adminName: data.adminName,
         adminPhoneNumber: data.adminPhoneNumber,
-        status: data.status || "unlock",
+        status: ((data.status) === '0') ? undefined : data.status,
         minCreatedDate: data.minCreatedDate || new Date(2021, 0, 1),
         maxCreatedDate: data.maxCreatedDate || new Date(),
     }
@@ -82,4 +82,16 @@ exports.adminCurrentAccount = async (req, res) => {
 
     res.render('admin/adminUser/adminAccount', { title: 'Product', layout: 'admin/layout.hbs', adminUser});
 }
-//
+
+exports.lockAllAdminUser = async (req, res) => {
+    const lockALl = req.query.lockAll;
+
+    if(lockALl){
+        for (let adminUserId of lockALl)
+        {
+            await userService.lockAdminUser(adminUserId);
+        }
+    }
+
+    res.redirect('/admin/adminUser');
+}

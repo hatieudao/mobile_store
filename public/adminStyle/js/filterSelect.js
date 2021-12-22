@@ -21,5 +21,27 @@ $('#resetBtn').click(function (){
 const filterStatus = $('#filterStatus').val();
 console.log("filterSelect: ",filterStatus);
 console.log("$('#status').val: ",$('#status').val());
-$('#status').val(filterStatus);
-console.log("$('#status').val: ",$('#status').val());
+if(filterStatus)
+{
+    $('#status').val(filterStatus);
+    console.log("$('#status').val: ",$('#status').val());
+}
+else
+{
+    $('#status').val('0');
+}
+
+
+const filterState = $('#filterState').val();
+console.log("filterSelect: ",filterState);
+console.log("$('#state').val: ",$('#state').val());
+if(filterState)
+{
+    $('#state').val(filterState);
+    console.log("$('#state').val: ",$('#state').val());
+}
+else
+{
+    $('#state').val('0');
+}
+
