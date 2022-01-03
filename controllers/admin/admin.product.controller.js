@@ -5,6 +5,7 @@ const configurationService = require('../../services/admin/admin.configuration.s
 const optionService = require('../../services/admin/admin.option.service');
 const pictureService = require('../../services/admin/admin.picture.service');
 const {stack} = require("sequelize/dist/lib/utils");
+const fs = require('fs');
 
 exports.productList = async (req, res) => {
 
@@ -84,6 +85,8 @@ exports.addProductPage = async (req, res) => {
 exports.addProduct = async (req, res) => {
     const configurations = req.query.configurations;
     const options = req.query.options;
+    // const pictures = req.query.pictures;
+
     const { fullName, price, rating, brandName } = req.query;
     const addNewProduct = await productService.addProduct(fullName, price, rating, brandName);
     console.log(addNewProduct);
@@ -115,67 +118,80 @@ exports.productItem = async (req, res) => {
     const options = await optionService.getOptionsInforByProductId(id);
     const pictures = await pictureService.getPicturesInforByProductId(id);
 
-    res.render('admin/product/productItem', { title: 'Product', layout: 'admin/layout.hbs', product, configurations, options, pictures });
+    const brandNames = await brandService.getAllBrandName(true);
+
+    res.render('admin/product/productItem', { title: 'Product', layout: 'admin/layout.hbs', product, configurations, options, pictures, brandNames });
 }
 
 exports.updateProduct = async (req, res) => {
 
     const id = parseInt(req.params.id);
-    const { fullName, price, rating, brandName } = req.query;
+    const {fullName, price, rating, brandName} = req.body;
 
-    const deleteOptions = req.query.deleteOptions;
-    const deleteConfigurations = req.query.deleteConfigurations;
+    const deleteOptions = req.body.deleteOptions;
+    const deleteConfigurations = req.body.deleteConfigurations;
+    const deletePictures = req.body.deletePictures;
+    const deletePictureLinkInput = req.body.deletePictureLinks;
 
     await productService.updateProduct(id, fullName, price, rating, brandName);
 
-    const configurations = req.query.configurations;
-    const options = req.query.options;
+    const configurations = req.body.configurations;
+    const options = req.body.options;
+    const pictureFiles = req.files;
 
-    if(configurations)
-    {
-        for (let configuration of configurations){
+    if (configurations) {
+        for (let configuration of configurations) {
             const newConfiguration = await configurationService.addConfiguration(id, configuration.configurationValue, configuration.specificationName);
             console.log(newConfiguration);
-        };
+        }
+        ;
     }
-    if(options)
-    {
-        for (let option of options){
+    if (options) {
+        for (let option of options) {
             const newOption = await optionService.addOption(id, option.optionName, option.optionPrice, option.capacityName);
             console.log(newOption);
-        };
+        }
+        ;
+    }
+    if (pictureFiles) {
+        for (let pictureFile of pictureFiles) {
+            let path = pictureFile.path.replace(/\\/g, "/");
+            let link = path.replace('public', "");
+            const addNewPicture = await pictureService.addPicture(id, link);
+        }
     }
 
 
-    if(deleteConfigurations)
-    {
+    if (deleteConfigurations) {
+
+
         await configurationService.deleteConfigurationByIds(deleteConfigurations);
     }
 
-    if(deleteOptions)
-    {
+    if (deleteOptions) {
         await optionService.deleteOptionByIds(deleteOptions);
     }
 
+    if (deletePictures) {
 
-    res.redirect('/admin/product/'+id);
+        if (deletePictureLinkInput) {
+            await removePicturePaths(deletePictureLinkInput);
+        }
 
+        await pictureService.deletePictureByIds(deletePictures);
+    }
+
+    res.redirect('/admin/product/' + id);
 }
 
-exports.addPicturePage = async (req, res) => {
-    const producId = parseInt(req.params.id);
-    console.log('id = ', producId);
+removePicturePaths = async function (deletePictureLinkInput){
+    for (let link of deletePictureLinkInput) {
+        console.log("deletePictureLinkInput: ", link);
+        try {
+            fs.unlinkSync("./public" + link);
+        } catch (e) {
+            return false;
+        }
 
-    res.render('admin/product/productAddPicture', { title: 'Product', layout: 'admin/layout.hbs', producId });
-}
-
-exports.addPicture = async (req, res) => {
-    const producId = parseInt(req.params.id);
-    console.log('id = ', producId);
-
-    const {link} = req.query;
-
-    const addNewPicture = await pictureService.addPicture(producId, link);
-
-    res.render('admin/product/productAddPicture', { title: 'Product', layout: 'admin/layout.hbs', producId });
+    }
 }

@@ -30,11 +30,16 @@ exports.addPicture = async (mobile_id, link) => {
 
 
 exports.deletePictureByIds = async (listIds) => {
-    models.pictures.destroy(
-        {
-            where: {
-                id: listIds
+    try
+    {
+        models.pictures.destroy(
+            {
+                where: {
+                    id: listIds
+                }
             }
-        }
-    );
+        );
+    }catch (e){
+        return false;
+    }
 }

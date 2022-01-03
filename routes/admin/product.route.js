@@ -3,6 +3,20 @@ var router = express.Router();
 
 const productController = require('../../controllers/admin/admin.product.controller');
 
+const multer  = require('multer')
+// const upload = multer({ dest: './public/uploads/products/'});
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './public/uploads/products/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+})
+
+const upload = multer({ storage: storage })
+
 router.get('/',productController.productList);
 router.get('/addPage',productController.addProductPage);
 router.get('/add',productController.addProduct);
@@ -10,12 +24,9 @@ router.get('/deleteAll',productController.deleteAllProduct)
 
 router.get('/:id',productController.productItem);
 
-router.get('/:id/update',productController.updateProduct);
+router.post('/:id/update',upload.any('pictures'), productController.updateProduct);
 router.get('/:id/delete',productController.deleteProduct);
 
-
-router.get('/:id/addPicturePage',productController.addPicturePage)
-router.get('/:id/addPicture',productController.addPicture)
 
 
 
