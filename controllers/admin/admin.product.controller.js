@@ -63,6 +63,17 @@ exports.deleteProduct = async (req, res) => {
     res.redirect('/admin/product');
 }
 
+exports.restoreProduct = async (req, res) => {
+    console.log('Restore Form');
+    const id = parseInt(req.params.id);
+    console.log('id = ', id);
+
+    await productService.restoreProduct(id);
+
+    res.redirect('/admin/product');
+}
+
+
 exports.deleteAllProduct = async (req, res) => {
     const deleteAll = req.query.deleteAll;
 
@@ -83,26 +94,52 @@ exports.addProductPage = async (req, res) => {
 
 
 exports.addProduct = async (req, res) => {
-    const configurations = req.query.configurations;
-    const options = req.query.options;
+    const configurations = req.body.configurations;
+    const options = req.body.options;
+    const pictureFiles = req.files;
     // const pictures = req.query.pictures;
 
-    const { fullName, price, rating, brandName } = req.query;
-    const addNewProduct = await productService.addProduct(fullName, price, rating, brandName);
-    console.log(addNewProduct);
-    const producId = addNewProduct.id;
+    const { fullName, price, rating, brandName } = req.body;
+    try{
+        const addNewProduct = await productService.addProduct(fullName, price, rating, brandName);
+        console.log(addNewProduct);
+        const producId = addNewProduct.id;
 
-    for (let configuration of configurations){
-        const newConfiguration = await configurationService.addConfiguration(producId, configuration.configurationValue, configuration.specificationName);
-        console.log(newConfiguration);
-    };
+        if(configurations)
+        {
+            for (let configuration of configurations){
+                if(configuration)
+                {
+                    const newConfiguration = await configurationService.addConfiguration(producId, configuration.configurationValue, configuration.specificationName);
+                    console.log(newConfiguration);
+                }
+            };
+        }
 
-    for (let option of options){
-        const newOption = await optionService.addOption(producId, option.optionName, option.optionPrice, option.capacityName);
-        console.log(newOption);
-    };
+        if(options)
+        {
+            for (let option of options){
+                if(option)
+                {
+                    const newOption = await optionService.addOption(producId, option.optionName, option.optionPrice, option.capacityName);
+                    console.log(newOption);
+                }
+            };
+        }
 
-    res.redirect('/admin/product/'+ producId);
+
+        if (pictureFiles) {
+            for (let pictureFile of pictureFiles) {
+                let path = pictureFile.path.replace(/\\/g, "/");
+                let link = path.replace('public', "");
+                const addNewPicture = await pictureService.addPicture(producId, link);
+            }
+        }
+
+        res.redirect('/admin/product/'+ producId);
+    }catch (e) {
+        return false;
+    }
 }
 
 exports.productItem = async (req, res) => {
@@ -110,17 +147,17 @@ exports.productItem = async (req, res) => {
     console.log('id = ', id);
 
     //Tìm kiếm products theo ID
-    const data = await productService.findProductInforById(id);
-    const product = data[0];
+    // const data = await productService.findProductInforById(id);
+    const product = await productService.findProductInforById(id, true);
 
     //Tìm kiếm  configurations, options, pictures dựa trên product
     const configurations = await configurationService.getConfigurationsInforByProductId(id);
     const options = await optionService.getOptionsInforByProductId(id);
     const pictures = await pictureService.getPicturesInforByProductId(id);
-
     const brandNames = await brandService.getAllBrandName(true);
+    const isRemove = (product.status === "remove");
 
-    res.render('admin/product/productItem', { title: 'Product', layout: 'admin/layout.hbs', product, configurations, options, pictures, brandNames });
+    res.render('admin/product/productItem', { title: 'Product', layout: 'admin/layout.hbs', product, configurations, options, pictures, brandNames, isRemove });
 }
 
 exports.updateProduct = async (req, res) => {
@@ -141,15 +178,19 @@ exports.updateProduct = async (req, res) => {
 
     if (configurations) {
         for (let configuration of configurations) {
-            const newConfiguration = await configurationService.addConfiguration(id, configuration.configurationValue, configuration.specificationName);
-            console.log(newConfiguration);
+            if(configuration){
+                const newConfiguration = await configurationService.addConfiguration(id, configuration.configurationValue, configuration.specificationName);
+                console.log(newConfiguration);
+            }
         }
         ;
     }
     if (options) {
         for (let option of options) {
-            const newOption = await optionService.addOption(id, option.optionName, option.optionPrice, option.capacityName);
-            console.log(newOption);
+            if(option){
+                const newOption = await optionService.addOption(id, option.optionName, option.optionPrice, option.capacityName);
+                console.log(newOption);
+            }
         }
         ;
     }

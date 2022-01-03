@@ -19,13 +19,14 @@ const upload = multer({ storage: storage })
 
 router.get('/',productController.productList);
 router.get('/addPage',productController.addProductPage);
-router.get('/add',productController.addProduct);
+router.post('/add',upload.any('pictures'),productController.addProduct);
 router.get('/deleteAll',productController.deleteAllProduct)
 
 router.get('/:id',productController.productItem);
 
 router.post('/:id/update',upload.any('pictures'), productController.updateProduct);
 router.get('/:id/delete',productController.deleteProduct);
+router.get('/:id/delete',productController.restoreProduct);
 
 
 

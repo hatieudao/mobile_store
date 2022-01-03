@@ -4,10 +4,17 @@ exports.findBrandByName = (name) => models.brands.findOne({
         where: ({ name: name })
     })
 
-exports.createBrand =  (name) =>  {
-    const brand = models.brands.create({name: name});
-    return brand;
+exports.createBrand = async (name) =>  {
+    try{
+        const maxId = await models.brands.max('id');
+        const nextId = maxId + 1;
+        const brand = models.brands.create({id: nextId, name: name});
+        return brand;
+    }catch (e){
+        return false;
+    }
 }
+
 
 exports.getBrandByName = async (name) => {
     const brand = await this.findBrandByName(name);

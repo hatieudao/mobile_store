@@ -240,7 +240,9 @@
                 {{#each products}}
                 <tr>
                     <td>
+                    {{#ifCond status "===" "exist" }}
                         <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="deleteAll[]" value="{{id}}">
+                    {{/ifCond}}
                     </td>
                     <td>{{id}}</td>
                     <td>{{full_name}}</td>

@@ -94,10 +94,11 @@ exports.productList = async (page, limit, filter, raw = false) => {
 
 }
 
-exports.findProductById = (id) => {
+exports.findProductById = (id, raw = false) => {
 
     const result = models.mobiles.findOne({
-        where: ({ id: id })
+        where: ({ id: id }),
+        raw: raw
     });
 
     return result;
@@ -105,13 +106,14 @@ exports.findProductById = (id) => {
 }
 
 
-exports.findProductInforById = (id) => {
+exports.findProductInforById = (id, raw = false) => {
 
-    const result = models.mobiles.findAll({
+    const result = models.mobiles.findOne({
         include: [
             { model: models.brands, require: true, as: 'brand' },
         ],
-        where: ({ id: id })
+        where: ({ id: id }),
+        raw: raw
     });
 
     return result;
@@ -119,20 +121,22 @@ exports.findProductInforById = (id) => {
 }
 
 exports.addProduct = async (fullName, price, rating, brandName) => {
-    const brand = await brandService.getBrandByName(brandName);
-    console.log('brand: ',brand);
-    const brandId = brand.id;
-    console.log('brandId: ',brandId);
+    try{
+        const brand = await brandService.getBrandByName(brandName);
+        console.log('brand: ',brand);
+        const brandId = brand.id;
+        console.log('brandId: ',brandId);
 
-    // const createAt = sequelize.literal('CURRENT_TIMESTAMP');
-    const createAt = new Date();
+        // const createAt = sequelize.literal('CURRENT_TIMESTAMP');
+        const createAt = new Date();
 
-    try {
         const product = await this.createProduct(fullName, brandId, price, rating, createAt);
         return product;
-    } catch (error) {
+
+    }catch (e) {
         return false;
     }
+
 
 
 }
@@ -184,6 +188,18 @@ exports.deleteProduct = async (id) => {
 
     product.update({
         status: "remove"
+    })
+
+
+}
+
+exports.restoreProduct = async (id) => {
+
+
+    const product = await this.findProductById(id);
+
+    product.update({
+        status: "exist"
     })
 
 
