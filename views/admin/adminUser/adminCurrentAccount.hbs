@@ -5,13 +5,13 @@
                 Thông tin Admin
             </h1>
         </header>
-        <form class="" action="">
+        <form class="" action="/admin/adminUser/currentAccount/update" enctype="multipart/form-data" method="post">
             <div class="">
                 <div class="row justify-content-end">
                     <div class="col-sm-4 text-center">
-                        <button type="submit" class="btn btn-success shadow-none" data-toggle="modal">
+                        <button id="updateBtn" type="submit" class="btn btn-success shadow-none" data-toggle="modal">
                             <i class="fa fa-pencil"></i>
-                            Chỉnh sửa
+                            Lưu chỉnh sửa
                         </button>
                     </div>
                 </div>
@@ -64,8 +64,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 align-items-center justify-content-center" style="border: solid 1px #ccc">
-                        <img class="my-auto" src="{{adminUser.avatar}}" style="width: 100%"/>
+                    <div class="col-lg-3 col-md-6 align-items-center justify-content-center">
+                        <div style="border: solid 1px #ccc">
+                            <img id="adminAvatarImg" src="{{adminUser.avatar}}" style="width: 100%"/>
+                        </div>
+                        <div class="mt-2">
+                            <input name="avatar" accept="image/*" type='file' id="avatarInput"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,22 +104,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3 py-2">
-                                Avatar
-                            </div>
-                            <div class="col-lg-9 py-2">
-                                <input class="form-control shadow-none" name="avatar" type="text" placeholder="{{adminUser.avatar}}" value="{{adminUser.avatar}}">
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </form>
 
     </div>
 </div>
 
-
+{{#section 'script'}}
+    <script>
+        $("#avatarInput").change(function (e){
+            const file = e.target.files[0];
+            console.log("file: ",file);
+            const src = URL.createObjectURL(file);
+            console.log("file: ",src);
+            $("#adminAvatarImg").attr("src",src);
+        })
+    </script>
+{{/section}}

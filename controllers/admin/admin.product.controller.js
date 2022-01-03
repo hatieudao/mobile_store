@@ -42,6 +42,11 @@ exports.productList = async (req, res) => {
     //Số lượng các products
     const count = allProducts.count;
 
+    for (let product of products) {
+        const id = product.id;
+        const picture = await pictureService.getAvatarPictureByProductId(id);
+        product.picture = picture;
+    }
 
     const pagination = {
         page: page,

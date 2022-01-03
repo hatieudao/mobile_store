@@ -4,6 +4,7 @@ const {models} = require('../../models');
 const uuid = require('uuid');
 const bcrypt = require('bcrypt');
 const {Op} = require("sequelize");
+const brandService = require("./admin.brand.service");
 
 
 
@@ -192,14 +193,16 @@ exports.lockAdminUser = async (adminUserId) => {
     })
 }
 
-//
-// exports.foo = async () => {
-//     const x = new Date('Thu Nov 4 2021 09:03:00 GMT+0700 (Indochina Time)');
-//     const u = await this.findAdminUserById(11);
-//     u.update({
-//
-//         created_at: x
-//     })
-//
-//     await u.save();
-// }
+
+exports.updateAdminUser = async(id, avatar) => {
+
+    const admin = await this.findAdminUserById(id);
+
+    admin.update({
+        avatar: avatar
+    })
+
+    await admin.save();
+
+    return id;
+}

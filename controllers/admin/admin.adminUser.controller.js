@@ -3,6 +3,7 @@ const productService = require("../../services/admin/admin.product.service");
 const configurationService = require("../../services/admin/admin.configuration.service");
 const optionService = require("../../services/admin/admin.option.service");
 const pictureService = require("../../services/admin/admin.picture.service");
+const fs = require("fs");
 
 exports.adminUserList = async (req, res) => {
 
@@ -66,7 +67,7 @@ exports.adminAccount = async (req, res) => {
     const id = parseInt(req.params.id);
     console.log('id = ', id);
 
-    const adminUser = await userService.findAdminUserById(id);
+    const adminUser = await userService.findAdminUserById(id, true);
 
     res.render('admin/adminUser/adminAccount', { title: 'Product', layout: 'admin/layout.hbs', adminUser});
 }
@@ -80,7 +81,7 @@ exports.adminCurrentAccount = async (req, res) => {
 
     const adminUser = await userService.findAdminUserById(id);
 
-    res.render('admin/adminUser/adminAccount', { title: 'Product', layout: 'admin/layout.hbs', adminUser});
+    res.render('admin/adminUser/adminCurrentAccount', { title: 'Product', layout: 'admin/layout.hbs', adminUser});
 }
 
 exports.lockAllAdminUser = async (req, res) => {
@@ -94,4 +95,35 @@ exports.lockAllAdminUser = async (req, res) => {
     }
 
     res.redirect('/admin/adminUser');
+}
+
+exports.updateAdminCurrentAccount = async (req, res) => {
+
+    const currentAdminUser = req.user;
+    const id = parseInt(currentAdminUser.id);
+    console.log('id = ', id);
+
+    const adminUser = await userService.findAdminUserById(id,true);
+
+    const avatarFile = req.file;
+    let avatar;
+
+    if (avatarFile) {
+        let path = avatarFile.path.replace(/\\/g, "/");
+        avatar = path.replace('public', "");
+        await removeAvatarPaths(adminUser.avatar)
+    }
+
+    await userService.updateAdminUser(id, avatar);
+
+
+    res.redirect('/admin/adminUser/currentAccount');
+}
+
+removeAvatarPaths = async function (path){
+    try {
+        fs.unlinkSync("./public" + path);
+    } catch (e) {
+        return false;
+    }
 }

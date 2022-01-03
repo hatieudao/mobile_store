@@ -167,8 +167,10 @@
                 {{#each adminUsers}}
                     <tr>
                         <td>
-                            {{#ifCond ../user.id '!==' id}}
-                             <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="lockAll[]" value="{{id}}">
+                            {{#ifCond ../user.id '!==' id }}
+                                {{#ifCond status "===" "unlock"}}
+                                    <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="lockAll[]" value="{{id}}">
+                                {{/ifCond}}
                             {{/ifCond}}
 
                         </td>
