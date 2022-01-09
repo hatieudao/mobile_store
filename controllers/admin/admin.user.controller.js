@@ -1,5 +1,5 @@
 const userService = require('../../services/admin/admin.user.service');
-const productService = require("../../services/admin/admin.product.service");
+const orderService = require("../../services/admin/admin.order.service");
 
 exports.userList = async (req, res) => {
 
@@ -23,7 +23,7 @@ exports.userList = async (req, res) => {
     const allUser = await userService.userList(page,limit, filter, true);
 
     //products
-    const users = allUser.rows;
+    const normalUsers = allUser.rows;
     //Số lượng các products
     const count = allUser.count;
 
@@ -33,7 +33,7 @@ exports.userList = async (req, res) => {
         totalRows: count
     }
 
-    res.render('admin/user/userList', { title: 'user List', layout: 'admin/layout.hbs', users, pagination, filter });
+    res.render('admin/user/userList', { title: 'user List', layout: 'admin/layout.hbs', normalUsers, pagination, filter });
 }
 
 
@@ -56,8 +56,9 @@ exports.userAccount = async (req, res) => {
     const id = parseInt(req.params.id);
     console.log('id = ', id);
 
-    const user = await userService.findUserById(id, true);
+    const normalUser = await userService.findUserById(id, true);
+    const orders = await orderService.findOrderByUserId(id);
 
-    res.render('admin/user/userAccount', { title: 'User Account', layout: 'admin/layout.hbs', user});
+    res.render('admin/user/userAccount', { title: 'User Account', layout: 'admin/layout.hbs', normalUser});
 }
 

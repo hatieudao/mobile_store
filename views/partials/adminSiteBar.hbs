@@ -3,9 +3,9 @@
         <h3 class="admin-sidebar-header__title">Admin</h3>
         <a href="/admin/adminUser/currentAccount" class="admin-sidebar-header-infor d-flex flex-column justify-content-center text-decoration-none text-white">
             <div class="admin-sidebar-header-avatar rounded-circle">
-                <img src="/adminStyle/img/avatar/avatar01.png" alt="admin-avatar" class="admin-sidebar-header-avatar__img">
+                <img src="{{user.avatar}}" alt="admin-avatar" class="admin-sidebar-header-avatar__img">
             </div>
-            <span class="admin-sidebar-header-infor__name mt-2">Transang123</span>
+            <span class="admin-sidebar-header-infor__name mt-2">{{user.username}}</span>
         </a>
     </div>
 

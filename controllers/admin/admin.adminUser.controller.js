@@ -128,3 +128,19 @@ removeAvatarPaths = async function (path){
         return false;
     }
 }
+
+
+exports.changePassword = async (req, res) => {
+
+    const currentAdminUser = req.user;
+    const id = parseInt(currentAdminUser.id);
+    console.log('id = ', id);
+
+
+    const {newPassword} = req.body;
+
+    if(newPassword){
+        await userService.changeAdminPassword(id,newPassword);
+    }
+    res.redirect('/admin/adminUser/currentAccount');
+}

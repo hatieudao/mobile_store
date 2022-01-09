@@ -23,6 +23,7 @@ router.get('/add',adminUserController.addAdminUser);
 router.get('/lockAll',adminUserController.lockAllAdminUser)
 router.get('/currentAccount',adminUserController.adminCurrentAccount);
 router.post('/currentAccount/update',upload.single('avatar'),adminUserController.updateAdminCurrentAccount);
+router.post('/currentAccount/changePassword',adminUserController.changePassword);
 router.get('/:id',adminUserController.adminAccount);
 
 // router.get('/currentAccount', function (req, res, next) {

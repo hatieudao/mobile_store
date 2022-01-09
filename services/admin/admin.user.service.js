@@ -74,9 +74,7 @@ exports.findUserById = (id, raw = false) => {
         },
         raw: raw
     });
-
     return result;
-
 }
 
 
@@ -208,5 +206,19 @@ exports.updateAdminUser = async(id, phone_number, address, avatar) => {
 
     return id;
 }
+
+exports.changeAdminPassword = async(id, password) => {
+    const saltRounds = 5;
+    const hashPassword = await bcrypt.hash(password,saltRounds);
+
+    const admin = await this.findAdminUserById(id);
+
+    admin.update({
+        password: hashPassword
+    })
+
+    await admin.save();
+}
+
 
 
