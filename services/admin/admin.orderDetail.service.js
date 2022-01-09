@@ -35,3 +35,18 @@ exports.deleteOrderDetailByIds = async (listIds) => {
         }
     );
 }
+
+exports.findOrderDetailInforAndCountAllByOrderId = async (orderId, raw = false) => {
+    return models.order_details.findAndCountAll({
+        include: [
+            { model: models.options, require: true, as: 'option',
+                include: [
+                    { model: models.mobiles, require: true, as: 'mobile'},
+                    { model: models.capacities, require: true, as: 'capacity' },
+                ],
+            },
+        ],
+        where: ({ order_id: orderId }),
+        raw: raw
+    })
+}

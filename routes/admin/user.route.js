@@ -7,9 +7,7 @@ const adminUserController = require("../../controllers/admin/admin.adminUser.con
 router.get('/',userController.userList);
 router.get('/lockAll',userController.lockAllUser)
 
-router.get('/:userId', function (req, res, next) {
-  const id = req.params.userId
-  res.render('admin/user/user', { title: `User ${id}`, layout: 'admin/layout.hbs' });
-});
+router.get('/:id',userController.userAccount);
+
 
 module.exports = router;

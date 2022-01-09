@@ -51,3 +51,13 @@ exports.lockAllUser = async (req, res) => {
 }
 
 
+exports.userAccount = async (req, res) => {
+
+    const id = parseInt(req.params.id);
+    console.log('id = ', id);
+
+    const user = await userService.findUserById(id, true);
+
+    res.render('admin/user/userAccount', { title: 'User Account', layout: 'admin/layout.hbs', user});
+}
+

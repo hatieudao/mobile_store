@@ -26,7 +26,7 @@ router.get('/:id',productController.productItem);
 
 router.post('/:id/update',upload.any('pictures'), productController.updateProduct);
 router.get('/:id/delete',productController.deleteProduct);
-router.get('/:id/delete',productController.restoreProduct);
+router.get('/:id/restore',productController.restoreProduct);
 
 
 

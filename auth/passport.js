@@ -31,7 +31,7 @@ async function validPassword(user, password){
 }
 
 passport.serializeUser(function(user, done) {
-    done(null, {id: user.id, username: user.username, full_name: user.full_name});
+    done(null, {id: user.id, username: user.username, full_name: user.full_name, avatar: user.avatar});
 });
 
 passport.deserializeUser(function(user, done) {

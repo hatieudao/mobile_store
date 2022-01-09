@@ -194,11 +194,13 @@ exports.lockAdminUser = async (adminUserId) => {
 }
 
 
-exports.updateAdminUser = async(id, avatar) => {
+exports.updateAdminUser = async(id, phone_number, address, avatar) => {
 
     const admin = await this.findAdminUserById(id);
 
     admin.update({
+        phone_number: phone_number,
+        address: address,
         avatar: avatar
     })
 
@@ -206,3 +208,5 @@ exports.updateAdminUser = async(id, avatar) => {
 
     return id;
 }
+
+

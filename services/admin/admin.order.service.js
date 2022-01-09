@@ -1,6 +1,6 @@
 
 const {models} = require('../../models');
-const {Op} = require("sequelize");
+const {Op, where} = require("sequelize");
 
 exports.orderList = async (page, limit, filter, raw = false) => {
 
@@ -67,3 +67,52 @@ exports.orderList = async (page, limit, filter, raw = false) => {
     return result;
 
 }
+
+exports.findOrderInforById = async (id, raw = false) => {
+
+    const result = await models.orders.findOne({
+        include: [
+            { model: models.users, require: true, as: 'user' },
+        ],
+        where: ({ id: id }),
+        raw: raw
+    });
+
+    return result;
+}
+
+exports.findOrderById = async (id, raw = false) => {
+
+    const result = await models.orders.findOne({
+        where: ({ id: id }),
+        raw: raw
+    });
+
+    return result;
+
+}
+
+
+
+exports.changeState = async (id, state) => {
+    const order = await this.findOrderById(id);
+    await order.update({
+        state: state
+    });
+    await order.save();
+}
+
+
+exports.countOrderByUserId = async(userId) => {
+    const countOrder = await models.orders.count({
+        where: {
+            user_id: userId
+        },
+        include: [
+            { model: models.users, require: true, as: 'user' },
+        ],
+
+    });
+    return countOrder;
+}
+

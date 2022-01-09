@@ -191,7 +191,7 @@
                             {{created_at}}
                         </td>
                         <td>
-                            <a href="/:orderItemOD0001" class="link-primary text-primary text-decoration-none">
+                            <a href="/admin/order/{{id}}" class="link-primary text-primary text-decoration-none">
                                 Chi tiết
                             </a>
                         </td>
@@ -204,15 +204,9 @@
                 </tbody>
             </table>
         </form>
-        <footer class="row justify-content-center admin-order-footer">
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
+        <footer class="row justify-content-center">
+            <nav class="col-lg-3 col-md-6 col-sm-9" aria-label="Page navigation example" id="pagination">
+                {{{createPagination pagination paginationClass="pagination"}}}
             </nav>
         </footer>
     </div>

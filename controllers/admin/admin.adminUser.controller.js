@@ -103,6 +103,7 @@ exports.updateAdminCurrentAccount = async (req, res) => {
     const id = parseInt(currentAdminUser.id);
     console.log('id = ', id);
 
+    const {phone_number, address} = req.body;
     const adminUser = await userService.findAdminUserById(id,true);
 
     const avatarFile = req.file;
@@ -114,7 +115,7 @@ exports.updateAdminCurrentAccount = async (req, res) => {
         await removeAvatarPaths(adminUser.avatar)
     }
 
-    await userService.updateAdminUser(id, avatar);
+    await userService.updateAdminUser(id, phone_number, address, avatar);
 
 
     res.redirect('/admin/adminUser/currentAccount');

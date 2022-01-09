@@ -75,7 +75,7 @@ exports.restoreProduct = async (req, res) => {
 
     await productService.restoreProduct(id);
 
-    res.redirect('/admin/product');
+    res.redirect('/admin/product/'+id);
 }
 
 

@@ -6,11 +6,9 @@ const orderController = require('../../controllers/admin/admin.order.controller'
 
 router.get('/',orderController.orderList);
 
-router.get('/:orderId', function (req, res, next) {
-  const id = req.params.orderId
-  res.render('admin/order/orderItem', { title: `Order ${id}`, layout: 'admin/layout.hbs' });
-});
+router.get('/:id', orderController.orderItem);
 
+router.get('/:id/changeState', orderController.changeState);
 
 
 module.exports = router;
