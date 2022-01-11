@@ -30,6 +30,10 @@ module.exports = function(sequelize, DataTypes) {
     price: {
       type: DataTypes.BIGINT,
       allowNull: false
+    },
+    status: {
+      type: DataTypes.STRING(30),
+      allowNull: true
     }
   }, {
     sequelize,

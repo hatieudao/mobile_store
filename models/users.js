@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   return sequelize.define('users', {
     id: {
       autoIncrement: true,
@@ -43,6 +43,10 @@ module.exports = function (sequelize, DataTypes) {
     created_at: {
       type: DataTypes.DATE,
       allowNull: true
+    },
+    status: {
+      type: DataTypes.STRING(30),
+      allowNull: true
     }
   }, {
     sequelize,
@@ -60,4 +64,3 @@ module.exports = function (sequelize, DataTypes) {
     ]
   });
 };
-

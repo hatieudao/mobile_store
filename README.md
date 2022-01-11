@@ -43,8 +43,13 @@ users avatar:  varchar(400)
 users password: varchar(200) 
 
 create first admin
-insert into users (id, username, password, full_name, address, uid, phone_number, avatar, role)
-values (11, 'transang', 'https://robohash.org/9KH.png?set=set2&size=150x150', 'Trần Ngọc Sang', 'Quảng Ngãi', '79e78c5e-9f4d-43c6-aee9-f03439453190', '012345678', 'https://robohash.org/9KH.png?set=set2&size=150x150','admin');
+
+insert into users (id, username, password, full_name, address, uid, phone_number, avatar, role, status)
+values (11, 'transang', '$2b$05$aiQe0bUqGHU7ZtWchNH4EeneVgErk/YcmU0VVxM6EA0FLr9xLXHeq',
+		'Trần Ngọc Sang',
+		'Quảng Ngãi', '79e78c5e-9f4d-43c6-aee9-f03439453190', '012345678',
+		'https://robohash.org/9KH.png?set=set2&size=150x150','admin', 'unlock');
+		
 
 username: transang
 password: 3003sang

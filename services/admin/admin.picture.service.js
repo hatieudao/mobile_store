@@ -2,6 +2,12 @@ const { models } = require('../../models');
 
 exports.getPicturesInforByProductId = (producId) => models.pictures.findAll({
     where: ({mobile_id: producId }),
+    raw: true
+})
+
+exports.getAvatarPictureByProductId = (producId) => models.pictures.findOne({
+    where: ({mobile_id: producId }),
+    raw: true
 })
 
 
@@ -30,11 +36,16 @@ exports.addPicture = async (mobile_id, link) => {
 
 
 exports.deletePictureByIds = async (listIds) => {
-    models.pictures.destroy(
-        {
-            where: {
-                id: listIds
+    try
+    {
+        models.pictures.destroy(
+            {
+                where: {
+                    id: listIds
+                }
             }
-        }
-    );
+        );
+    }catch (e){
+        return false;
+    }
 }

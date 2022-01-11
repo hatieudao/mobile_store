@@ -3,50 +3,41 @@ const productService = require("../../services/admin/admin.product.service");
 const configurationService = require("../../services/admin/admin.configuration.service");
 const optionService = require("../../services/admin/admin.option.service");
 const pictureService = require("../../services/admin/admin.picture.service");
+const fs = require("fs");
 
 exports.adminUserList = async (req, res) => {
-    const { page, limit } = req.query;
+
+    const data = req.query;
+
+    const page = parseInt(data.page) || 1;
+    const limit = parseInt(data.limit) || 10;
 
     const filter = {
-        username: req.query.username,
-        fullName: req.query.fullName,
-        phoneNumber: req.query.phoneNumber
+        adminId: data.adminId,
+        adminUserName: data.adminUserName,
+        adminName: data.adminName,
+        adminPhoneNumber: data.adminPhoneNumber,
+        status: ((data.status) === '0') ? undefined : data.status,
+        minCreatedDate: data.minCreatedDate || new Date(2021, 0, 1),
+        maxCreatedDate: data.maxCreatedDate || new Date(),
     }
 
+    // await userService.foo();
 
-    //Lấy url gốc -> cắt chuỗi "page=" ra (nếu có)
-    const oriUrl = req.originalUrl;
-    const splitIndex = oriUrl.lastIndexOf("page=");
-    const url = splitIndex > -1 ? oriUrl.slice(0,splitIndex-1) : oriUrl;
-
-    //Kiểm tra xem trên có các query khác hay koS
-    const selectPage = url.lastIndexOf('?') > -1 ? '&page=' : '?page';
-
-
-
-
-    //Lấy products
-    const dataService = await userService.adminUserList(page || 1,limit || 10, filter);
+    const allAdminUser = await userService.adminUserList(page,limit, filter, true);
 
     //products
-    const adminUsers = dataService.rows;
+    const adminUsers = allAdminUser.rows;
     //Số lượng các products
-    const countAdminUsers = dataService.count;
+    const count = allAdminUser.count;
 
-
-    const curPage = parseInt(page) || 1;
-    const curLimit = parseInt(limit) || 10;
-
-    //Số lượng page = ceil của (tổng sản phảm / số lượng sản phẩm trên 1 trang)
-    const countPage = Math.ceil(countAdminUsers/curLimit);
     const pagination = {
-        curPage: curPage,
-        prevPageLink: curPage > 1 ? url + selectPage + (curPage - 1) : url + selectPage + curPage,
-        nextPageLink: curPage < countPage ? url + selectPage + (curPage + 1) : url + selectPage + curPage,
-        limit: parseInt(limit) || 10
+        page: page,
+        limit: limit,
+        totalRows: count
     }
 
-    res.render('admin/adminUser/adminUserList', { title: 'user List', layout: 'admin/layout.hbs', adminUsers, pagination });
+    res.render('admin/adminUser/adminUserList', { title: 'user List', layout: 'admin/layout.hbs', adminUsers, pagination, filter });
 }
 
 
@@ -76,7 +67,7 @@ exports.adminAccount = async (req, res) => {
     const id = parseInt(req.params.id);
     console.log('id = ', id);
 
-    const adminUser = await userService.findAdminUserById(id);
+    const adminUser = await userService.findAdminUserById(id, true);
 
     res.render('admin/adminUser/adminAccount', { title: 'Product', layout: 'admin/layout.hbs', adminUser});
 }
@@ -90,6 +81,66 @@ exports.adminCurrentAccount = async (req, res) => {
 
     const adminUser = await userService.findAdminUserById(id);
 
-    res.render('admin/adminUser/adminAccount', { title: 'Product', layout: 'admin/layout.hbs', adminUser});
+    res.render('admin/adminUser/adminCurrentAccount', { title: 'Product', layout: 'admin/layout.hbs', adminUser});
 }
-//
+
+exports.lockAllAdminUser = async (req, res) => {
+    const lockALl = req.query.lockAll;
+
+    if(lockALl){
+        for (let adminUserId of lockALl)
+        {
+            await userService.lockAdminUser(adminUserId);
+        }
+    }
+
+    res.redirect('/admin/adminUser');
+}
+
+exports.updateAdminCurrentAccount = async (req, res) => {
+
+    const currentAdminUser = req.user;
+    const id = parseInt(currentAdminUser.id);
+    console.log('id = ', id);
+
+    const {phone_number, address} = req.body;
+    const adminUser = await userService.findAdminUserById(id,true);
+
+    const avatarFile = req.file;
+    let avatar;
+
+    if (avatarFile) {
+        let path = avatarFile.path.replace(/\\/g, "/");
+        avatar = path.replace('public', "");
+        await removeAvatarPaths(adminUser.avatar)
+    }
+
+    await userService.updateAdminUser(id, phone_number, address, avatar);
+
+
+    res.redirect('/admin/adminUser/currentAccount');
+}
+
+removeAvatarPaths = async function (path){
+    try {
+        fs.unlinkSync("./public" + path);
+    } catch (e) {
+        return false;
+    }
+}
+
+
+exports.changePassword = async (req, res) => {
+
+    const currentAdminUser = req.user;
+    const id = parseInt(currentAdminUser.id);
+    console.log('id = ', id);
+
+
+    const {newPassword} = req.body;
+
+    if(newPassword){
+        await userService.changeAdminPassword(id,newPassword);
+    }
+    res.redirect('/admin/adminUser/currentAccount');
+}

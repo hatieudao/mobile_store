@@ -5,13 +5,18 @@
                 Thông tin Admin
             </h1>
         </header>
-        <form class="" action="">
+        <form class="" action="/admin/adminUser/currentAccount/update" enctype="multipart/form-data" method="post">
             <div class="">
                 <div class="row justify-content-end">
                     <div class="col-sm-4 text-center">
-                        <button type="submit" class="btn btn-success shadow-none" data-toggle="modal">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPasswordModal">
+                            <i class="fas fa-pencil-alt"></i>
+                            Đổi mật khẩu
+                        </button>
+
+                        <button id="updateBtn" type="submit" class="btn btn-success shadow-none" data-toggle="modal">
                             <i class="fa fa-pencil"></i>
-                            Chỉnh sửa
+                            Lưu chỉnh sửa
                         </button>
                     </div>
                 </div>
@@ -64,8 +69,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 align-items-center justify-content-center" style="border: solid 1px #ccc">
-                        <img class="my-auto" src="{{adminUser.avatar}}" style="width: 100%"/>
+                    <div class="col-lg-3 col-md-6 align-items-center justify-content-center">
+                        <div style="border: solid 1px #ccc">
+                            <img id="adminAvatarImg" src="{{adminUser.avatar}}" style="width: 100%"/>
+                        </div>
+                        <div class="mt-2">
+                            <input name="avatar" accept="image/*" type='file' id="avatarInput"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,22 +109,59 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3 py-2">
-                                Avatar
-                            </div>
-                            <div class="col-lg-9 py-2">
-                                <input class="form-control shadow-none" name="avatar" type="text" placeholder="{{adminUser.avatar}}" value="{{adminUser.avatar}}">
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </form>
 
     </div>
 </div>
 
+<div id="editPasswordModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <form class="modal-content" action="/admin/adminUser/currentAccount/changePassword" method="post">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nhập Mật khẩu mới</label>
+                    <input name="newPassword" id="newPassword" type="password" class="form-control" required>
+                </div>
+                <p id="errorPassword"></p>
+                <div class="form-group">
+                    <label>Mật khẩu mới</label>
+                    <input id="newPasswordAgain" type="password" class="form-control" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="submitEditPassWordBtn" type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </form>
+    </div>
+</div>
 
+{{#section 'script'}}
+    <script>
+
+
+        $('#submitEditPassWordBtn').click(function (e){
+            const newPassword = $("#newPassword").val();
+            const newPasswordAgain = $("#newPasswordAgain").val();
+
+            if(newPassword !== newPasswordAgain){
+                e.preventDefault();
+                console.log("Mật khẩu sai")
+                $("#errorPassword").html("Mật khẩu nhập lại không đúng");
+                $("#submitEditPassWordBtn").prop('disabled', false);
+            }
+            else{
+
+            }
+        })
+
+
+    </script>
+{{/section}}
