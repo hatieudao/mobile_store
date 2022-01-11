@@ -55,6 +55,8 @@ exports.productList = async (req, res) => {
     }
 
     res.render('admin/product/productList', { title: 'Product List', layout: 'admin/layout.hbs', products, pagination, filter, brandNames});
+    // res.render('admin/product/productList', { title: 'Product List', layout: 'admin/layout.hbs'});
+
 }
 
 

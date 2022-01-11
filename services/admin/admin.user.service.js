@@ -184,6 +184,18 @@ exports.findAdminUserByUsername = (username) => {
     return result;
 }
 
+exports.findUnlockAdminUserByUsername = (username) => {
+
+    const result = models.users.findOne({
+        where: {
+            username: username,
+            role: "admin",
+            status: "unlock"
+        }
+    });
+    return result;
+}
+
 exports.lockAdminUser = async (adminUserId) => {
     const adminUser = await this.findAdminUserById(adminUserId);
     adminUser.update({

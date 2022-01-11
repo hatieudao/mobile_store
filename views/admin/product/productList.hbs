@@ -239,47 +239,87 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody class="admin-table-tbody">
-                {{#each products}}
-                <tr>
-                    <td>
-                    {{#ifCond status "===" "exist" }}
-                        <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="deleteAll[]" value="{{id}}">
-                    {{/ifCond}}
-                    </td>
-                    <td>{{id}}</td>
-                    <td>{{full_name}}</td>
-                    <td>{{[brand.name]}}</td>
-                    <td>{{price}}</td>
-                    <td>{{rating}}</td>
-                    <td>
-                        {{created_at}}
-                    </td>
-                    <td>
-                        {{updated_at}}
-                    </td>
-                    <td class="text-center">
-                        <a href="/admin/product/{{id}}">
-                            <i class="fas fa-info-circle"></i>
-                        </a>
-                    </td>
+                <tbody class="admin-table-tbody" id="productList">
+                    {{#each products}}
+                    <tr>
+                        <td>
+                        {{#ifCond status "===" "exist" }}
+                            <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="deleteAll[]" value="{{id}}">
+                        {{/ifCond}}
+                        </td>
+                        <td>{{id}}</td>
+                        <td>{{full_name}}</td>
+                        <td>{{[brand.name]}}</td>
+                        <td>{{price}}</td>
+                        <td>{{rating}}</td>
+                        <td>
+                            {{created_at}}
+                        </td>
+                        <td>
+                            {{updated_at}}
+                        </td>
+                        <td class="text-center">
+                            <a href="/admin/product/{{id}}">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </td>
 
-                    <td>
-                        {{status}}
-                    </td>
-                    <td>
-                        <img src="{{picture.link}}" style="width: 50px">
-                    </td>
-                </tr>                             
-                {{/each}}
+                        <td>
+                            {{status}}
+                        </td>
+                        <td>
+                            <img src="{{picture.link}}" style="width: 50px">
+                        </td>
+                    </tr>
+                    {{/each}}
+
+                    <script type="text/x-handlebars-template" id="productListTemplate">
+
+                        \{{#each products}}
+                            <tr>
+                                <td>
+                                \{{#ifCond status "===" "exist" }}
+                                    <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="deleteAll[]" value="\{{id}}">
+                                \{{/ifCond}}
+                                </td>
+                                <td>\{{id}}</td>
+                                <td>\{{full_name}}</td>
+                                <td>\{{[brand.name]}}</td>
+                                <td>\{{price}}</td>
+                                <td>\{{rating}}</td>
+                                <td>
+                                    \{{created_at}}
+                                </td>
+                                <td>
+                                    \{{updated_at}}
+                                </td>
+                                <td class="text-center">
+                                    <a href="/admin/product/\{{id}}">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                </td>
+
+                                <td>
+                                    \{{status}}
+                                </td>
+                                <td>
+                                    <img src="\{{picture.link}}" style="width: 50px">
+                                </td>
+                            </tr>
+                        \{{/each}}
+                    </script>
                 </tbody>
             </table>
         </form>
 
         <footer class="row justify-content-center">
             <nav class="col-lg-3 col-md-6 col-sm-9" aria-label="Page navigation example" id="pagination">
+                <input type="hidden" id="apiPath" value="/product">
                 {{{createPagination pagination paginationClass="pagination"}}}
             </nav>
+
+        <script type="text/x-handlebars-template" id="productListTemplate">
+
         </footer>
     </div>
 </div>
@@ -287,6 +327,21 @@
 {{#section 'script'}}
     <script src="/adminStyle/js/filterSelect.js"></script>
     <script src="/adminStyle/js/pagination.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>-->
+    <script>
+
+          function loadData(){
+
+        }
+    </script>
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>-->
+<!--    <script>-->
+<!--        // compile the template-->
+<!--        const template = Handlebars.compile("Handlebars <b>\{{doesWhat}}</b>");-->
+<!--        // execute the compiled template and print the output to the console-->
+<!--        console.log(template({ doesWhat: "rocks!" }));-->
+<!--    </script>-->
 {{/section}}
 
 

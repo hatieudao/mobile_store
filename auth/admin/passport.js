@@ -3,6 +3,7 @@ const passport = require('passport')
 const { models } = require('../../models');
 // const User = require('../../models/users');
 const bcrypt = require('bcrypt');
+const userService = require('../../services/admin/admin.user.service');
 
 passport.use(new LocalStrategy(
     {
@@ -15,13 +16,7 @@ passport.use(new LocalStrategy(
         try
         {
 
-            const user = await models.users.findOne({
-                where: {
-                    username: username,
-                    role: "admin"
-                },
-                raw: true
-            });
+            const user = await userService.findUnlockAdminUserByUsername(username);
             if (!user) {
                 console.log('Sai username');
                 return done(null, false, { message: 'Incorrect username.' });

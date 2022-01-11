@@ -57,7 +57,6 @@ exports.userAccount = async (req, res) => {
     console.log('id = ', id);
 
     const normalUser = await userService.findUserById(id, true);
-    const orders = await orderService.findOrderByUserId(id);
 
     res.render('admin/user/userAccount', { title: 'User Account', layout: 'admin/layout.hbs', normalUser});
 }
