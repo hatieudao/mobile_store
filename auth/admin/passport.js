@@ -2,7 +2,8 @@ const passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy;
 const { models } = require('../../models');
 // const User = require('../../models/users');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
+const userService = require('../../services/admin/admin.user.service');
 
 passport.use(new LocalStrategy(
   {
@@ -14,13 +15,7 @@ passport.use(new LocalStrategy(
 
     try {
 
-      const user = await models.users.findOne({
-        where: {
-          username: username,
-          role: "admin"
-        },
-        raw: true
-      });
+      const user = await userService.findUnlockAdminUserByUsername(username);
       if (!user) {
         console.log('Sai username');
         return done(null, false, { message: 'Incorrect username.' });
@@ -41,7 +36,7 @@ passport.use(new LocalStrategy(
 ));
 
 passport.serializeUser(function (user, done) {
-  done(null, { id: user.id, username: user.username, name: user.full_name });
+  done(null, { id: user.id, username: user.username, full_name: user.full_name, avatar: user.avatar });
 });
 
 

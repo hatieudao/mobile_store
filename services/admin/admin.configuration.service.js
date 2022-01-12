@@ -20,9 +20,9 @@ exports.addConfiguration = async (mobile_id, value,specificationName) => {
     } catch (error) {
         return false;
     }
-
-
 }
+
+
 
 exports.createConfiguration = async  (mobile_id, value,specification_id) =>  {
 

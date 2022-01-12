@@ -18,3 +18,9 @@ exports.getSpecificationByName = async (name) => {
     }
     return specification;
 }
+
+exports.specificationList = (page, limit, filter) => {
+    const result = models.specifications.findAndCountAll({raw: true});
+    return result;
+
+}

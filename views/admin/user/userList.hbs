@@ -1,168 +1,204 @@
-                <div class="container">
-                    <div class="admin-container-content">
-                        <header class="admin-container-content-header">
-                            <h1 class="row py-2 text-primary admin-container-content-header__title">
-                                Danh sách người dùng
-                            </h1>
-                        </header>
-                        <div class="row py-4">
-                            <div class="col-sm-8">
-                                <div class="row align-items-start admin-container-content-filter">
-                                    <div class="col-sm-10">
-                                        <div class="row pb-2">
-                                            <div class="col-sm-4">                                        
-                                                <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID">                                        
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên">
-                                                    <div class="">
-                                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <div class="dropdown-item" href="#">Galaxy</div>
-                                                            <div class="dropdown-item" href="#">Iphone X</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Thương hiệu">
-                                                    <div class="">
-                                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <div class="dropdown-item" href="#">Samsung</div>
-                                                            <div class="dropdown-item" href="#">Apple</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="row pb-2">
-                                            <div class="col-sm-4">                                        
-                                                <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID">                                        
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên">
-                                                    <div class="">
-                                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                                        <div class="dropdown-menu">
-                                                            <div class="dropdown-item" href="#">Galaxy</div>
-                                                            <div class="dropdown-item" href="#">Iphone X</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <input type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Thương hiệu">
-                                                    <div class="">
-                                                        <button class="btn btn-outline-secondary dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                                        <div class="dropdown-menu">
-                                                            <div class="dropdown-item" href="#">Samsung</div>
-                                                            <div class="dropdown-item" href="#">Apple</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
+<div class="container">
+    <div class="admin-container-content">
+        <header>
+            <h1 class="row py-2 text-primary">
+                Danh sách user
+            </h1>
+        </header>
+
+        <div class="row py-4">
+            <form class="" name="filterForm">
+                <div class="row align-items-start justify-content-between">
+                    <div class="col-lg-10">
+                        <div class="row pb-2">
+                            <div class="pb-2 col-lg-3 col-md-6">
+                                <div class="d-flex justify-content-between">
+                                    <input name="userId" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="ID User"
+                                        {{#if filter.userId}}
+                                           value="{{filter.userId}}"
+                                        {{/if}}
+                                    >
+                                </div>
+                            </div>
+                            <div class="pb-2 col-lg-3 col-md-6">
+                                <div class="d-flex justify-content-between">
+                                    <input name="userFullName" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Tên User"
+                                        {{#if filter.userFullName}}
+                                           value="{{filter.userFullName}}"
+                                        {{/if}}
+                                    >
+                                </div>
+                            </div>
+                            <div class="pb-2 col-lg-3 col-md-6">
+                                <div class="d-flex justify-content-between">
+                                    <input name="userPhoneNumber" type="number" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Số điện thoại"
+                                        {{#if filter.userPhoneNumber}}
+                                           value="{{filter.userPhoneNumber}}"
+                                        {{/if}}
+                                    >
+                                </div>
+                            </div>
+                            <div class="pb-2 col-lg-3 col-md-6">
+                                <div class="d-flex justify-content-between">
+                                    <input name="userUserName" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Username"
+                                        {{#if filter.userUserName}}
+                                           value="{{filter.userUserName}}"
+                                        {{/if}}
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pb-2">
+                            <div class="pb-2 col-lg-3 col-md-6">
+                                <div class="form-group">
+                                    <label>Tạo từ ngày</label>
+                                    <input name="minCreatedDate" type="date" class="mb-2 form-control shadow-none"aria-label="Text input with dropdown button"
+                                        {{#if filter.minCreatedDate}}
+                                           value="{{filter.minCreatedDate}}"
+                                        {{/if}}
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <label>Đến ngày</label>
+                                    <input name="maxCreatedDate" type="date" class="mb-2 form-control shadow-none"aria-label="Text input with dropdown button"
+                                        {{#if filter.maxCreatedDate}}
+                                           value="{{filter.maxCreatedDate}}"
+                                        {{/if}}
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-1 d-flex justify-content-end">
+                        <button id="resetBtn" type="button" class="btn btn-warning left">
+                            Reset
+                        </button>
+                        <button id="searchBtn" type="submit" class="btn btn-primary left">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row pb-2 d-flex align-items-center justify-content-between">
+                    <div class="col-lg-4 pb-2">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6">
+                                        Số dòng
                                     </div>
-                                    <div class="col-sm-2">
-                                        <button id="" type="button" class="btn btn-primary left"><i class="fa fa-search"></i></button>
+                                    <div class="col-lg-6">
+                                        <div class="d-flex justify-content-between">
+                                            <input name="limit" id="limit" type="text" class="form-control shadow-none" aria-label="Text input with dropdown button" placeholder="Số dòng"
+                                                {{#if pagination.limit}}
+                                                   value="{{pagination.limit}}"
+                                                {{/if}}
+                                            >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4 text-center">
-                                    <a class="" href="/product/productAddItem.html">
-                                        <button type="button" class="btn btn-primary shadow-none" data-toggle="modal">
-                                            <i class="fa fa-pencil"></i>
-                                            Thêm mới
-                                        </button>
-                                    </a>
-                                    <button type="button" class="btn btn-danger shadow-none">
-                                        <i class="fa fa-times-circle"></i>
-                                        Xóa
-                                    </button>
+                            <div class="col-lg-6 ">
+                                <div class="row align-items-center">
+                                    <div class="select-menu-group">
+                                        <input type="hidden" id="filterStatus"
+                                            {{#if filter.status}}
+                                               value="{{filter.status}}"
+                                            {{/if}}
+                                        >
+                                        <select name="status" id="status" class="form-select">
+                                            <option value="0">Tất cả</option>
+                                            <option value="unlock">Mở khóa</option>
+                                            <option value="lock">Khóa</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                        </div>    
-                        <div class="" id="">
-                            <label>
-                                Hiển thị 
-                                <select name="" class="">
-                                    <option value="10">10</option>
-                                    <option value="25">25</option>
-                                    <option value="50">50</option>
-                                    <option value="-1">Tất cả</option>
-                                </select> 
-                                dòng
-                            </label>
                         </div>
-                        <div class="row py-4">
-                            <table class="table table-bordered admin-table">
-                                <thead class="admin-table-thead">
-                                    <tr>
-                                        <th>
-                                            Chọn
-                                        </th>
-                                        <th>
-                                            ID  
-                                        </th>
-
-                                        <th>
-                                            Username
-                                        </th>
-                                        <th>
-                                            Tên
-                                        </th>
-                                        <th>
-                                            Số điện thoại
-                                        </th>
-                                        <th>
-                                            Ngày tạo
-                                        </th>
-                                        <th>
-                                            Xem chi tiết
-                                        </th>
-                                        <th>
-                                            Ảnh
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody class="admin-table-tbody">
-                                    {{#each users}}
-                                    <tr>
-                                        <td>
-                                            <input class="form-check-input" type="checkbox" id="">
-                                        </td>
-                                        <td>{{id}}</td>
-                                        <td>{{username}}</td>
-                                        <td>{{full_name}}</td>
-                                        <td>{{phone_number}}</td>
-                                        <td>{{created_at}}</td>
-                                        <td>
-                                            <a href="/:userKH0001">
-                                                Chi tiết
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <img src="{{avatar}}" alt="" class="">
-                                        </td>
-                                        {{/each}}
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <footer class="row justify-content-center admin-order-footer">
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination justify-content-center">
-                                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                              </nav>
-                        </footer>
+                    </div>
+                    <div class="col-lg-4 pb-2 text-center">
+                        <button type="submit" class="btn btn-danger shadow-none" form="lockAllForm">
+                            <i class="fa fa-times-circle"></i>
+                            Khóa tài khoản
+                        </button>
                     </div>
                 </div>
+            </form>
+
+
+        </div>
+
+
+        <form class="row py-4" name="lockAllForm" id="lockAllForm" action="/admin/user/lockAll">
+            <table class="table table-bordered admin-table">
+                <thead class="admin-table-thead">
+                <tr>
+                    <th>
+                        <input class="form-check-input" type="checkbox" id="selectAll" name="selectAll">
+                    </th>
+                    <th>
+                        ID
+                    </th>
+
+                    <th>
+                        Username
+                    </th>
+                    <th>
+                        Tên
+                    </th>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Ngày tạo
+                    </th>
+                    <th>
+                        Xem chi tiết
+                    </th>
+                    <th>
+                        Ảnh
+                    </th>
+                    <th>
+                        Trạng thái
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="admin-table-tbody">
+                {{#each normalUsers}}
+                    <tr>
+                        <td>
+                            <input class="form-check-input select-row-checkbox" type="checkbox" id="" name="lockAll[]" value="{{id}}">
+                        </td>
+                        <td>{{id}}</td>
+                        <td>{{username}}</td>
+                        <td>{{full_name}}</td>
+                        <td>{{phone_number}}</td>
+                        <td>{{created_at}}</td>
+                        <td class="text-center">
+                            <a href="/admin/user/{{id}}">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <img src="{{avatar}}" alt="" class="">
+                        </td>
+                        <td>
+                            {{status}}
+                        </td>
+                {{/each}}
+                </tr>
+                </tbody>
+            </table>
+        </form>
+        <footer class="row justify-content-center">
+            <nav class="col-lg-3 col-md-6 col-sm-9" aria-label="Page navigation example" id="pagination">
+                {{{createPagination pagination paginationClass="pagination"}}}
+            </nav>
+        </footer>
+    </div>
+</div>
+
+{{#section 'script'}}
+    <script src="/adminStyle/js/filterSelect.js"></script>
+    <script src="/adminStyle/js/pagination.js"></script>
+{{/section}}

@@ -6,7 +6,10 @@ const productRouter = require('./product.route');
 const userRouter = require('./user.route');
 const authRouter = require('./auth.route');
 const adminUserRouter = require('./adminUser.route');
+const apiRouter = require('./api.route');
+
 const authController = require('../../controllers/admin/admin.auth.controller');
+
 
 /* GET home page. */
 router.get('/', authController.isLogin, function (req, res, next) {
@@ -22,6 +25,7 @@ router.use('/order', authController.isLogin, orderRouter);
 router.use('/user', authController.isLogin, userRouter);
 router.use('/product', authController.isLogin, productRouter);
 router.use('/adminUser', authController.isLogin, adminUserRouter);
+router.use('/api', authController.isLogin, apiRouter);
 
 
 module.exports = router;
