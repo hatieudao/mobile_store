@@ -889,10 +889,12 @@ ol.slide-indicators li.active {
 .copyright>p {
     margin: 10px 0 0;
 }
+/*
 
 .product-big-title-area {
     background: url(/img/crossword.png) repeat scroll 0 0 #248869ba;
 }
+*/
 
 .product-bit-title h2 {
     font-family: raleway;
@@ -1864,8 +1866,8 @@ div.cart-collaterals ul.products li.product a:hover {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     -webkit-transform-origin: 50% 0%;
     transform-origin: 50% 0%;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    /*-webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);*/
     -webkit-transition: none;
     transition: none;
     -webkit-animation: expand 0.8s 0.6s ease-out forwards;
@@ -2128,7 +2130,8 @@ div.cart-collaterals ul.products li.product a:hover {
         width: 7px;
    }
 }
-@-webkit-keyframes expand {
+
+/*@-webkit-keyframes expand {
     0% {
         -webkit-transform: scale3d(1, 0, 1);
         opacity: 0;
@@ -2213,7 +2216,8 @@ div.cart-collaterals ul.products li.product a:hover {
         transform: translate3d(0, 0, 0);
         opacity: 1;
    }
-}
+}*/
+
 @media (max-width: 600px) {
     .form_wrapper .col_half {
         width: 100%;
@@ -2585,8 +2589,10 @@ div.cart-collaterals ul.products li.product a:hover {
 }
 
 .title-product-name-style{
-   width: 220px;
+    width: 220px;
+    height: 45px;
     padding-top: 8px;
+    overflow: hidden;
 }
 
 .parameter__title{
