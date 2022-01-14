@@ -1,3 +1,5 @@
-function addToCart() {
-  console.log("ADD");
+function addToCart(id) {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  cart.push(id);
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
