@@ -500,3 +500,9 @@
         </div>
     </div>
 </div>
+{{#if user}}
+{{else}}
+{{#section 'script'}}
+  <script src="/js/cart/addToCart.js"></script>
+{{/section}}
+{{/if}}

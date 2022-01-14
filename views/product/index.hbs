@@ -106,8 +106,17 @@
                         </div>
 
                         <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
-                               rel="nofollow" href="#"><i class="fa fa-shopping-cart cart-amunt"></i></a>
+                            {{#if user }}
+                              <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
+                                rel="nofollow" href="#"><i class="fa fa-shopping-cart cart-amunt"></i></a>
+                               {{else}}
+                               <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
+                                rel="nofollow" href="#">
+                                <button onclick="addToCart()">
+                                <i class="fa fa-shopping-cart cart-amunt"></i>
+                                </button>
+                                </a>
+                            {{/if}}
                             <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
                                rel="nofollow" href="/product/{{id}}"><i class="fa fa-search cart-amunt"></i></a>
                             <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
@@ -184,4 +193,11 @@
         </div>
     </div>-->
 </div>
+
+{{#if user}}
+{{else}}
+  {{#section 'script'}}
+    <script src="/js/cart/addToCart.js"></script>
+  {{/section}}
+{{/if}}
 

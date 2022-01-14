@@ -79,7 +79,7 @@ const productRouter = require('./routes/public/product.route');
 const contactRouter = require('./routes/public/contact.route');
 const authRouter = require('./routes/public/auth.route');
 // User route
-const cartRouter = require('./routes/user/cart.route')
+const cartRouter = require('./routes/public/cart.route')
 const checkoutRouter = require('./routes/user/checkout.route')
 const myAccountRouter = require('./routes/user/myAccount.route')
 const wishListRouter = require('./routes/user/wishlist.route')
