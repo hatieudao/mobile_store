@@ -15,7 +15,7 @@ const expressHandlebarsSections = require('express-handlebars-sections');
 let hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials', function (err) { });
 hbs.registerHelper('createPagination', pagiHelper.createPagination);
-hbs.registerHelper('section',expressHandlebarsSections());
+hbs.registerHelper('section', expressHandlebarsSections());
 hbs.registerHelper('ifCond', function (v1, operator, v2, options) {
 
   switch (operator) {
@@ -54,7 +54,7 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 // Database
 const db = require('./config/database')
 db.authenticate()
-  .then(() => console.log("DB connected..........."))
+  .then(() => console.log("DB connected...........\n"))
   .catch(err => console.log("Error......." + err))
 
 //////////////////////
