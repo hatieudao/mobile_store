@@ -88,7 +88,7 @@ const wishListRouter = require('./routes/user/wishlist.route')
 
 const adminRouter = require('./routes/admin')
 
-
+const productApi = require('./api/public/product.api')
 
 
 app.set("views", "./views")
@@ -114,9 +114,8 @@ app.use('/cart', cartRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/myaccount', myAccountRouter);
 app.use('/wishlist', wishListRouter);
-
 app.use('/admin', adminRouter);
-
+app.use('/api/product', productApi);
 
 // catch 404 and forward to error handler
 app.use('*', (req, res) => res.render('404', { layout: '404' }))

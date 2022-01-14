@@ -167,6 +167,14 @@ body {
     margin-left: 15px;
 }
 
+.popup{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.product-price, .product-subtotal{
+  width: 150px;
+}
 
 .shopping-item:hover {
     background: none repeat scroll 0 0 #072548;
