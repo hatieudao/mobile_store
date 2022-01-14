@@ -79,7 +79,7 @@ const productRouter = require('./routes/public/product.route');
 const contactRouter = require('./routes/public/contact.route');
 const authRouter = require('./routes/public/auth.route');
 // User route
-const cartRouter = require('./routes/user/cart.route')
+const cartRouter = require('./routes/public/cart.route')
 const checkoutRouter = require('./routes/user/checkout.route')
 const myAccountRouter = require('./routes/user/myAccount.route')
 const wishListRouter = require('./routes/user/wishlist.route')
@@ -88,7 +88,7 @@ const wishListRouter = require('./routes/user/wishlist.route')
 
 const adminRouter = require('./routes/admin')
 
-
+const productApi = require('./api/public/product.api')
 
 
 app.set("views", "./views")
@@ -114,9 +114,8 @@ app.use('/cart', cartRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/myaccount', myAccountRouter);
 app.use('/wishlist', wishListRouter);
-
 app.use('/admin', adminRouter);
-
+app.use('/api/product', productApi);
 
 // catch 404 and forward to error handler
 app.use('*', (req, res) => res.render('404', { layout: '404' }))

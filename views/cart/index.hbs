@@ -109,39 +109,7 @@
                                         <th class="product-subtotal">Total</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr class="cart_item">
-                                        <td class="product-remove">
-                                            <a title="Remove this item" class="remove" href="#">×</a>
-                                        </td>
-
-                                        <td class="product-thumbnail">
-                                            <a href="/single-product"><img width="145" height="145"
-                                                    alt="poster_1_up" class="shop_thumbnail"
-                                                    src="img/product-thumb-2.jpg"></a>
-                                        </td>
-
-                                        <td class="product-name">
-                                            <a href="/single-product">Ship Your Idea</a>
-                                        </td>
-
-                                        <td class="product-price">
-                                            <span class="amount">£15.00</span>
-                                        </td>
-
-                                        <td class="product-quantity">
-                                            <div class="quantity buttons_added">
-<!--                                                <input type="button" class="minus" value="-">-->
-                                                <input type="number" size="4" class="input-text qty text" title="Qty"
-                                                    value="1" min="0" step="1">
-<!--                                                <input type="button" class="plus" value="+">-->
-                                            </div>
-                                        </td>
-
-                                        <td class="product-subtotal">
-                                            <span class="amount">£15.00</span>
-                                        </td>
-                                    </tr>
+                                <tbody id="cart-items">
                                     <tr>
                                         <td class="actions" colspan="6">
                                             <div class="coupon">
@@ -152,8 +120,12 @@
                                                     class="button">
                                             </div>
                                             <input type="submit" value="Update Cart" name="update_cart" class="button">
-                                            <input type="submit" value="Checkout" name="proceed"
-                                                class="checkout-button button alt wc-forward">
+                                            <a href="/checkout" type="submit" value="Checkout" name="proceed" 
+                                              style="margin-left: 70px;"
+                                              class="checkout-button button alt wc-forward">
+                                              Checkout
+                                            </a>
+                                            
                                         </td>
                                     </tr>
                                 </tbody>
@@ -500,3 +472,9 @@
         </div>
     </div>
 </div>
+{{#if user}}
+{{else}}
+{{#section 'script'}}
+  <script src="/js/cart/loadCart.js"></script>
+{{/section}}
+{{/if}}
