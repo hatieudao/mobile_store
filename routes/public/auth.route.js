@@ -1,5 +1,5 @@
 const express = require('express');
-const passport = require("../../auth/passport");
+const passportUser = require("../../auth/passport");
 const router = express.Router();
 
 const authController = require('../../controllers/auth.controller');
@@ -7,9 +7,11 @@ const authController = require('../../controllers/auth.controller');
 /* GET home page. */
 router.get('/login', authController.login);
 
-router.post('/login',
-    passport.authenticate('local',{ successRedirect: '/',
-        failureRedirect: '/login?errorLogin' }),authController.loginP);
+router.post('/login', passportUser.authenticate('local', {
+  successRedirect: '/',
+  failureRedirect: '/login?errorLogin'
+}),
+  authController.loginP);
 
 router.get('/logout', authController.logout);
 

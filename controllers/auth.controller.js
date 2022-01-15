@@ -5,6 +5,7 @@ exports.login = async (req, res) => {
 }
 
 exports.loginP = async (req, res) => {
+  console.log("Auth fix");
   if (req.user)
     res.redirect('/');
   else
