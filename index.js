@@ -11,6 +11,7 @@ const session = require("express-session")
 const passport = require('./auth/passport')
 const pagiHelper = require('express-handlebars-paginate');
 const expressHandlebarsSections = require('express-handlebars-sections');
+const cookie = require('cookie-parser');
 
 let hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials', function (err) { });
@@ -50,7 +51,8 @@ app.use(passport.session());
 
 app.use(bodyParser.json()) // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-
+app.use(cookieParser());
+app.use(express.json());
 // Database
 const db = require('./config/database')
 db.authenticate()
