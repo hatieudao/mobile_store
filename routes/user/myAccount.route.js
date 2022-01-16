@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-myAccountController = require('../../controllers/myAccount.controller');
-
+const myAccountController = require('../../controllers/myAccount.controller');
+const verifyMiddleware = require('../../middlewares/verified.middlewares');
 /* GET home page. */
-router.get('/', myAccountController.isLogin, myAccountController.myAccount);
+router.get('/', myAccountController.isLogin,
+  verifyMiddleware.isVerified,
+  myAccountController.myAccount);
 router.post('/', myAccountController.isLogin, myAccountController.updateAccount);
 
 module.exports = router;
