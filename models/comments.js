@@ -38,6 +38,10 @@ module.exports = function(sequelize, DataTypes) {
     created_at: {
       type: DataTypes.DATE,
       allowNull: true
+    },
+    parent_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,
