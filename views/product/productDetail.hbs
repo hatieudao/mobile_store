@@ -162,28 +162,25 @@
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
                                                 <h2>Reviews</h2>
                                                 <div class="submit-review">
-                                                    <p><label for="name">Name</label> <input name="name" type="text">
+                                                    <p><label for="name">Name</label> <input name="name" id="userName"
+                                                                                             type="text">
                                                     </p>
-                                                    <p><label for="email">Email</label> <input name="email"
-                                                                                               type="email">
-                                                    </p>
-                                                    <div class="rating-chooser">
-                                                        <p>Your rating</p>
-
-                                                        <div class="rating-wrap-post">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                        </div>
+                                                    <div class="rate">
+                                                        <input type="radio" id="star5" name="rate" value="5"/>
+                                                        <label for="star5" title="text">5 stars</label>
+                                                        <input type="radio" id="star4" name="rate" value="4"/>
+                                                        <label for="star4" title="text">4 stars</label>
+                                                        <input type="radio" id="star3" name="rate" value="3"/>
+                                                        <label for="star3" title="text">3 stars</label>
+                                                        <input type="radio" id="star2" name="rate" value="2"/>
+                                                        <label for="star2" title="text">2 stars</label>
+                                                        <input type="radio" id="star1" name="rate" value="1"/>
+                                                        <label for="star1" title="text">1 star</label>
                                                     </div>
-                                                    <p><label for="review">Your review</label> <textarea name="review"
-                                                                                                         id=""
-                                                                                                         cols="30"
-                                                                                                         rows="10"></textarea>
+                                                    <p><label for="review">Your review</label> <textarea
+                                                            id="review" cols="30" rows="10"></textarea>
                                                     </p>
-                                                    <p><input type="submit" value="Submit"></p>
+                                                    <button type="submit" id="submitComment">comment</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -211,7 +208,8 @@
                                 <div class="product-hover">
                                     <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
                                         cart</a>
-                                    <a href="/product/{{id}}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                    <a href="/product/{{id}}" class="view-details-link"><i class="fa fa-link"></i> See
+                                        details</a>
                                 </div>
                             </div>
 
@@ -229,22 +227,40 @@
 </div>
 
 <div class="container">
+
     <div class="row">
         <div class="bg-light p-2">
-            <div class="d-flex flex-row align-items-start"><img class="rounded-circle"
-                                                                src="https://i.imgur.com/RpzrMR2.jpg"
-                                                                width="40"><textarea
-                    class="form-control ml-1 shadow-none textarea"></textarea></div>
-            <div class="mt-2 text-right">
-                <button class="btn btn-primary btn-sm shadow-none" type="button">Post
-                    comment
-                </button>
-                <button class="btn btn-outline-primary btn-sm ml-1 shadow-none"
-                        type="button">Cancel
-                </button>
-            </div>
+            <input type="hidden" name="mobileId" value="{{mb.id}}">
+            <input type="hidden" name="userId" value="{{user.id}}">
+            {{#if user}}
+                <div>
+                    <ul class="rating" style="margin-left: 20px">
+                        <li class="star-style"><i class="fa fa-star fa-fw" id="s1"></i></li>
+                        <li class="star-style"><i class="fa fa-star fa-fw" id="s2"></i></li>
+                        <li class="star-style"><i class="fa fa-star fa-fw" id="s3"></i></li>
+                        <li class="star-style"><i class="fa fa-star fa-fw" id="s4"></i></li>
+                        <li class="star-style"><i class="fa fa-star fa-fw" id="s5"></i></li>
+                    </ul>
+                </div>
+                <div class="d-flex flex-row align-items-start">
+                    <img class="rounded-circle" src="{{user.avatar}}" width="50">
+
+                    <textarea class="form-control ml-1 shadow-none textarea" id="content"></textarea>
+                </div>
+
+                <div class="mt-2 text-right">
+                    <button class="btn btn-primary btn-sm shadow-none" type="submit" id="postcomment">Post comment
+                    </button>
+                    <button class="btn btn-outline-primary btn-sm ml-1 shadow-none"
+                            type="button">Cancel
+                    </button>
+                </div>
+            {{else}}
+                <b style="margin-left: 50px">Vui lòng đăng nhập để comment!</b>
+            {{/if}}
         </div>
     </div>
+
 
     <div class="row">
         <div class="col-md-12">
@@ -254,7 +270,7 @@
                     <h6 class="card-subtitle">Latest Comments section by users</h6>
                 </div>
                 <div class="comment-widgets m-b-20">
-                    <div class="d-flex flex-row comment-row">
+                    <!--<div class="d-flex flex-row comment-row">
                         <div class="p-2"><span class="round"><img src="https://i.imgur.com/uIgDDDd.jpg" alt="user"
                                                                   width="50"></span></div>
                         <div class="comment-text w-100">
@@ -311,9 +327,95 @@
                                 or
                                 non-characteristic words etc.</p>
                         </div>
+                    </div>-->
+
+                    <div id="ratings">
+                        {{#each comments}}
+                            <div class="d-flex flex-row comment-row">
+                                <div class="p-2">
+                                        <span class="round">
+                                            {{#if user.avatar}}
+                                                <img src="{{user.avatar}}" alt="user" width="50">
+                                            {{/if}}
+                                        </span>
+                                </div>
+
+                                <div class="comment-text w-100">
+                                    <h5>{{user.full_name}}</h5>
+
+                                    <!--<input type="hidden" name="voted" value="{{rating}}">
+                                    <div id="vote"></div>-->
+
+                                    {{#for 0 rating 1}}
+                                        <i class="fa fa-star fa-fw" style="color: #FFCC36"></i>
+                                    {{/for}}
+                                    {{#for rating 5 1}}
+                                        <i class="fa fa-star fa-fw" style="color: #CCC"></i>
+                                    {{/for}}
+
+                                    <div class="comment-footer">
+                                        <span class="date">{{created_at}}</span>
+                                    </div>
+                                    <p class="m-b-5 m-t-10">{{body}}</p>
+                                </div>
+                            </div>
+                        {{/each}}
+                        <script type="text/x-handlebars-template" id="ratingsTemplate">
+
+
+                       \{{#each comments}}
+                        <div class="d-flex flex-row comment-row">
+                            <div class="p-2">
+                                        <span class="round">
+                                            \{{#if user.avatar}}
+                                                <img src="\{{user.avatar}}" alt="user" width="50">
+                                            \{{/if}}
+                                        </span>
+                            </div>
+
+                            <div class="comment-text w-100">
+                                <h5>\{{user.full_name}}</h5>
+
+                                    \{{#for 0 rating 1}}
+                                        <i class="fa fa-star fa-fw" style="color: #FFCC36"></i>
+                                    \{{/for}}
+                                    \{{#for rating 5 1}}
+                                        <i class="fa fa-star fa-fw" style="color: #CCC"></i>
+                                    \{{/for}}
+
+                                <div class="comment-footer">
+                                    <span class="date">\{{created_at}}</span>
+                                </div>
+
+
+
+                                <p class="m-b-5 m-t-10">\{{body}}</p>
+                            </div>
+                        </div>
+                        \{{/each}}
+
+
+
+                        </script>
                     </div>
+
+                    <footer class="row justify-content-center">
+                        <nav class="col-lg-3 col-md-6 col-sm-9" aria-label="Page navigation example" id="pagination">
+                            {{{createPagination pagination paginationClass="pagination"}}}
+                            <script type="text/x-handlebars-template" id="paginationTemplate">
+                                  \{{{createPagination pagination paginationClass="pagination"}}}
+
+
+                            </script>
+                        </nav>
+                    </footer>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+{{#section 'script'}}
+    <script src="/js/comment/comment.js">
+    </script>
+{{/section}}

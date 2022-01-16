@@ -57,6 +57,7 @@ module.exports.addItem = async (req, res, next) => {
         if (cart_detail.option_id == option.id){
             await cartDetailService.updateQuantityCartDetailById(cart_detail.id, cart_detail.quantity + 1);
             isUpdate = 1;
+            break;
         }
     }
 

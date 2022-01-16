@@ -44,6 +44,14 @@ hbs.registerHelper('ifCond', function (v1, operator, v2, options) {
   }
 });
 
+
+hbs.registerHelper('for', function(from, to, incr, block) {
+  var accum = '';
+  for(var i = from; i < to; i += incr)
+    accum += block.fn(i);
+  return accum;
+});
+
 app.use(session({ secret: process.env.SESSION_SECRET }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -86,6 +94,7 @@ const wishListRouter = require('./routes/user/wishlist.route')
 // Admin route
 
 const productApi = require('./api/public/product.api')
+const apiProductRouter = require('./api/public/product.route.api')
 
 
 app.set("views", "./views")
@@ -111,7 +120,8 @@ app.use('/cart', cartRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/myaccount', myAccountRouter);
 app.use('/wishlist', wishListRouter);
-app.use('/api/product', productApi);
+//app.use('/api/product', productApi);
+app.use('/api/product', apiProductRouter);
 
 // catch 404 and forward to error handler
 app.use('*', (req, res) => res.render('404', { layout: '404' }))
