@@ -21,7 +21,7 @@ exports.register = async (req, res) => {
 }
 
 exports.registerP = async (req, res) => {
-  const { username, fullName, password, reTypePassword } = req.body;
+  const { username, fullName, password, reTypePassword, email } = req.body;
 
   try {
     if (!username) {

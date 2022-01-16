@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
-
-exports.sendEmailVerify = (email) => {
+const { emailContent } = require('./email');
+exports.sendEmailVerify = async (email, token) => {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -9,16 +9,13 @@ exports.sendEmailVerify = (email) => {
     }
   });
 
-  // setup email data with unicode symbols
   let mailOptions = {
-    from: `"Mobile Store Verify"`, // sender address
-    to: email, // list of receivers
-    subject: 'Node Contact Request', // Subject line
-    text: 'Hello world?', // plain text body
-    html: '<h1>Hello</h1>' // html body
+    from: `"Mobile Store Verify"`,
+    to: email,
+    subject: 'Verify Email',
+    html: emailContent(`${process.env.DOMAIN}/verify/${token}`)
   };
 
-  // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return console.log(error);
@@ -29,3 +26,4 @@ exports.sendEmailVerify = (email) => {
     return 'Email has been sent';
   });
 }
+

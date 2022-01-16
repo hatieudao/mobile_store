@@ -12,7 +12,7 @@ exports.verifyUser = async (id, uid) => {
           uid: uid,
         }
       });
-    console.log(status);
+    return status;
   } catch (error) {
     throw new Error('error verify');
   }
