@@ -81,6 +81,7 @@ const myAccountRouter = require('./routes/user/myAccount.route')
 const wishListRouter = require('./routes/user/wishlist.route')
 // Verify route
 const verifyRouter = require('./routes/public/verify.route');
+const resetPasswordRouter = require('./routes/public/resetPassword.route');
 // API route
 const productApi = require('./api/public/product.api')
 
@@ -109,6 +110,7 @@ app.use('/myaccount', myAccountRouter);
 app.use('/wishlist', wishListRouter);
 app.use('/verify', verifyRouter);
 app.use('/api/product', productApi);
+app.use('/reset-password', resetPasswordRouter);
 app.use('/', homeRouter);
 app.use('/', authRouter);
 
