@@ -1,19 +1,19 @@
 const { models } = require('../models');
 const { v4: uuidv4 } = require('uuid');
-exports.resetPassword = async (id, uid) => {
+const bcrypt = require("bcryptjs");
+exports.updatePassword = async (id, newPassword) => {
   try {
+    const hashPassword = await bcrypt.hash(newPassword, 10);
     const status = await models.users.update({
-      uid: uuidv4(),
-      status: 'unlock',
+      password: hashPassword
     },
       {
         where: {
-          id: id,
-          uid: uid,
+          id: id
         }
       });
     return status;
   } catch (error) {
-    throw new Error('error verify');
+    throw new Error('error update');
   }
 }
