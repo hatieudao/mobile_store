@@ -4,7 +4,7 @@ const { create } = require("hbs");
 const bcrypt = require("bcryptjs");
 const { v4: uuidv4 } = require('uuid');
 
-exports.getUserbyUsername = (username) => models.users.findOne({ where: { username }, raw: true });
+exports.getUserbyUsername = (username) => models.users.findOne({ where: { username: username, status: "unlock" }, raw: true });
 
 exports.register = async (user) => {
   const created_at = new Date();
