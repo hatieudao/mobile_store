@@ -7,15 +7,11 @@ exports.sendEmailVerify = (email) => {
       user: process.env.SERVER_EMAIL,
       pass: process.env.SERVER_pass
     }
-    // ,
-    // tls: {
-    //   rejectUnauthorized: false
-    // }
   });
 
   // setup email data with unicode symbols
   let mailOptions = {
-    from: `"Nodemailer Contact" ${process.env.SERVER_EMAIL}`, // sender address
+    from: `"Mobile Store Verify"`, // sender address
     to: email, // list of receivers
     subject: 'Node Contact Request', // Subject line
     text: 'Hello world?', // plain text body
