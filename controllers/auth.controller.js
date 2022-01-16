@@ -5,7 +5,6 @@ exports.login = async (req, res) => {
 }
 
 exports.loginP = async (req, res) => {
-  console.log("Auth fix");
   if (req.user)
     res.redirect('/');
   else
@@ -22,7 +21,7 @@ exports.register = async (req, res) => {
 }
 
 exports.registerP = async (req, res) => {
-  const { username, fullName, password, reTypePassword } = req.body;
+  const { username, fullName, password, reTypePassword, email } = req.body;
 
   try {
     if (!username) {

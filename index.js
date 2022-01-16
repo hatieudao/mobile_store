@@ -11,6 +11,7 @@ const session = require("express-session")
 const passport = require('./auth/passport')
 const pagiHelper = require('express-handlebars-paginate');
 const expressHandlebarsSections = require('express-handlebars-sections');
+const cookie = require('cookie-parser');
 
 let hbs = require('hbs');
 hbs.registerPartials(__dirname + '/views/partials', function (err) { });
@@ -48,24 +49,20 @@ app.use(session({ secret: process.env.SESSION_SECRET }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(bodyParser.json()) // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-
-// Database
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cookieParser());
+app.use(express.json());
 const db = require('./config/database')
 db.authenticate()
   .then(() => console.log("DB connected...........\n"))
   .catch(err => console.log("Error......." + err))
 
-//////////////////////
-
-//passport
 
 app.use(session({ secret: process.env.SESSION_SECRET }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-///////////////////////
 app.use(function (req, res, next) {
   res.locals.currentAdminUser = req.user;
   next();
@@ -74,7 +71,6 @@ app.use(function (req, res, next) {
 
 // Public route
 const homeRouter = require('./routes/public/home.route');
-//const registerRouter = require('./routes/public/register.route');
 const productRouter = require('./routes/public/product.route');
 const contactRouter = require('./routes/public/contact.route');
 const authRouter = require('./routes/public/auth.route');
@@ -83,8 +79,9 @@ const cartRouter = require('./routes/public/cart.route')
 const checkoutRouter = require('./routes/user/checkout.route')
 const myAccountRouter = require('./routes/user/myAccount.route')
 const wishListRouter = require('./routes/user/wishlist.route')
-// Admin route
-
+// Verify route
+const verifyRouter = require('./routes/public/verify.route');
+// API route
 const productApi = require('./api/public/product.api')
 
 
@@ -102,16 +99,18 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use('/', homeRouter);
 app.use('/product', productRouter);
-app.use('/', authRouter);
+
 //app.use('/register', registerRouter);
 app.use('/contact', contactRouter);
 app.use('/cart', cartRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/myaccount', myAccountRouter);
 app.use('/wishlist', wishListRouter);
+app.use('/verify', verifyRouter);
 app.use('/api/product', productApi);
+app.use('/', homeRouter);
+app.use('/', authRouter);
 
 // catch 404 and forward to error handler
 app.use('*', (req, res) => res.render('404', { layout: '404' }))
