@@ -33,9 +33,13 @@ exports.registerP = async (req, res) => {
       await authService.register(req.body);
       //res.redirect('/login');
 
+      const userInfo = await authService.getUserbyUsername(username);
+
       const user = {
+        id: userInfo.id,
         username: username,
-        full_name: fullName
+        full_name: fullName,
+        avatar: userInfo.avatar
       };
 
       req.login(user, function (err) {

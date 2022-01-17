@@ -17,10 +17,13 @@ exports.getOrderByUserId = (user_id) => {
 
 exports.addOrderByUserId = async (user_id) => {
     const maxId = await models.orders.max('id');
+    const date = new Date();
 
     return await models.orders.create({
         id: maxId + 1,
-        user_id: user_id
+        user_id: user_id,
+        state: "waiting to confirm",
+        created_ad: date,
     })
 }
 
