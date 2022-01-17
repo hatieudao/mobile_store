@@ -29,7 +29,7 @@ async function validPassword(user, password) {
   return bcrypt.compare(password, user.password);
 }
 
-passportUser.serializeUser(function (user, done) {
+passport.serializeUser(function (user, done) {
   const { id, username, full_name, avatar, uid, status, email } = user;
   done(null, { id, username, full_name, avatar, uid, status, email });
 
