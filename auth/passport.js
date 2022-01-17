@@ -4,9 +4,8 @@ const bcrypt = require("bcryptjs");
 
 const { models } = require("../models");
 const authService = require("../services/authService");
-const passportUser = passport;
 
-passportUser.use(new LocalStrategy(
+passport.use(new LocalStrategy(
   async function (username, password, done) {
     try {
       //const user = await models.users.findOne({where: {username}, raw: true});
@@ -33,10 +32,11 @@ async function validPassword(user, password) {
 passportUser.serializeUser(function (user, done) {
   const { id, username, full_name, avatar, uid, status, email } = user;
   done(null, { id, username, full_name, avatar, uid, status, email });
+
 });
 
-passportUser.deserializeUser(function (user, done) {
+passport.deserializeUser(function (user, done) {
   return done(null, user);
 });
 
-module.exports = passportUser;
+module.exports = passport;

@@ -45,6 +45,14 @@ hbs.registerHelper('ifCond', function (v1, operator, v2, options) {
   }
 });
 
+
+hbs.registerHelper('for', function(from, to, incr, block) {
+  var accum = '';
+  for(var i = from; i < to; i += incr)
+    accum += block.fn(i);
+  return accum;
+});
+
 app.use(session({ secret: process.env.SESSION_SECRET }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -84,6 +92,7 @@ const verifyRouter = require('./routes/public/verify.route');
 const resetPasswordRouter = require('./routes/public/resetPassword.route');
 // API route
 const productApi = require('./api/public/product.api')
+const apiProductRouter = require('./api/public/product.route.api')
 
 
 app.set("views", "./views")

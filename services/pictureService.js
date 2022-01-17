@@ -7,6 +7,9 @@ exports.getPicturesOfMobile = (mobile_id) => models.pictures.findAll({
   }
 )
 
-
+exports.getAvatarPictureByProductId = (producId) => models.pictures.findOne({
+    where: ({mobile_id: producId }),
+    raw: true
+})
 
 
