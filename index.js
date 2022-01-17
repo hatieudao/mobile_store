@@ -120,8 +120,8 @@ app.use('/cart', cartRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/myaccount', myAccountRouter);
 app.use('/wishlist', wishListRouter);
-//app.use('/api/product', productApi);
-app.use('/api/product', apiProductRouter);
+app.use('/api/product', productApi);
+app.use('/api/commentProduct', apiProductRouter);
 
 // catch 404 and forward to error handler
 app.use('*', (req, res) => res.render('404', { layout: '404' }))
