@@ -16,3 +16,14 @@ module.exports.addOrderDetail = async (order_id, option_id, quantity) => {
         return false;
     }
 }
+
+
+module.exports.getListOrderDetailById = async (order_id) => {
+    return await models.order_details.findAll({
+        where: {
+            order_id: order_id
+        },
+        raw: true
+    })
+}
+
