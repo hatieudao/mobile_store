@@ -6,6 +6,8 @@ const { v4: uuidv4 } = require('uuid');
 
 exports.getUserbyUsername = (username) => models.users.findOne({ where: { username: username, status: "unlock" }, raw: true });
 
+exports.getUserbyId = (id) => models.users.findOne({ where: { id: id, status: "unlock" }, raw: true });
+
 exports.register = async (user) => {
   const created_at = new Date();
   const maxId = await models.users.max('id');

@@ -100,7 +100,13 @@
             <div class="col-md-8">
                 <div class="product-content-right">
                     <div class="woocommerce">
-                        <div class="woocommerce-info">Returning customer? <a class="showlogin" data-toggle="collapse"
+
+                        {{#if user}}
+                        {{else}}
+                            <div class="woocommerce-info"> Please login to order </div>
+                        {{/if}}
+
+                        <!--<div class="woocommerce-info">Returning customer? <a class="showlogin" data-toggle="collapse"
                                                                              href="#login-form-wrap"
                                                                              aria-expanded="false"
                                                                              aria-controls="login-form-wrap">Click here
@@ -137,16 +143,16 @@
                             </p>
 
                             <div class="clear"></div>
-                        </form>
+                        </form>-->
 
-                        <div class="woocommerce-info">Have a coupon? <a class="showcoupon" data-toggle="collapse"
+                        <!--<div class="woocommerce-info">Have a coupon? <a class="showcoupon" data-toggle="collapse"
                                                                         href="#coupon-collapse-wrap"
                                                                         aria-expanded="false"
                                                                         aria-controls="coupon-collapse-wrap">Click here
                             to enter your code</a>
-                        </div>
+                        </div>-->
 
-                        <form id="coupon-collapse-wrap" method="post" class="checkout_coupon collapse">
+                        <!--<form id="coupon-collapse-wrap" method="post" class="checkout_coupon collapse">
 
                             <p class="form-row form-row-first">
                                 <input type="text" value="" id="coupon_code" placeholder="Coupon code"
@@ -158,7 +164,7 @@
                             </p>
 
                             <div class="clear"></div>
-                        </form>
+                        </form>-->
 
                         <form enctype="multipart/form-data" action="#" class="checkout" method="post" name="checkout">
 
@@ -404,14 +410,14 @@
                                                 <option value="UG">Uganda</option>
                                                 <option value="UA">Ukraine</option>
                                                 <option value="AE">United Arab Emirates</option>
-                                                <option selected="selected" value="GB">United Kingdom (UK)</option>
+                                                <option value="GB">United Kingdom (UK)</option>
                                                 <option value="US">United States (US)</option>
                                                 <option value="UY">Uruguay</option>
                                                 <option value="UZ">Uzbekistan</option>
                                                 <option value="VU">Vanuatu</option>
                                                 <option value="VA">Vatican</option>
                                                 <option value="VE">Venezuela</option>
-                                                <option value="VN">Vietnam</option>
+                                                <option selected="selected" value="VN">Vietnam</option>
                                                 <option value="WF">Wallis and Futuna</option>
                                                 <option value="EH">Western Sahara</option>
                                                 <option value="WS">Western Samoa</option>
@@ -422,6 +428,17 @@
                                         </p>
 
                                         <p id="billing_first_name_field"
+                                           class="form-row form-row-first validate-required">
+                                            <label class="" for="billing_first_name">Full Name <abbr title="required"
+                                                                                                      class="required">*</abbr>
+                                            </label>
+
+
+                                            <input type="text" value="{{user.full_name}}" placeholder="" id="billing_full_name"
+                                                   name="billing_full_name" class="input-text ">
+
+                                        </p>
+                                        <!--<p id="billing_first_name_field"
                                            class="form-row form-row-first validate-required">
                                             <label class="" for="billing_first_name">First Name <abbr title="required"
                                                                                                       class="required">*</abbr>
@@ -437,14 +454,14 @@
                                             </label>
                                             <input type="text" value="" placeholder="" id="billing_last_name"
                                                    name="billing_last_name" class="input-text ">
-                                        </p>
+                                        </p>-->
                                         <div class="clear"></div>
 
-                                        <p id="billing_company_field" class="form-row form-row-wide">
+                                        <!--<p id="billing_company_field" class="form-row form-row-wide">
                                             <label class="" for="billing_company">Company Name</label>
                                             <input type="text" value="" placeholder="" id="billing_company"
                                                    name="billing_company" class="input-text ">
-                                        </p>
+                                        </p>-->
 
                                         <p id="billing_address_1_field"
                                            class="form-row form-row-wide address-field validate-required">
@@ -455,11 +472,11 @@
                                                    id="billing_address_1" name="billing_address_1" class="input-text ">
                                         </p>
 
-                                        <p id="billing_address_2_field" class="form-row form-row-wide address-field">
+                                        <!--<p id="billing_address_2_field" class="form-row form-row-wide address-field">
                                             <input type="text" value=""
                                                    placeholder="Apartment, suite, unit etc. (optional)"
                                                    id="billing_address_2" name="billing_address_2" class="input-text ">
-                                        </p>
+                                        </p>-->
 
                                         <p id="billing_city_field"
                                            class="form-row form-row-wide address-field validate-required"
@@ -478,7 +495,7 @@
                                             <input type="text" id="billing_state" name="billing_state"
                                                    placeholder="State / County" value="" class="input-text ">
                                         </p>
-                                        <p id="billing_postcode_field"
+                                        <!--<p id="billing_postcode_field"
                                            class="form-row form-row-last address-field validate-required validate-postcode"
                                            data-o_class="form-row form-row-last address-field validate-required validate-postcode">
                                             <label class="" for="billing_postcode">Postcode <abbr title="required"
@@ -486,7 +503,7 @@
                                             </label>
                                             <input type="text" value="" placeholder="Postcode / Zip"
                                                    id="billing_postcode" name="billing_postcode" class="input-text ">
-                                        </p>
+                                        </p>-->
 
                                         <div class="clear"></div>
 
@@ -510,21 +527,29 @@
                                         <div class="clear"></div>
 
 
-                                        <div class="create-account">
-                                            <p>Create an account by entering the information below. If you are a
-                                                returning customer please login at the top of the page.</p>
-                                            <p id="account_password_field" class="form-row validate-required">
-                                                <label class="" for="account_password">Account password <abbr
-                                                        title="required" class="required">*</abbr>
-                                                </label>
-                                                <input type="password" value="" placeholder="Password"
-                                                       id="account_password" name="account_password" class="input-text">
-                                            </p>
-                                            <div class="clear"></div>
-                                        </div>
+                                        {{#if user }}
+
+                                            <div class="create-account">
+                                                <div id="UserMessage">
+
+                                                </div>
+                                                <!--<p>Create an account by entering the information below. If you are a
+                                                    returning customer please login at the top of the page.</p>-->
+                                                <p id="account_password_field" class="form-row validate-required">
+                                                    <label class="" for="account_password">Confirm password <abbr
+                                                            title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="password" value="" placeholder="Password"
+                                                           id="account_password" name="account_password" class="input-text">
+                                                </p>
+                                                <div class="clear"></div>
+                                            </div>
+
+                                        {{/if}}
 
                                     </div>
                                 </div>
+
 
                                 <div class="col-2">
                                     <div class="woocommerce-shipping-fields">
@@ -893,7 +918,9 @@
                                         <th class="product-total">Total</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="order-items">
+                                    </tbody>
+                                    <!--<tbody>
                                     <tr class="cart_item">
                                         <td class="product-name">
                                             Ship Your Idea <strong class="product-quantity">× 1</strong></td>
@@ -901,8 +928,8 @@
                                             <span class="amount">£15.00</span>
                                         </td>
                                     </tr>
-                                    </tbody>
-                                    <tfoot>
+                                    </tbody>-->
+                                    <!--<tfoot>
 
                                     <tr class="cart-subtotal">
                                         <th>Cart Subtotal</th>
@@ -926,10 +953,10 @@
                                         <td><strong><span class="amount">£15.00</span></strong></td>
                                     </tr>
 
-                                    </tfoot>
+                                    </tfoot>-->
                                 </table>
 
-
+<!--
                                 <div id="payment">
                                     <ul class="payment_methods methods">
                                         <li class="payment_method_bacs">
@@ -982,6 +1009,27 @@
                                     <div class="clear"></div>
 
                                 </div>
+
+                                -->
+
+                                {{#if user }}
+                                    <div id="payment">
+                                        <div class="form-row place-order">
+
+                                            <button class="btn btn-primary btn-sm shadow-none"
+                                                    type="submit"
+                                                    id="placeOrder">place order
+                                            </button>
+
+
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                    </div>
+                                {{/if}}
+
+
                             </div>
                         </form>
 
@@ -991,3 +1039,10 @@
         </div>
     </div>
 </div>
+
+{{#if user}}
+    {{#section 'script'}}
+        <script src="/js/cart/myCart.js"></script>
+        <script src="/js/order/myOrder.js"></script>
+    {{/section}}
+{{/if}}

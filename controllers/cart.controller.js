@@ -2,6 +2,7 @@ const mobileService = require('../services/mobileService');
 const cartService = require('../services/cartService');
 const cartDetailService = require('../services/cartdetailService');
 const optionService = require('../services/optionService');
+const {models} = require("../models");
 
 
 module.exports.getCart = async (req, res, next) => {
@@ -44,7 +45,7 @@ module.exports.addItem = async (req, res, next) => {
     const userid = req.user.id;
     let user_cart = await cartService.getCartByUserId(userid);
 
-    if (user_cart === null) {
+    if (user_cart === null || user_cart === false) {
         await cartService.addCartByUserId(userid);
         user_cart = await cartService.getCartByUserId(userid);
     }
@@ -65,3 +66,13 @@ module.exports.addItem = async (req, res, next) => {
         await cartDetailService.addCartDetail(user_cart.id, option.id);
     }
 }
+
+module.exports.updateCartLogin = async (req, res, next) => {
+    const cart = localStorage.getItem('cart');
+    if (cart !== null) {
+        //do something
+        console.log(cart);
+    }
+
+}
+
