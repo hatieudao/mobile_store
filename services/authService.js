@@ -27,6 +27,7 @@ exports.register = async (user) => {
       address: user.address,
       phone_number: user.phoneNumber,
       uid: uid,
+      email: user.email,
       created_at: created_at,
       role: "user"
     });
