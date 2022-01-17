@@ -26,9 +26,11 @@ exports.verifyToken = async (req, res) => {
 exports.sendEmailVertifyToUserEmail = async (req, res) => {
   if (!req.user) res.sendStatus(403);
   const user = req.user;
-  const token = createToken(user);
+  const fullInforUser = await verifyService.getUserbyUsername(user.username);
+  console.log(fullInforUser);
+  const token = createToken(fullInforUser);
   if (token === 'error') res.redirect('/login');
-  console.log(user.email);
-  sender.sendEmailVerify(user.email, token);
+  console.log(fullInforUser.email);
+  sender.sendEmailVerify(fullInforUser.email, token);
   res.render('check-your-mail', { username: user.username, layout: 'emptyLayout' });
 }

@@ -1,5 +1,6 @@
 const { models } = require('../models');
 const { v4: uuidv4 } = require('uuid');
+exports.getUserbyUsername = (username) => models.users.findOne({ where: { username: username }, raw: true });
 exports.verifyUser = async (id, uid) => {
   try {
     const status = await models.users.update({

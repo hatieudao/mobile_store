@@ -1,4 +1,4 @@
-const authService = require('../services/authService');
+const verifyService = require('../services/verify.service');
 const jwt = require("jsonwebtoken");
 const resetPasswordService = require('../services/resetPassword.service');
 const sender = require('../utils/sendEmailVerify');
@@ -6,7 +6,8 @@ const { createToken } = require('../utils/createToken');
 exports.resetPassword = async (req, res) => {
   try {
     const { username } = req.body;
-    const user = await authService.getUserbyUsername(username);
+
+    const user = await verifyService.getUserbyUsername(username);
     console.log(user);
     let errorAuth = "";
     if (!user) {
