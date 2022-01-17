@@ -98,7 +98,7 @@
                 <div class="col-md-3 col-sm-6 product-area">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img class="style-img-product" src={{pictures.0.link}} alt="">
+                            <img class="style-img-product" src={{picture}} alt="">
                         </div>
                         <h4 class="title-product-name-style"><a href="/product/{{id}}">{{full_name}}</a></h4>
                         <div class="product-carousel-price">
@@ -106,13 +106,15 @@
                         </div>
 
                         <div class="product-option-shop">
-                            {{#if user }}
-                              <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
-                                rel="nofollow" href="#"><i class="fa fa-shopping-cart cart-amunt"></i></a>
-                               {{else}}
-                               <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
-                                rel="nofollow" onclick="addToCart({{id}})" >
-                                <i class="fa fa-shopping-cart cart-amunt"></i>
+                            {{#if ../user}}
+                                <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
+                                   rel="nofollow" onclick="addToCartUser({{id}})">
+                                    <i class="fa fa-shopping-cart cart-amunt"></i>
+                                </a>
+                            {{else}}
+                                <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
+                                   rel="nofollow" onclick="addToCart({{id}})">
+                                    <i class="fa fa-shopping-cart cart-amunt"></i>
                                 </a>
                             {{/if}}
                             <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70"
@@ -193,9 +195,12 @@
 </div>
 
 {{#if user}}
+    {{#section 'script'}}
+        <script src="/js/cart/myCart.js"></script>
+    {{/section}}
 {{else}}
-  {{#section 'script'}}
-    <script src="/js/cart/addToCart.js"></script>
-  {{/section}}
+    {{#section 'script'}}
+        <script src="/js/cart/addToCart.js"></script>
+    {{/section}}
 {{/if}}
 
