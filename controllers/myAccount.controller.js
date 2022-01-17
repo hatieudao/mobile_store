@@ -17,14 +17,14 @@ exports.updateAccount = async (req, res) => {
   }
 
   const { linkPicture } = req.body;
-  const { fullName, phoneNumber, address } = req.body;
+  const { fullName, phoneNumber, address, email } = req.body;
   const { currentPassword, newPassword, confirmPassword } = req.body;
 
   if (linkPicture !== undefined) {
     await authService.addPicture(username, linkPicture);
   }
   if (fullName !== undefined && phoneNumber !== undefined && address !== undefined) {
-    await authService.updateUser(username, fullName, phoneNumber, address);
+    await authService.updateUser(username, fullName, phoneNumber, address, email);
   }
 
   const userInfo = await authService.getUserbyUsername(username);
