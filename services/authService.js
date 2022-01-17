@@ -23,20 +23,19 @@ exports.register = async (user) => {
 
     const uid = uuidv4();
 
-    return await models.users.create(
-        {
-            id: maxId + 1,
-            username: user.username,
-            password: hashPassword,
-            full_name: user.fullName,
-            email: user.email,
-            address: user.address,
-            phone_number: user.phoneNumber,
-            uid: uid,
-            created_at: created_at,
-            role: "user",
-            status: "unlock"
-        });
+  return await models.users.create(
+    {
+      id: maxId + 1,
+      username: user.username,
+      password: hashPassword,
+      full_name: user.fullName,
+      address: user.address,
+      phone_number: user.phoneNumber,
+      uid: uid,
+      email: user.email,
+      created_at: created_at,
+      role: "user"
+    });
 };
 
 exports.addPicture = async (username, linkPicture) => {
