@@ -12,6 +12,8 @@ router.post('/addItem', cartController.addItem);
 
 router.post('/updateCartLogin', cartController.updateCartLogin);
 
+router.get('/updateCart', cartController.updateCart);
+
 /*router.get('/', function(req, res, next) {
   res.render('cart', { title: 'Cart' });
 });*/

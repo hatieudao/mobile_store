@@ -14,7 +14,8 @@ function loadMyCart() {
       cartTotal += cart.quantity * cart.mobile.price;
       html += `
                 <td class="product-remove">
-                      <a title="Remove this item" class="remove" onclick="removeItem(${cart.id})" >×</a>
+                      <a title="Remove this item" class="remove" onclick="removeItem(${cart.id})" ">×</a>
+                      <input type="hidden" value="${cart.id}" name="cart_id">
                   </td>
                   
                   <td class="product-thumbnail">
@@ -37,7 +38,7 @@ function loadMyCart() {
                   <td class="product-quantity">
                       <div class="quantity buttons_added">
                           <input type="number" size="4" class="input-text qty text" title="Qty" name="cart_quantity"
-                              value="${cart.quantity}" min="0" step="1">
+                              value="${cart.quantity}" min="1" step="1">
                       </div>
                   </td>
             
@@ -54,23 +55,13 @@ function loadMyCart() {
     html += `
             <tr>
               <td class="actions" colspan="6">
-                  <!--<div class="coupon">
-                      <label for="coupon_code">Coupon:</label>
-                      <input type="text" placeholder="Coupon code" value="" id="coupon_code"
-                          class="input-text" name="coupon_code">
-                      <input type="submit" value="Apply Coupon" name="apply_coupon"
-                          class="button">
-                  </div>-->
                   
-                  <a href="#" type="submit" class="checkout-button button alt wc-forward" 
+                  <button type="button" class="checkout-button button alt wc-forward" 
                   onclick="updateCart()">
                   Update Cart
-                  </a>
-                  <a href="/checkout" type="submit" value="Checkout" name="proceed" 
-                    style="margin-left: 70px;"
-                    class="checkout-button button alt wc-forward">
-                    Checkout
-                  </a>
+                  </button>
+                  <button onclick="location.href='/checkout'" type="button">
+                  checkout</button>
               </td>
             </tr>`
 
@@ -101,11 +92,10 @@ function loadMyCart() {
                 </tbody>
                 </table>
                 `
-
-    const table_cartTotal = document.getElementById("cart-totals");
-    table_cartTotal.innerHTML = html_cartTotal;
-  })
-
+    
+        const table_cartTotal = document.getElementById("cart-totals");
+        table_cartTotal.innerHTML = html_cartTotal;
+    })
 }
 
 loadMyCart();

@@ -111,3 +111,17 @@ module.exports.updateCartLogin = async (req, res, next) => {
 
 }
 
+
+module.exports.updateCart = async (req, res, next) => {
+
+    const id = req.query.cart_id;
+    const quantity = req.query.cart_quantity;
+
+    const length = id.length;
+
+    for (let i = 0; i < length; i++){
+        await cartDetailService.updateQuantityCartDetailById(id[i], quantity[i]);
+    }
+
+    res.status(200);
+}
