@@ -30,7 +30,7 @@
                 <div class="product-search">
                     <div class="row">
                         <form action="/product" method="get">
-                            <input type="text" name="search" placeholder="Search">
+                            <input type="text" name="search" placeholder="Search name mobile">
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -43,62 +43,62 @@
         <div class="col-sm-2">
             <form action="">
                 <div class="form-title">Hãng sản xuất:</div>
-                <label class="form-label" onclick="selectParam('brandId', '', true)">Tất cả
+                <label class="form-label" onclick="selectParamResetPageNum('brandId', 0)">Tất cả
                     <input type="radio" id="0" name="hang" value="0" checked><span
                             class="checkmark"></span>
                 </label>
                 {{#each brands}}
-                    <label class="form-label" onclick="selectParam('brandId', {{id}}, true)">{{name}}
+                    <label class="form-label" onclick="selectParamResetPageNum('brandId', {{id}})">{{name}}
                         <input type="radio" id="brandId{{id}}" name="hang" value="{{name}}"><span
                                 class="checkmark"></span>
                     </label>
                 {{/each}}
 
                 <div class="form-title">Giá:</div>
-                <label class="form-label" onclick="selectParam('price', 0)">Tất cả
+                <label class="form-label" onclick="selectParamResetPageNum('price', 0)">Tất cả
                     <input type="radio" id="0" name="price" value="0" checked><span class="checkmark"></span>
                 </label>
-                <label class="form-label" onclick="selectParam('price', 1)">Dưới 2tr
+                <label class="form-label" onclick="selectParamResetPageNum('price', 1)">Dưới 2tr
                     <input type="radio" id="1" name="price" value="1"><span class="checkmark"></span>
                 </label>
-                <label class="form-label" onclick="selectParam('price', 2)">Từ 2tr - 5tr
+                <label class="form-label" onclick="selectParamResetPageNum('price', 2)">Từ 2tr - 5tr
                     <input type="radio" id="2" name="price" value="2"><span class="checkmark"></span>
                 </label>
-                <label class="form-label" onclick="selectParam('price', 3)">Từ 5tr - 10tr
+                <label class="form-label" onclick="selectParamResetPageNum('price', 3)">Từ 5tr - 10tr
                     <input type="radio" id="3" name="price" value="3"><span class="checkmark"></span>
                 </label>
-                <label class="form-label" onclick="selectParam('price', 4)">Từ 10tr - 20tr
+                <label class="form-label" onclick="selectParamResetPageNum('price', 4)">Từ 10tr - 20tr
                     <input type="radio" id="4" name="price" value="4"><span class="checkmark"></span>
                 </label>
-                <label class="form-label" onclick="selectParam('price', 5)">Trên 20tr
+                <label class="form-label" onclick="selectParamResetPageNum('price', 5)">Trên 20tr
                     <input type="radio" id="5" name="price" value="5"><span class="checkmark"></span>
                 </label>
 
                 <div class="form-title">Sắp xếp:</div>
-                <label class="form-label" onclick="selectParam('sort', 0)">Tất cả
+                <label class="form-label" onclick="selectParamResetPageNum('sort', 0)">Tất cả
                     <input type="radio" id="0" name="sort" value="0" checked>
                     <span class="checkmark"></span>
                 </label>
-                <label class="form-label" onclick="selectParam('sort', 1)">Mới nhất
+                <label class="form-label" onclick="selectParamResetPageNum('sort', 1)">Mới nhất
                     <input type="radio" id="1" name="sort" value="1">
                     <span class="checkmark"></span>
                 </label>
-                <label class="form-label" onclick="selectParam('sort', 2)">Giá tăng
+                <label class="form-label" onclick="selectParamResetPageNum('sort', 2)">Giá tăng
                     <input type="radio" id="2" name="sort" value="2">
                     <span class="checkmark"></span>
                 </label>
-                <label class="form-label" onclick="selectParam('sort', 3)">Giá giảm
+                <label class="form-label" onclick="selectParamResetPageNum('sort', 3)">Giá giảm
                     <input type="radio" id="3" name="sort" value="3">
                     <span class="checkmark"></span>
                 </label>
             </form>
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-10" id="listDataProduct">
             {{#each mobiles}}
                 <div class="col-md-3 col-sm-6 product-area">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img class="style-img-product" src={{picture}} alt="">
+                            <img class="style-img-product" src="{{picture}}" alt="">
                         </div>
                         <h4 class="title-product-name-style"><a href="/product/{{id}}">{{full_name}}</a></h4>
                         <div class="product-carousel-price">
@@ -125,75 +125,25 @@
                     </div>
                 </div>
             {{/each}}
-        </div>
-        <div class="col">
-            <div class="row middle-pagination">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="{{pagination.prevPageLink}}" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">{{pagination.curPage}}</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="{{pagination.nextPageLink}}" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
+
+            <footer class="row justify-content-center">
+                <input type="hidden" id="pagi" value="{{pagination}}">
+                <nav class="col-sm-10" aria-label="Page navigation example" id="pagination"
+                     style=" display: flex; justify-content: center;">
+                    {{{createPagination pagination paginationClass="pagination"}}}
+
                 </nav>
-            </div>
+            </footer>
         </div>
-
-
-        <!--        <div class="row">-->
-        <!--            <div class="col-md-12">-->
-        <!--                <div class="product-pagination text-center">-->
-        <!--                    <nav>-->
-        <!--                        <ul class="pagination">-->
-        <!--                            <li>-->
-        <!--                                <a href="#" aria-label="Previous">-->
-        <!--                                    <span aria-hidden="true">&laquo;</span>-->
-        <!--                                </a>-->
-        <!--                            </li>-->
-        <!--                            <li><a href="?page=1">1</a></li>-->
-        <!--                            <li><a href="?page=2">2</a></li>-->
-        <!--                            <li><a href="?page=3">3</a></li>-->
-        <!--                            <li><a href="?page=4">4</a></li>-->
-        <!--                            <li><a href="?page=5">5</a></li>-->
-        <!--                            <li>-->
-        <!--                                <a href="#" aria-label="Next">-->
-        <!--                                    <span aria-hidden="true">&raquo;</span>-->
-        <!--                                </a>-->
-        <!--                            </li>-->
-        <!--                        </ul>-->
-        <!--                    </nav>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
     </div>
-    <!--<div class="container">
-        <div class="row">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="{{pagination.prevPageLink}}" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">{{pagination.curPage}}</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="{{pagination.nextPageLink}}" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>-->
 </div>
 
+{{#section 'script'}}
+    <script src="/js/product/productFilter.js">
+    </script>
+    <script src="/js/product/productPagination.js">
+    </script>
+{{/section}}
 {{#if user}}
     {{#section 'script'}}
         <script src="/js/cart/myCart.js"></script>

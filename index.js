@@ -92,7 +92,7 @@ const verifyRouter = require('./routes/public/verify.route');
 const resetPasswordRouter = require('./routes/public/resetPassword.route');
 // API route
 const productApi = require('./api/public/product.api')
-const apiProductRouter = require('./api/public/product.route.api')
+const apiProductRouter = require('./api/public/comment.route.api')
 
 
 app.set("views", "./views")

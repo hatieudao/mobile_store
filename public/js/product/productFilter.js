@@ -1,4 +1,6 @@
-const urlParams = new URLSearchParams(location.search);
+
+const urlParamFilter = new URLSearchParams(location.search);
+
 let params = {
     page: 1,
     brandId: 0,
@@ -7,16 +9,17 @@ let params = {
     search: ''
 };
 
+
 for (let key in params) {
-    if (!urlParams.has(key)) {
-        urlParams.append(key, params[key]);
+    if (!urlParamFilter.has(key)) {
+        urlParamFilter.append(key, params[key]);
     }
 }
 
 
 $(document).ready(() =>{
     for (let key in params){
-        const control = $(`#${key}${urlParams.get(key)}`);
+        const control = $(`#${key}${urlParamFilter.get(key)}`);
         if (control){
             $(control).prop('checked', true);
         }
@@ -36,6 +39,11 @@ $(document).ready(() =>{
     }
 })
 
+function selectParamResetPageNum(key, value, reset = false) {
+    selectParam(key, value);
+    selectParam('page', 1);
+}
+
 function selectParam(key, value, reset = false) {
     //if (reset) {
     //    for (let key in params) {
@@ -43,8 +51,8 @@ function selectParam(key, value, reset = false) {
     //    }
     //}
 
-    urlParams.set(key, value);
-    let url = `/product?${urlParams.toString()}`;
+    urlParamFilter.set(key, value);
+    let url = `/product?${urlParamFilter.toString()}`;
     location.href = url;
 }
 

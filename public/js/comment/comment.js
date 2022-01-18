@@ -41,7 +41,6 @@ $(document).ready(function () {
 
 $('#postcomment').on('click', e => {
     e.preventDefault();
-    // let content = $('input[name=content]').val();
     let content = $('textarea#content').val();
     $('textarea#content').val(null);
     let mobileId = $('input[name=mobileId]').val();

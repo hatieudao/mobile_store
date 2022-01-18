@@ -14,7 +14,6 @@ module.exports.comment = async (req, res, next) => {
     const comments = allComments.rows;
     const count = allComments.count;
 
-
     for (let comment of comments){
         const user_id = comment.user_id;
         const user = await userService.getUserbyId(user_id);
