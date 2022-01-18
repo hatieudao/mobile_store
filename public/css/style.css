@@ -2587,7 +2587,10 @@ div.cart-collaterals ul.products li.product a:hover {
 }
 
 .title-product-name-style{
-   width: 220px;
+    height: 45px;
+    line-height: 2rem;
+    overflow: hidden;
+    width: 220px;
     padding-top: 8px;
 }
 
