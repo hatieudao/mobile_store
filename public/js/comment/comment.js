@@ -133,11 +133,11 @@ $("#pagination").on('click', '.page-link', function (e) {
 
             console.log("pagination now", pagination);
             ratings.html(ratingsTemplate({comments}));
-            console.log("ratings: ", ratings);
+            //console.log("ratings: ", ratings);
             console.log("ratings html: ", ratings.html());
 
             $("#pagination").html(paginationTemplate({pagination, paginationClass: "pagination"}));
-            console.log("pagi html: ", $("#pagination").html());
+            //console.log("pagi html: ", $("pagination").html());
         }
     })
 })
