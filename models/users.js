@@ -51,6 +51,10 @@ module.exports = function (sequelize, DataTypes) {
     status: {
       type: DataTypes.STRING(30),
       allowNull: true
+    },
+    email: {
+      type: DataTypes.STRING(200),
+      allowNull: true
     }
   }, {
     sequelize,

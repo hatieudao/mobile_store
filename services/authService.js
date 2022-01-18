@@ -1,22 +1,27 @@
-const { models } = require('../models');
-const { where } = require("sequelize");
-const { create } = require("hbs");
+const {models} = require('../models');
+const {where} = require("sequelize");
+const {create} = require("hbs");
 const bcrypt = require("bcryptjs");
-const { v4: uuidv4 } = require('uuid');
+const {v4: uuidv4} = require('uuid');
 
-exports.getUserbyUsername = (username) => models.users.findOne({ where: { username: username, status: "unlock" }, raw: true });
+exports.getUserbyUsername = (username) => models.users.findOne({
+    where: {username: username, status: "unlock"},
+    raw: true
+});
+
+exports.getUserbyId = (id) => models.users.findOne({where: {id: id, status: "unlock"}, raw: true});
 
 exports.register = async (user) => {
-  const created_at = new Date();
-  const maxId = await models.users.max('id');
-  const account = await models.users.findOne({ where: { username: user.username } });
-  if (account) {
-    throw new Error('Username already registered');
-  }
+    const created_at = new Date();
+    const maxId = await models.users.max('id');
+    const account = await models.users.findOne({where: {username: user.username}});
+    if (account) {
+        throw new Error('Username already registered');
+    }
 
-  const hashPassword = await bcrypt.hash(user.password, 10);
+    const hashPassword = await bcrypt.hash(user.password, 10);
 
-  const uid = uuidv4();
+    const uid = uuidv4();
 
   return await models.users.create(
     {
@@ -34,61 +39,62 @@ exports.register = async (user) => {
 };
 
 exports.addPicture = async (username, linkPicture) => {
-  try {
-    await models.users.update({
-      avatar: linkPicture
-    },
-      {
-        where: {
-          username: username
-        }
-      });
-  } catch (error) {
-    throw new Error('error update');
-  }
+    try {
+        await models.users.update({
+                avatar: linkPicture
+            },
+            {
+                where: {
+                    username: username
+                }
+            });
+    } catch (error) {
+        throw new Error('error update');
+    }
 }
 
-exports.updateUser = async (username, fullName, phoneNumber, address) => {
-  try {
-    await models.users.update({
-      full_name: fullName,
-      phone_number: phoneNumber,
-      address: address
-    },
-      {
-        where: {
-          username: username
-        }
-      });
-  } catch (error) {
-    throw new Error('error update');
-  }
+exports.updateUser = async (username, fullName, phoneNumber, address, email) => {
+    try {
+        await models.users.update({
+                full_name: fullName,
+                phone_number: phoneNumber,
+                address: address,
+                email: email
+            },
+            {
+                where: {
+                    username: username
+                }
+            });
+    } catch (error) {
+        throw new Error('error update');
+    }
 }
 
 exports.updatePassword = async (username, newPassword) => {
-  const hashPassword = await bcrypt.hash(newPassword, 10);
-  try {
-    await models.users.update({
-      password: hashPassword
-    },
-      {
-        where: {
-          username: username
-        }
-      });
-  } catch (error) {
-    throw new Error('error update');
-  }
+    const hashPassword = await bcrypt.hash(newPassword, 10);
+    try {
+        await models.users.update({
+                password: hashPassword
+            },
+            {
+                where: {
+                    username: username
+                }
+            });
+    } catch (error) {
+        throw new Error('error update');
+    }
 }
 
 exports.delAccount = async (username) => {
-  try {
-    await models.users.destroy({
-      where: {
-        username: username
-      }
-    });
-  } catch (error) {
-    throw new Error('error delete');
-  }
+    try {
+        await models.users.destroy({
+            where: {
+                username: username
+            }
+        });
+    } catch (error) {
+        throw new Error('error delete');
+    }
 }

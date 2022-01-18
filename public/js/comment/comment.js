@@ -47,7 +47,7 @@ $('#postcomment').on('click', e => {
     let mobileId = $('input[name=mobileId]').val();
     let userid = $('input[name=userId]').val();
     $.ajax({
-        url: '/api/product/addComment',
+        url: '/api/commentProduct/addComment',
         method: 'POST',
         data: {
             user_id: userid,
@@ -114,8 +114,8 @@ $("#pagination").on('click', '.page-link', function (e) {
     console.log("filter", filter);
 
     //Url của API
-    // const urlApi = "/api" + "/product" + "?" + filter;
-    const urlApi = `/api/product/${$('input[name=mobileId]').val()}/comment` + "?" + filter;
+    // const urlApi = "/api" + "/commentProduct" + "?" + filter;
+    const urlApi = `/api/commentProduct/${$('input[name=mobileId]').val()}/comment` + "?" + filter;
     console.log(urlApi);
 
 
@@ -125,7 +125,7 @@ $("#pagination").on('click', '.page-link', function (e) {
 
     $.ajax({
         url: urlApi,
-        // url: `/api/product/${$('input[name=mobileId]').val()}/comment`,
+        // url: `/api/commentProduct/${$('input[name=mobileId]').val()}/comment`,
         success: function (data) {
             console.log("data rating:", data);
             const comments = data.comments;
