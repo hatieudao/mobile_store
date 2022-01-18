@@ -31,13 +31,15 @@ exports.getListMobileAPage = (page, limit, filter) => {
 
     let options = {
         include: [
+
             {
                 model: models.brands, as: "brand", where: {}
             }
-            /*,
+            ,/*
             {
                 model: models.pictures, as: "pictures", where: {}
-            }*/
+            }
+            */
         ],
         order: [],
         offset: (page - 1) * limit,
@@ -47,7 +49,8 @@ exports.getListMobileAPage = (page, limit, filter) => {
                 [Op.gte]: min,
                 [Op.lte]: max
             }
-        }
+        },
+        raw: true
     }
 
     if (filter.search && filter.search != '') {

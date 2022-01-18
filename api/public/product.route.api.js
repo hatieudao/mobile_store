@@ -4,8 +4,6 @@ const router = express.Router();
 const apiProductController = require('./product.controller.api');
 
 /* GET home page. */
-router.post('/addComment', apiProductController.addComment);
-
-router.get('/:mobileId/comment', apiProductController.comment);
+router.get('/', apiProductController.getListProduct);
 
 module.exports = router;

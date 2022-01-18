@@ -2,7 +2,6 @@
 const paginationSource = $("#paginationTemplate").html();
 const paginationTemplate = Handlebars.compile(paginationSource);
 
-
 let rated = 5;
 $(document).ready(function () {
 
@@ -41,9 +40,7 @@ $(document).ready(function () {
 
 $('#postcomment').on('click', e => {
     e.preventDefault();
-    // let content = $('input[name=content]').val();
     let content = $('textarea#content').val();
-    $('textarea#content').val(null);
     let mobileId = $('input[name=mobileId]').val();
     let userid = $('input[name=userId]').val();
     $.ajax({
@@ -57,11 +54,10 @@ $('#postcomment').on('click', e => {
         },
         success: function (data) {
             console.log(data);
-
+            $('textarea#content').val(null);
             const arrHrefs =  $('a[href*="?page=1"]')
             console.log("arrHrefs: ",arrHrefs.html());
             arrHrefs.trigger('click');
-
         }
     })
 });
@@ -108,14 +104,8 @@ $("#pagination").on('click', '.page-link', function (e) {
 
     const pageHref = item.attr('href');
 
-    //filter là params cùa filter mà ta chọn
-    //ta cách ra sau "?" của page-link href
-    const filter = pageHref.split("?")[1]
-    console.log("filter", filter);
-
-    //Url của API
     // const urlApi = "/api" + "/commentProduct" + "?" + filter;
-    const urlApi = `/api/commentProduct/${$('input[name=mobileId]').val()}/comment` + "?" + filter;
+    const urlApi = `/api/commentProduct/${$('input[name=mobileId]').val()}/comment`;
     console.log(urlApi);
 
 
