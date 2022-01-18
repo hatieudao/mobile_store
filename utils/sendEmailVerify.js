@@ -29,7 +29,9 @@ exports.sendEmailVerify = async (email, token) => {
 
 exports.sendEmailResetPassword = async (email, token) => {
   let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.SERVER_EMAIL,
       pass: process.env.SERVER_pass

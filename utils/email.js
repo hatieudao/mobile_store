@@ -391,12 +391,15 @@ exports.emailResetContent = (url) =>
       mso-hide: all;
     }
     .button--green {
+      color: #FFF;
       background-color: #28DB67;
     }
     .button--red {
+      color: #FFF;
       background-color: #FF3665;
     }
     .button--blue {
+      color: #FFF;
       background-color: #414EF9;
     }
 
@@ -444,7 +447,7 @@ exports.emailResetContent = (url) =>
                             <w:anchorlock/>
                             <center style="color:#ffffff;font-family:sans-serif;font-size:15px;">Verify Email</center>
                           </v:roundrect><![endif]-->
-                            <a href="${url}" class="button button--blue">Reset Password</a>
+                            <a href="${url}" class="button button--green">Reset Password</a>
                           </div>
                         </td>
                       </tr>

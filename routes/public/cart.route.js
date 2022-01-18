@@ -10,7 +10,7 @@ router.post('/removeItem', cartController.removeItem);
 
 router.post('/addItem', cartController.addItem);
 
-router.get('/updateCartLogin', cartController.updateCartLogin);
+router.post('/updateCartLogin', cartController.updateCartLogin);
 
 router.get('/updateCart', cartController.updateCart);
 
