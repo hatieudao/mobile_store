@@ -6,6 +6,9 @@ exports.getCartDetailByCartId = (cart_id) => {
     const cart = models.cart_details.findAll(
       {
         where: ({ cart_id }),
+        order: [
+            ['id', 'ASC']
+        ],
         raw: true
       }
     )
