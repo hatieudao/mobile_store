@@ -151,12 +151,24 @@ function addToCartUser(id) {
 
 function updateCart() {
   console.log('updateCart');
-  let value;
-  $('#myCartTable tr').each(function () {
-    value = $(this).find("td").eq(2).html();
-  });
 
-  console.log('value', value);
+  //const car_quan = $('input[name=cart_quantity[]]').val();
+  const cart_quantity = $("input[name='cart_quantity']").map(function(){return $(this).val();}).get();
+  const cart_id = $("input[name='cart_id']").map(function(){return $(this).val();}).get();
+  console.log('car_quan', cart_quantity);
+  console.log('cart_id', cart_id);
+
+  $.ajax({
+    url: '/cart/updateCart',
+    method: 'GET',
+    data: {
+      cart_id: cart_id,
+      cart_quantity: cart_quantity
+    }
+  })
+
+  loadMyCart();
+  tempAlertAdd("Update cart successfully", 5000);
 }
 function addLocalStorageCart() {
   const cart = JSON.parse(localStorage.getItem('cart') || '{}');
