@@ -143,14 +143,13 @@
     </script>
     <script src="/js/product/productPagination.js">
     </script>
-{{/section}}
-{{#if user}}
-    {{#section 'script'}}
+
+    {{#if user}}
         <script src="/js/cart/myCart.js"></script>
-    {{/section}}
-{{else}}
-    {{#section 'script'}}
+    {{else}}
         <script src="/js/cart/addToCart.js"></script>
-    {{/section}}
-{{/if}}
+    {{/if}}
+
+{{/section}}
+
 
