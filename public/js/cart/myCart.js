@@ -8,15 +8,16 @@ function loadMyCart() {
             return;
         }
 
-        let html = `<input type="hidden" name="cart_row" value="{${data.length}}">`;
-
+        //let html = `<input type="hidden" name="cart_row" value="{${data.length}}">`;
+        let html = '';
+        let cartTotal = 0;
         for (const cart of data) {
-            html += ` <table id="myTable">
+            cartTotal += cart.quantity * cart.mobile.price;
+            html += `
                 <td class="product-remove">
                       <a title="Remove this item" class="remove" onclick="removeItem(${cart.id})" >×</a>
                   </td>
                   
-                  <input type="hidden" name="cart_id" value="{${cart.id}}">
                   <td class="product-thumbnail">
                       <a href="/product/${cart.mobile.id}"><img width="145" height="145"
                               alt="poster_1_up" class="shop_thumbnail"
@@ -28,7 +29,10 @@ function loadMyCart() {
                   </td>
             
                   <td class="product-price">
-                      <span class="amount">${(parseInt(cart.mobile.price)).toLocaleString('it-IT', {style: 'currency', currency: 'VND'})}</span>
+                      <span class="amount">${(parseInt(cart.mobile.price)).toLocaleString('it-IT', {
+                style: 'currency',
+                currency: 'VND'
+            })}</span>
                   </td>
             
                   <td class="product-quantity">
@@ -40,26 +44,24 @@ function loadMyCart() {
             
                   <td class="product-subtotal">
                       <span class="amount">${(cart.quantity * cart.mobile.price).toLocaleString('it-IT', {
-                            style: 'currency', currency: 'VND'
-                        })}</span>
+                style: 'currency', currency: 'VND'
+            })}</span>
                   </td>
                 </tr>
                  `
-             }
+        }
 
-
-        html += `</table>`;
 
         html += `
             <tr>
               <td class="actions" colspan="6">
-                  <div class="coupon">
+                  <!--<div class="coupon">
                       <label for="coupon_code">Coupon:</label>
                       <input type="text" placeholder="Coupon code" value="" id="coupon_code"
                           class="input-text" name="coupon_code">
                       <input type="submit" value="Apply Coupon" name="apply_coupon"
                           class="button">
-                  </div>
+                  </div>-->
                   
                   <a href="#" type="submit" class="checkout-button button alt wc-forward" 
                   onclick="updateCart()">
@@ -73,15 +75,41 @@ function loadMyCart() {
               </td>
             </tr>`
 
-                const table = document.getElementById("cart-items");
-                table.innerHTML = html;
+        const table = document.getElementById("cart-items");
+        table.innerHTML = html;
 
-            })
+
+        let html_cartTotal = `<table cellspacing="0">
+                <tbody>
+                <tr class="cart-subtotal">
+                    <th>Cart Subtotal</th>
+                    <td><span class="amount">${(cartTotal).toLocaleString('it-IT', {
+                    style: 'currency', currency: 'VND'
+                })}</span></td>
+                </tr>
+        
+                <tr class="shipping">
+                    <th>Shipping and Handling</th>
+                    <td>Free Shipping</td>
+                </tr>
+        
+                <tr class="order-total">
+                    <th>Order Total</th>
+                    <td><strong><span class="amount">${(cartTotal).toLocaleString('it-IT', {
+            style: 'currency', currency: 'VND'
+        })}</span></strong></td>
+                </tr>
+                </tbody>
+                </table>
+                `
+
+        const table_cartTotal = document.getElementById("cart-totals");
+        table_cartTotal.innerHTML = html_cartTotal;
+    })
 
 }
 
 loadMyCart();
-
 
 
 function tempAlertDel(msg, duration) {
@@ -132,7 +160,12 @@ function addToCartUser(id) {
     //loadMyCart();
 }
 
-function updateCart(){
+function updateCart() {
     console.log('updateCart');
+    let value;
+    $('#myCartTable tr').each(function () {
+        value = $(this).find("td").eq(2).html();
+    });
 
+    console.log('value', value);
 }

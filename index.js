@@ -117,6 +117,7 @@ app.use('/cart', cartRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/myaccount', myAccountRouter);
 app.use('/wishlist', wishListRouter);
+app.use('/api/commentProduct', apiProductRouter);
 app.use('/verify', verifyRouter);
 app.use('/api/product', productApi);
 app.use('/reset-password', resetPasswordRouter);
