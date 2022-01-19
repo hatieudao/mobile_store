@@ -179,6 +179,7 @@ function addLocalStorageCart() {
       list: JSON.stringify(cart),
     }
   })
-  // localStorage.setItem('cart', JSON.stringify({}));
+  localStorage.setItem('cart', JSON.stringify({}));
+  loadMyCart();
 }
 addLocalStorageCart()
