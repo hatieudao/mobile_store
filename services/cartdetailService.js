@@ -7,7 +7,7 @@ exports.getCartDetailByCartId = (cart_id) => {
       {
         where: ({ cart_id }),
         order: [
-            ['id', 'ASC']
+          ['id', 'ASC']
         ],
         raw: true
       }
@@ -57,6 +57,19 @@ module.exports.addCartDetail = async (cart_id, option_id) => {
       cart_id: cart_id,
       option_id: option_id,
       quantity: 1
+    })
+  } catch (e) {
+    console.log(e);
+  }
+}
+module.exports.addCartDetailAndQuantity = async (cart_id, option_id, quantity) => {
+  const maxId = await models.cart_details.max('id');
+  try {
+    await models.cart_details.create({
+      id: maxId + 1,
+      cart_id: cart_id,
+      option_id: option_id,
+      quantity: quantity
     })
   } catch (e) {
     console.log(e);

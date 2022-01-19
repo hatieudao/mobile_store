@@ -80,33 +80,43 @@ module.exports.addItem = async (req, res, next) => {
 }
 
 module.exports.updateCartLogin = async (req, res, next) => {
+  try {
+    if (!req.user) return;
+    const userid = req.user.id;
+    const list = JSON.parse(req.body.list);
+    for (let [key, val] of Object.entries(list)) {
+      if (val === 0) continue;
+      const mobile_id = parseInt(key);
+      const quantity = val;
+      let user_cart = await cartService.getCartByUserId(userid);
 
-  const mobile_id = req.body.mobile_id;
-  const quantity = req.body.quantity;
-  const userid = req.user.id;
-  let user_cart = await cartService.getCartByUserId(userid);
-
-  if (user_cart === null || user_cart === false) {
-    await cartService.addCartByUserId(userid);
-    user_cart = await cartService.getCartByUserId(userid);
-  }
-
-  const cart_details = await cartDetailService.getCartDetailByCartId(user_cart.id);
-  const option = await optionService.getFirstOptionsByMobileId(mobile_id);
-
-  if (option !== null) {
-    let isUpdate = 0;
-    for (let cart_detail of cart_details) {
-      if (cart_detail.option_id == option.id) {
-        await cartDetailService.updateQuantityCartDetailById(cart_detail.id, cart_detail.quantity + quantity);
-        isUpdate = 1;
-        break;
+      if (user_cart === null || user_cart === false) {
+        await cartService.addCartByUserId(userid);
+        user_cart = await cartService.getCartByUserId(userid);
       }
+
+      const cart_details = await cartDetailService.getCartDetailByCartId(user_cart.id);
+      const option = await optionService.getFirstOptionsByMobileId(mobile_id);
+      if (option !== null) {
+        let isUpdate = 0;
+        for (let cart_detail of cart_details) {
+          if (cart_detail.option_id === option.id) {
+            await cartDetailService.updateQuantityCartDetailById(cart_detail.id, cart_detail.quantity + quantity);
+            isUpdate = 1;
+            break;
+          }
+        }
+
+        if (isUpdate == 0) {
+          //console.log(`CALL USER: ${user_cart.id}, OP: ${option.id} ,QUANTITY: ${quantity}`);
+          await cartDetailService.addCartDetailAndQuantity(user_cart.id, option.id, quantity);
+        }
+      }
+
     }
 
-    if (isUpdate == 0) {
-      await cartDetailService.addCartDetail(user_cart.id, option.id);
-    }
+  } catch (error) {
+    console.log(error)
   }
 
 }
@@ -114,14 +124,14 @@ module.exports.updateCartLogin = async (req, res, next) => {
 
 module.exports.updateCart = async (req, res, next) => {
 
-    const id = req.query.cart_id;
-    const quantity = req.query.cart_quantity;
+  const id = req.query.cart_id;
+  const quantity = req.query.cart_quantity;
 
-    const length = id.length;
+  const length = id.length;
 
-    for (let i = 0; i < length; i++){
-        await cartDetailService.updateQuantityCartDetailById(id[i], quantity[i]);
-    }
+  for (let i = 0; i < length; i++) {
+    await cartDetailService.updateQuantityCartDetailById(id[i], quantity[i]);
+  }
 
-    res.status(200);
+  res.status(200);
 }

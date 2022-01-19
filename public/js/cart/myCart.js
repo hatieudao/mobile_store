@@ -92,10 +92,10 @@ function loadMyCart() {
                 </tbody>
                 </table>
                 `
-    
-        const table_cartTotal = document.getElementById("cart-totals");
-        table_cartTotal.innerHTML = html_cartTotal;
-    })
+
+    const table_cartTotal = document.getElementById("cart-totals");
+    table_cartTotal.innerHTML = html_cartTotal;
+  })
 }
 
 loadMyCart();
@@ -153,8 +153,8 @@ function updateCart() {
   console.log('updateCart');
 
   //const car_quan = $('input[name=cart_quantity[]]').val();
-  const cart_quantity = $("input[name='cart_quantity']").map(function(){return $(this).val();}).get();
-  const cart_id = $("input[name='cart_id']").map(function(){return $(this).val();}).get();
+  const cart_quantity = $("input[name='cart_quantity']").map(function () { return $(this).val(); }).get();
+  const cart_id = $("input[name='cart_id']").map(function () { return $(this).val(); }).get();
   console.log('car_quan', cart_quantity);
   console.log('cart_id', cart_id);
 
@@ -172,17 +172,13 @@ function updateCart() {
 }
 function addLocalStorageCart() {
   const cart = JSON.parse(localStorage.getItem('cart') || '{}');
-  for (let [key, val] of Object.entries(cart)) {
-    $.ajax({
-      url: '/cart/updateCartLogin',
-      method: 'POST',
-      data: {
-        mobile_id: key,
-        quantity: val
-      }
-    })
-
-  }
-  localStorage.setItem('cart', JSON.stringify({}));
+  $.ajax({
+    url: '/cart/updateCartLogin',
+    method: 'POST',
+    data: {
+      list: JSON.stringify(cart),
+    }
+  })
+  // localStorage.setItem('cart', JSON.stringify({}));
 }
 addLocalStorageCart()
